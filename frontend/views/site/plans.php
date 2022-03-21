@@ -1,0 +1,33 @@
+<div class="plans">
+    <div class="container-lg" style="max-width: 1920px; margin-left: auto; margin-right: auto">
+        <div class="plans-bg">
+            <picture>
+                <img src="/images/plans/building/building.jpg" alt="">
+            </picture>
+        </div>
+        <div class="container" style="max-width: 1600px; margin-left: auto; margin-right: auto">
+            <div id="plans" class="plans-wrapper">
+                <div class="building">
+                    <div class="building-desc">
+                        <object type="image/svg+xml" data="/images/svg/royal-build-bl.svg">
+                            <img src="/images/svg/royal-build-bl.svg" alt="" />
+                        </object>
+                        <p class="cap">выберите этаж</p>
+                        <p>
+                            Повседневная практика показывает, что начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Разнообразный и богатый опыт консультация
+                        </p>
+                    </div>
+                    <div class="building-choice">
+                        <div class="building-img">
+                            <img src="/images/plans/building/build.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="building-floor">
+                        <p class="fl">12</p>
+                        <p>этаж</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+:root {
+    --white-color: #fcfbf2;
+    --main-color: #1a3c39;
+    --yellow-color: #b09470;
+    --blue-color: #1a3d3a;
+    --block-margin: 80px;
+    --gap: 100px;
+}
+
+@media screen and (max-width: 1600px) {
+    :root {
+        --gap: 80px
+    }
+}
+    
+@media screen and (max-width: 1200px) {
+    :root {
+        --gap: 60px
+    }
+}
+@media screen and (max-width: 768px) {
+    :root {
+        --block-margin: 40px
+    }
+}
+@media screen and (max-width: 480px) {
+    :root {
+        --block-margin: 20px
+    }
+}
