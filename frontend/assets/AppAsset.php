@@ -18,6 +18,7 @@ class AppAsset extends AssetBundle
     ];
     public $js = [
         'js/swiper-bundle.min.js',
+        'js/del.js',
         'js/app.min.js',
     ];
     public $depends = [

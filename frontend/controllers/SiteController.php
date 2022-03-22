@@ -14,6 +14,7 @@ use common\models\LoginForm;
 use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
+use frontend\models\Callback;
 use frontend\models\ContactForm;
 
 /**
@@ -75,6 +76,36 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        return $this->render('index');
+    }
+
+    public function actionCallback()
+    {
+
+        $model = new Callback();
+
+        $request = Yii::$app->request;
+
+        // if ($request->isPost && $model->load($request->post())) {
+        if ($request->isPost) {
+
+            $model->lang = Yii::$app->language;
+            $model->name = $request->post('name');
+            $model->phone = $request->post('phone');
+            // Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+            
+            if($model->save()){
+                return $this->renderPartial('_success');
+                return ['data' => ['success' => true]];
+            }
+            return ['data' => ['success' => false]];
+        }
+
+        if ($model->getErrors()) {
+            var_dump($model->getErrors());
+            die;
+        }
+
         return $this->render('index');
     }
 

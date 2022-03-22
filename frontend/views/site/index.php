@@ -397,13 +397,12 @@ $this->title = 'Royal';
                         Наш менеджер перезвонит Вам в течении <b>15 минут</b> и подберет для Вас наилучший вариант
                     </p>
                 </div>
-                <form class="form" action="#">
+                <form name="callBack" class="form" action="#" method="post">
                     <label for="call-name"></label>
                     <input name="name" id="call-name" type="text" placeholder="Имя" required>
                     <label for="call-phone"></label>
-                    <input name="phone" id="call-phone" pattern="(\+?\d[- .]*){7,15}" type="tel" class=""
-                        placeholder="Телефон" required>
-                    <button type="submit" href="#" class="btn"><span>Оставить заявку</span></button>
+                    <input name="phone" id="call-phone" pattern="(\+?\d[- .]*){7,15}" type="tel" class="" placeholder="Телефон" required>
+                    <button type="submit" href="#" class="btn callback"><span>Оставить заявку</span></button>
                 </form>
             </div>
         </div>
