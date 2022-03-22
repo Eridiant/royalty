@@ -109,6 +109,11 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
+    public function actionFloor()
+    {
+        return 1;
+    }
+
     /**
      * Displays plans page.
      *

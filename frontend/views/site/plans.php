@@ -18,8 +18,15 @@
                         </p>
                     </div>
                     <div class="building-choice">
-                        <div class="building-img">
-                            <img src="/images/plans/building/build.jpg" alt="">
+                    <div class="building-img">
+                            <picture>
+                                <img src="/images/plans/building/build.jpg" alt="">
+                            </picture>
+                        </div>
+                        <div class="building-svg">
+                            <object id="building" type="image/svg+xml" data="/images/svg/building.svg">
+                                ваш браузер устарел
+                            </object>
                         </div>
                     </div>
                     <div class="building-floor">
