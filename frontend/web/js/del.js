@@ -65,8 +65,8 @@ function floorAjax(floor) {
             // if (ss.data.success) {
                 // console.log(quizRequest.responseText);
                 // console.log(ss.data.success);
-                document.querySelector('.popup-wrapper').classList.add('show');
-                document.querySelector('.popup-wrapper .popup').innerHTML = quizRequest.responseText;
+
+                document.querySelector('#plans').innerHTML = quizRequest.responseText;
                 // document.querySelector('.popup-wrapper .popup-inner').classList.add('sending');
                 // }
                 if ( document.querySelector('.floor') ) {
@@ -94,12 +94,30 @@ function floorAjax(floor) {
 
 function flr() {
     let floor = document.querySelector('#floor').contentDocument;
+    let flat = document.querySelector('.flat');
+    let flatCont = flat.contentDocument;
 
     floor.addEventListener('click', (e) => {
         if (e.target.closest('.area')) {
             // document.querySelector('.floor-change').innerHTML = e.target.dataset.i;
+            flat.classList.add('show');
         }
     })
+
+    if (document.querySelector('.apartments-thumbs')) {
+        var thumbs = new Swiper(".apartments-thumbs", {
+            loop: true,
+            spaceBetween: 10,
+            slidesPerView: 4,
+        });
+        var apartments = new Swiper(".apartments-slider", {
+            loop: true,
+            spaceBetween: 20,
+            thumbs: {
+                swiper: thumbs,
+            },
+        });
+    }
 }
 
 function quizAjax(name, phone) {

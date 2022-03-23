@@ -125,6 +125,7 @@ class SiteController extends Controller
                     ->asArray()
                     ->all();
             
+            return $this->renderPartial('_floor', compact('model'));
             return $this->renderAjax('_floor', compact('model'));
             return $this->renderAjax('_success');
         }
