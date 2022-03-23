@@ -5,6 +5,7 @@
     --blue-color: #1a3d3a;
     --block-margin: 80px;
     --gap: 100px;
+    --small-gap: 40px;
 }
 
 @media screen and (max-width: 1600px) {

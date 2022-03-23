@@ -45,6 +45,8 @@ window.addEventListener('load', () => {
         })
 
     }
+
+    
 })
 
 function floorAjax(floor) {
@@ -65,9 +67,12 @@ function floorAjax(floor) {
                 // console.log(ss.data.success);
                 document.querySelector('.popup-wrapper').classList.add('show');
                 document.querySelector('.popup-wrapper .popup').innerHTML = quizRequest.responseText;
-                document.querySelector('.popup-wrapper .popup-inner').classList.add('sending');
+                // document.querySelector('.popup-wrapper .popup-inner').classList.add('sending');
                 // }
-            
+                if ( document.querySelector('.floor') ) {
+
+                    setTimeout(flr, 1000);
+                }
 
         } else if (quizRequest.status == 400) {
             throw Error('Ошибка: ' + quizRequest.status);
@@ -84,6 +89,17 @@ function floorAjax(floor) {
     // quizRequest.send(encodeURI(data));
     // quizRequest.send(data);
     // quizRequest.send();
+}
+
+
+function flr() {
+    let floor = document.querySelector('#floor').contentDocument;
+
+    floor.addEventListener('click', (e) => {
+        if (e.target.closest('.area')) {
+            // document.querySelector('.floor-change').innerHTML = e.target.dataset.i;
+        }
+    })
 }
 
 function quizAjax(name, phone) {

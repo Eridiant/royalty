@@ -15,6 +15,8 @@ use frontend\models\PasswordResetRequestForm;
 use frontend\models\ResetPasswordForm;
 use frontend\models\SignupForm;
 use frontend\models\Callback;
+use frontend\models\Floor;
+use frontend\models\Flat;
 use frontend\models\ContactForm;
 
 /**
@@ -111,6 +113,39 @@ class SiteController extends Controller
 
     public function actionFloor()
     {
+
+        $request = Yii::$app->request;
+
+        if ($request->isPost) {
+
+            // $model = Floor::findOne(['id' => $request->post('floor')]);
+            $model = Flat::find()
+                    ->where('floor_id=:floor_id')
+                    ->addParams([':floor_id' => 1])
+                    ->asArray()
+                    ->all();
+            
+            return $this->renderAjax('_floor', compact('model'));
+            return $this->renderAjax('_success');
+        }
+
+
+
+        return 1;
+    }
+
+    public function actionFlat()
+    {
+
+        $request = Yii::$app->request;
+
+        if ($request->isPost) {
+
+            $model = Flat::findOne(['id' => $id]);
+
+            return $this->renderAjax('_flat');
+        }
+
         return 1;
     }
 

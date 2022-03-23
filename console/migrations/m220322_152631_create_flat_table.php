@@ -18,6 +18,12 @@ class m220322_152631_create_flat_table extends Migration
         $this->createTable('{{%flat}}', [
             'id' => $this->primaryKey(),
             'floor_id' => $this->integer()->notNull(),
+            'num' => $this->smallInteger()->notNull(),
+            'money' => $this->money(),
+            'total_area' => $this->float(),
+            'living_space' => $this->float(),
+            'balcony_area' => $this->float(),
+            'status' => $this->tinyInteger()->notNull()->defaultValue(0),
         ]);
 
         // creates index for column `floor_id`
