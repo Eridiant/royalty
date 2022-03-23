@@ -70,7 +70,8 @@ function floorAjax(floor) {
                 // document.querySelector('.popup-wrapper .popup-inner').classList.add('sending');
                 // }
                 if ( document.querySelector('.floor') ) {
-
+                    document.querySelector('.plans-bg').classList.add('dn');
+                    document.querySelector('.building').classList.add('dn');
                     setTimeout(flr, 1000);
                 }
 
@@ -96,12 +97,20 @@ function flr() {
     let floor = document.querySelector('#floor').contentDocument;
     let flat = document.querySelector('.flat');
     let flatCont = flat.contentDocument;
+    document.querySelector('.floor-btn').addEventListener('click', (e) => {
+        document.querySelector('.plans-bg').classList.remove('dn');
+        document.querySelector('.building').classList.remove('dn');
+        document.querySelector('#plans').innerHTML = '';
+    })
 
     floor.addEventListener('click', (e) => {
         if (e.target.closest('.area')) {
             // document.querySelector('.floor-change').innerHTML = e.target.dataset.i;
             flat.classList.add('show');
         }
+    })
+    document.querySelector('.flat-btn').addEventListener('click', (e) => {
+        flat.classList.remove('show');
     })
 
     if (document.querySelector('.apartments-thumbs')) {
@@ -118,6 +127,7 @@ function flr() {
             },
         });
     }
+
 }
 
 function quizAjax(name, phone) {

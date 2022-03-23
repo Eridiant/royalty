@@ -7,6 +7,10 @@
                         <object type="image/svg+xml" data="/images/svg/royal-build-grd.svg">
                             <img src="/images/svg/royal-build-grd.svg" alt="" />
                         </object>
+                        <div class="floor-btn">
+                            <svg width="62" height="24"><use xlink:href="/images/icons.svg#arrow-right"></use></svg>
+                            <span>К выбору этажа'</span>
+                        </div>
                     </div>
                     <div class="floor-choice">
                         <div class="floor-legend">
@@ -94,12 +98,15 @@
                         </div>
                     </div>
                     <div class="flat-wrapper">
-                        <div class="flat-logo">
+                    <div class="flat-logo">
                             <object id="floor" type="image/svg+xml" data="/images/svg/royal-build-grd.svg">
                                 <img src="/images/svg/royal-build-grd.svg" alt="" />
                             </object>
                         </div>
-                        <div class="flat-btn">К выбору квартир</div>
+                        <div class="flat-btn">
+                            <svg width="62" height="24"><use xlink:href="/images/icons.svg#arrow-right"></use></svg>
+                            <span>К выбору квартир</span>
+                        </div>
                         <div class="subtitle">Квартира №34</div>
                         <div class="flat-inner">
                             <div class="flat-inner-location item">
@@ -123,6 +130,12 @@
                                 <p>Отопление электричество/газ </p>
                             </div>
                         </div>
-                        <div class="btn">Узнать цену</div>
+                        <div class="flat-buttons">
+                            <div class="btn">Узнать цену</div>
+                            <div class="">
+                                <svg width="14" height="16"><use xlink:href="/images/icons.svg#pdf"></use></svg>
+                                <span>Скачать</span>
+                            </div>
+                        </div>
                     </div>
                 </div>

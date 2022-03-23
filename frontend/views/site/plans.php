@@ -6,7 +6,8 @@
             </picture>
         </div>
         <div class="container" style="max-width: 1600px; margin-left: auto; margin-right: auto">
-            <div id="plans" class="plans-wrapper">
+            <div id="plans" class="plans-wrapper"></div>
+            <div class="plans-wrapper">
                 <div class="building">
                     <div class="building-desc">
                         <object type="image/svg+xml" data="/images/svg/royal-build-bl.svg">
