@@ -96,7 +96,7 @@ $this->title = 'Royal';
         <div class="container" style="max-width: 1600px; margin-left: auto; margin-right: auto">
             <div class="development-img">
                 <picture>
-                    <img src="/images/index/development/development.jpg" alt="">
+                    <img src="/images/index/development/dev.jpg" alt="">
                 </picture>
             </div>
             <div class="development-wrapper">
@@ -290,27 +290,32 @@ $this->title = 'Royal';
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <picture>
-                                <img src="http://dummyimage.com/400x400/a6a677">
+                                <img src="/images/index/apartments/apart-1.jpg">
                             </picture>
                         </div>
                         <div class="swiper-slide">
                             <picture>
-                                <img src="http://dummyimage.com/400x400/a6a677">
+                                <img src="/images/index/apartments/apart-2.jpg">
                             </picture>
                         </div>
                         <div class="swiper-slide">
                             <picture>
-                                <img src="http://dummyimage.com/400x400/a6a677">
+                                <img src="/images/index/apartments/apart-3.jpg">
                             </picture>
                         </div>
                         <div class="swiper-slide">
                             <picture>
-                                <img src="http://dummyimage.com/400x400/a6a677">
+                                <img src="/images/index/apartments/apart-4.jpg">
                             </picture>
                         </div>
                         <div class="swiper-slide">
                             <picture>
-                                <img src="http://dummyimage.com/400x400/a6a677">
+                                <img src="/images/index/apartments/apart-5.jpg">
+                            </picture>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture>
+                                <img src="/images/index/apartments/apart-6.jpg">
                             </picture>
                         </div>
                     </div>
@@ -319,27 +324,32 @@ $this->title = 'Royal';
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <picture>
-                                <img src="http://dummyimage.com/400x400/a6a677">
+                                <img src="/images/index/apartments/apart-1.jpg">
                             </picture>
                         </div>
                         <div class="swiper-slide">
                             <picture>
-                                <img src="http://dummyimage.com/400x400/a6a677">
+                                <img src="/images/index/apartments/apart-2.jpg">
                             </picture>
                         </div>
                         <div class="swiper-slide">
                             <picture>
-                                <img src="http://dummyimage.com/400x400/a6a677">
+                                <img src="/images/index/apartments/apart-3.jpg">
                             </picture>
                         </div>
                         <div class="swiper-slide">
                             <picture>
-                                <img src="http://dummyimage.com/400x400/a6a677">
+                                <img src="/images/index/apartments/apart-4.jpg">
                             </picture>
                         </div>
                         <div class="swiper-slide">
                             <picture>
-                                <img src="http://dummyimage.com/400x400/a6a677">
+                                <img src="/images/index/apartments/apart-5.jpg">
+                            </picture>
+                        </div>
+                        <div class="swiper-slide">
+                            <picture>
+                                <img src="/images/index/apartments/apart-6.jpg">
                             </picture>
                         </div>
                     </div>

@@ -29,7 +29,7 @@
                                 </object>
                             </div>
                         </div>
-                        <div class="floor-change">
+                        <div class="floor-change lg">
                             <p class="floor-change-num num">1</p>
                             <p class="floor-change-text">этаж</p>
                         </div>
@@ -103,7 +103,7 @@
                                 <img src="/images/svg/royal-build-grd.svg" alt="" />
                             </object>
                         </div>
-                        <div class="flat-btn">
+                        <div class="flat-btn md">
                             <svg width="62" height="24"><use xlink:href="/images/icons.svg#arrow-right"></use></svg>
                             <span>К выбору квартир</span>
                         </div>

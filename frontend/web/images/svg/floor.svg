@@ -63,44 +63,45 @@
         .area {
             cursor: pointer;
             fill: #fff0;
-            stroke-opacity: .1;
+            stroke-opacity: .2;
             stroke-width: 0px;
             transition: .3s;
         }
         .area:hover {
-            fill: #fff;
-            stroke: #fff;
+            fill: #fff9;
+            stroke: #fff9;
             stroke-opacity: .7;
             stroke-width: 8px;
-            fill-opacity: .6;
         }
         .reserved {
-            fill: #B09470;
+            fill: #B09470bb;
             stroke: #B09470;
             stroke-opacity: 1;
             stroke-width: 4px;
-            fill-opacity: .6;
         }
         .reserved:hover {
-            fill: #B09470;
+            fill: #B0947077;
             stroke: #B09470;
             stroke-opacity: 1;
             stroke-width: 8px;
-            fill-opacity: .8;
         }
         .sold {
-            fill: #80C9C2;
+            fill: #80C9C2bb;
             stroke: #80C9C2;
             stroke-opacity: 1;
             stroke-width: 4px;
-            fill-opacity: .6;
         }
         .sold:hover {
-            fill: #80C9C2;
+            fill: #80C9C277;
             stroke: #80C9C2;
             stroke-opacity: 1;
             stroke-width: 8px;
-            fill-opacity: .8;
+        }
+        .select {
+            fill: #B09470bb;
+            stroke: #B09470;
+            stroke-opacity: 1;
+            stroke-width: 16px;
         }
     </style>
 </svg>

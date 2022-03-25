@@ -31,7 +31,7 @@
                         </div>
                     </div>
                     <div class="building-floor">
-                        <p class="fl">12</p>
+                        <p class="fl num">1</p>
                         <p>этаж</p>
                     </div>
                 </div>
