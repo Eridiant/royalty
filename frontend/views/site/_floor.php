@@ -134,7 +134,7 @@
                             <div class="btn">Узнать цену</div>
                             <div class="">
                                 <svg width="14" height="16"><use xlink:href="/images/icons.svg#pdf"></use></svg>
-                                <span>Скачать</span>
+                                <span>Скачать планировку</span>
                             </div>
                         </div>
                     </div>
