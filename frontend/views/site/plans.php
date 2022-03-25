@@ -9,7 +9,7 @@
             <div id="plans" class="plans-wrapper"></div>
             <div class="plans-wrapper">
                 <div class="building">
-                    <div class="building-desc">
+                    <div class="building-desc sm">
                         <object type="image/svg+xml" data="/images/svg/royal-build-bl.svg">
                             <img src="/images/svg/royal-build-bl.svg" alt="" />
                         </object>
@@ -30,12 +30,26 @@
                             </object>
                         </div>
                     </div>
-                    <div class="building-floor">
+                    <div class="building-floor lg">
                         <p class="fl num">1</p>
                         <p>этаж</p>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+<div class="plans-mb smm">
+    <div class="container" style="max-width: 1600px; margin-left: auto; margin-right: auto">
+        <div class="building-sm">
+            <object type="image/svg+xml" data="/images/svg/royal-build-bl.svg">
+                <img src="/images/svg/royal-build-bl.svg" alt="" />
+            </object>
+            <p class="cap">выберите этаж</p>
+            <p>
+                Повседневная практика показывает, что начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Разнообразный и богатый опыт консультация
+            </p>
         </div>
     </div>
 </div>

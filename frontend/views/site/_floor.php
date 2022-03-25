@@ -13,7 +13,7 @@
                         </div>
                     </div>
                     <div class="floor-choice">
-                        <div class="floor-legend">
+                        <div class="floor-legend sm">
                             <p class="floor-reserved">Бронь</p>
                             <p class="floor-sold">Продано</p>
                         </div>
@@ -109,7 +109,7 @@
                         </div>
                         <div class="subtitle">Квартира №34</div>
                         <div class="flat-inner">
-                            <div class="flat-inner-location item">
+                            <div class="flat-inner-location item md">
                                 <span>Расположение квартиры на этаже:</span>
                                 <div class="flat-inner-img">
                                     <div class="floor-img">
@@ -132,6 +132,7 @@
                         </div>
                         <div class="flat-buttons">
                             <div class="btn">Узнать цену</div>
+                            <div class="btn btn-brd xsm">Забронировать квартиру</div>
                             <div class="">
                                 <svg width="14" height="16"><use xlink:href="/images/icons.svg#pdf"></use></svg>
                                 <span>Скачать планировку</span>
