@@ -99,8 +99,8 @@ use yii\helpers\Url;
         <div class="content-wrapper">
             <div class="content-nav">
                 <ul>
-                    <li><a href="<?=Url::toRoute('/site/index') ?>">Главная</a></li>
-                    <li><a href="<?=Url::toRoute('/site/plans') ?>">Инфраструктура </a></li>
+                    <li><a href="<?= Url::toRoute('/site/index') ?>">Главная</a></li>
+                    <li><a href="<?= Url::toRoute('/site/plans') ?>">Инфраструктура</a></li>
                 </ul>
             </div>
             <a class="content-footer" href="#">Политики конфиденциальности</a>

@@ -1,5 +1,7 @@
 <?php
 
+use yii\helpers\Url;
+
 /** @var yii\web\View $this */
 
 $this->title = 'Royal';
@@ -200,10 +202,10 @@ $this->title = 'Royal';
                     <div class="location-slider-wrapper">
                         <div class="location-slider swiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">
+                            <div class="swiper-slide">
                                     <div class="location-slider-img">
                                         <picture>
-                                            <img src="http://dummyimage.com/234x152/a6a6ff">
+                                            <img src="/images/index/location/loc-1.jpg">
                                         </picture>
                                     </div>
                                     <p>Колесо обозрения</p>
@@ -211,7 +213,7 @@ $this->title = 'Royal';
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
                                         <picture>
-                                            <img src="http://dummyimage.com/234x152/a6a6ff">
+                                            <img src="/images/index/location/loc-2.jpg">
                                         </picture>
                                     </div>
                                     <p>Памятник «Али и Нино»</p>
@@ -219,7 +221,7 @@ $this->title = 'Royal';
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
                                         <picture>
-                                            <img src="http://dummyimage.com/234x152/a6a6ff">
+                                            <img src="/images/index/location/loc-3.jpg">
                                         </picture>
                                     </div>
                                     <p>Набережная Батуми</p>
@@ -227,7 +229,7 @@ $this->title = 'Royal';
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
                                         <picture>
-                                            <img src="http://dummyimage.com/234x152/a6a6ff">
+                                            <img src="/images/index/location/loc-4.jpg">
                                         </picture>
                                     </div>
                                     <p>Памятник «Али и Нино»</p>
@@ -235,7 +237,7 @@ $this->title = 'Royal';
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
                                         <picture>
-                                            <img src="http://dummyimage.com/234x152/a6a6ff">
+                                            <img src="/images/index/location/loc-5.jpg">
                                         </picture>
                                     </div>
                                     <p>Памятник «Али и Нино»</p>
@@ -243,7 +245,7 @@ $this->title = 'Royal';
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
                                         <picture>
-                                            <img src="http://dummyimage.com/234x152/a6a6ff">
+                                            <img src="/images/index/location/loc-6.jpg">
                                         </picture>
                                     </div>
                                     <p>Памятник «Али и Нино»</p>
@@ -251,7 +253,7 @@ $this->title = 'Royal';
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
                                         <picture>
-                                            <img src="http://dummyimage.com/234x152/a6a6ff">
+                                            <img src="/images/index/location/loc-7.jpg">
                                         </picture>
                                     </div>
                                     <p>Памятник «Али и Нино»</p>
@@ -259,7 +261,23 @@ $this->title = 'Royal';
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
                                         <picture>
-                                            <img src="http://dummyimage.com/234x152/a6a6ff">
+                                            <img src="/images/index/location/loc-8.jpg">
+                                        </picture>
+                                    </div>
+                                    <p>Памятник «Али и Нино»</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="location-slider-img">
+                                        <picture>
+                                            <img src="/images/index/location/loc-9.jpg">
+                                        </picture>
+                                    </div>
+                                    <p>Памятник «Али и Нино»</p>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="location-slider-img">
+                                        <picture>
+                                            <img src="/images/index/location/loc-10.jpg">
                                         </picture>
                                     </div>
                                     <p>Памятник «Али и Нино»</p>
@@ -385,7 +403,7 @@ $this->title = 'Royal';
                         <p data-num="2">3333 3 33333333333 3 3 33333333333333 3333333333333</p>
                     </div>
                 </div>
-                <a href="#" class="apartments-btn btn">
+                <a href="<?= Url::toRoute('/site/plans') ?>" class="apartments-btn btn">
                     <span>Выбрать квартиру</span>
                     <svg width="62" height="24"><use xlink:href="/images/icons.svg#arrow-right"></use></svg>
                 </a>
