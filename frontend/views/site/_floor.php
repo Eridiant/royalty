@@ -7,10 +7,6 @@
                         <object type="image/svg+xml" data="/images/svg/royal-build-grd.svg">
                             <img src="/images/svg/royal-build-grd.svg" alt="" />
                         </object>
-                        <div class="floor-btn">
-                            <svg width="62" height="24"><use xlink:href="/images/icons.svg#arrow-right"></use></svg>
-                            <span>К выбору этажа'</span>
-                        </div>
                     </div>
                     <div class="floor-choice">
                         <div class="floor-legend sm">
@@ -33,6 +29,10 @@
                             <p class="floor-change-num num">1</p>
                             <p class="floor-change-text">этаж</p>
                         </div>
+                    </div>
+                    <div class="floor-btn">
+                        <svg width="62" height="24"><use xlink:href="/images/icons.svg#arrow-right"></use></svg>
+                        <span>К выбору этажа'</span>
                     </div>
                 </div>
                 <!-- квартира -->
@@ -98,7 +98,7 @@
                         </div>
                     </div>
                     <div class="flat-wrapper">
-                    <div class="flat-logo">
+                        <div class="flat-logo">
                             <object id="floor" type="image/svg+xml" data="/images/svg/royal-build-grd.svg">
                                 <img src="/images/svg/royal-build-grd.svg" alt="" />
                             </object>

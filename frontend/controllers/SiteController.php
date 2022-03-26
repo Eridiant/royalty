@@ -139,6 +139,18 @@ class SiteController extends Controller
     {
 
         $request = Yii::$app->request;
+        $flat = $request->post('flat');
+        // $files = \yii\helpers\FileHelper::findFiles("/frontend/web/images/del/flat/${flat}");
+        $files = \yii\helpers\FileHelper::findFiles("images/del/flat/${flat}");
+        // foreach (new DirectoryIterator($this->path) as $item) {
+        //     array_push($fls, $item->getFilename());
+        // }
+        // var_dump('<pre>');
+        // var_dump($files);
+        // var_dump('</pre>');
+        // die;
+        
+        return $this->renderPartial('_flat', compact('files'));
 
         if ($request->isPost) {
 

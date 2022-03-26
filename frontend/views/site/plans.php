@@ -19,6 +19,11 @@
                         </p>
                     </div>
                     <div class="building-choice">
+                    <div class="building-change lgm">
+                        <svg class="prev" width="161" height="25"><use xlink:href="images/icons.svg#rect"></use></svg>
+                        <p class="btn"><span>1</span> этаж</p>
+                        <svg class="next" width="161" height="25"><use xlink:href="images/icons.svg#rect"></use></svg>
+                    </div>
                     <div class="building-img">
                             <picture>
                                 <img src="/images/plans/building/build.jpg" alt="">
