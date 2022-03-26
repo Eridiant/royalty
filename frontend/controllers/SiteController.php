@@ -124,10 +124,12 @@ class SiteController extends Controller
                     ->addParams([':floor_id' => 1])
                     ->asArray()
                     ->all();
+
+            $files = \yii\helpers\FileHelper::findFiles("images/del/flat/1");
             
-            return $this->renderPartial('_floor', compact('model'));
-            return $this->renderAjax('_floor', compact('model'));
-            return $this->renderAjax('_success');
+            return $this->renderPartial('_floor', compact('files'));
+            // return $this->renderAjax('_floor', compact('model'));
+            // return $this->renderAjax('_success');
         }
 
 

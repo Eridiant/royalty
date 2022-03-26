@@ -38,62 +38,26 @@
                 <!-- квартира -->
                 <div class="flat">
                     <div class="apartments-slider-wrapper">
-                        <div class="apartments-slider swiper">
+                    <div class="apartments-slider swiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <picture>
-                                        <img src="http://dummyimage.com/400x400/a6a677">
-                                    </picture>
-                                </div>
-                                <div class="swiper-slide">
-                                    <picture>
-                                        <img src="http://dummyimage.com/400x400/a6a677">
-                                    </picture>
-                                </div>
-                                <div class="swiper-slide">
-                                    <picture>
-                                        <img src="http://dummyimage.com/400x400/a6a677">
-                                    </picture>
-                                </div>
-                                <div class="swiper-slide">
-                                    <picture>
-                                        <img src="http://dummyimage.com/400x400/a6a677">
-                                    </picture>
-                                </div>
-                                <div class="swiper-slide">
-                                    <picture>
-                                        <img src="http://dummyimage.com/400x400/a6a677">
-                                    </picture>
-                                </div>
+                                <?php foreach ($files as $file): ?>
+                                    <div class="swiper-slide">
+                                        <picture>
+                                            <img src="/<?= $file; ?>">
+                                        </picture>
+                                    </div>
+                                <?php endforeach; ?>
                             </div>
                         </div>
                         <div thumbsSlider="" class="apartments-thumbs swiper">
                             <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <picture>
-                                        <img src="http://dummyimage.com/400x400/a6a677">
-                                    </picture>
-                                </div>
-                                <div class="swiper-slide">
-                                    <picture>
-                                        <img src="http://dummyimage.com/400x400/a6a677">
-                                    </picture>
-                                </div>
-                                <div class="swiper-slide">
-                                    <picture>
-                                        <img src="http://dummyimage.com/400x400/a6a677">
-                                    </picture>
-                                </div>
-                                <div class="swiper-slide">
-                                    <picture>
-                                        <img src="http://dummyimage.com/400x400/a6a677">
-                                    </picture>
-                                </div>
-                                <div class="swiper-slide">
-                                    <picture>
-                                        <img src="http://dummyimage.com/400x400/a6a677">
-                                    </picture>
-                                </div>
+                                <?php foreach ($files as $file): ?>
+                                    <div class="swiper-slide">
+                                        <picture>
+                                            <img src="/<?= $file; ?>">
+                                        </picture>
+                                    </div>
+                                <?php endforeach; ?>
                             </div>
                         </div>
                     </div>

@@ -145,18 +145,25 @@ function flr() {
     })
 
     if (document.querySelector('.apartments-thumbs')) {
-        var thumbs = new Swiper(".apartments-thumbs", {
-            loop: true,
-            spaceBetween: 10,
-            slidesPerView: 4,
-        });
-        var apartments = new Swiper(".apartments-slider", {
-            loop: true,
-            spaceBetween: 20,
-            thumbs: {
-                swiper: thumbs,
-            },
-        });
+        function swiper() {
+            apartments?.destroy(true, true);
+            thumbs?.destroy(true, true);
+
+            var thumbs = new Swiper(".apartments-thumbs", {
+                loop: true,
+                spaceBetween: 10,
+                slidesPerView: 4,
+            });
+            var apartments = new Swiper(".apartments-slider", {
+                loop: true,
+                spaceBetween: 20,
+                thumbs: {
+                    swiper: thumbs,
+                },
+            });
+        }
+
+        swiper();
 
         function flatAjax(i) {
             // console.log(wrap.dataset.id);
@@ -177,11 +184,11 @@ function flr() {
                         // console.log(quizRequest.responseText);
                         // console.log(ss.data.success);
                         // document.querySelector('.popup-wrapper').classList.add('show');flat
-                        // document.querySelector('.apartments-slider-wrapper').innerHTML = quizRequest.responseText;
-                        // // document.querySelector('.popup-wrapper .popup-inner').classList.add('sending');
-                        // // }
-                        // apartments.update();
-                        // thumbs.update();
+                        // swiper(false);
+                        document.querySelector('.apartments-slider-wrapper').innerHTML = quizRequest.responseText;
+                        // document.querySelector('.popup-wrapper .popup-inner').classList.add('sending');
+                        // }
+                        swiper();
                     
         
                 } else if (quizRequest.status == 400) {
