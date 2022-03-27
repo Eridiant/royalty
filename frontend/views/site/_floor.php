@@ -82,7 +82,7 @@
                                         </picture>
                                     </div>
                                     <div class="floor-svg">
-                                        <object id="floor" type="image/svg+xml" data="/images/svg/floor.svg">
+                                        <object id="floor-current" type="image/svg+xml" data="/images/svg/floor-current.svg">
                                             ваш браузер устарел
                                         </object>
                                     </div>

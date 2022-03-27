@@ -227,7 +227,7 @@ function flr() {
                         // document.querySelector('.popup-wrapper .popup-inner').classList.add('sending');
                         // }
                         swiper();
-                    
+                    flatCurrent(i);
         
                 } else if (quizRequest.status == 400) {
                     throw Error('Ошибка: ' + quizRequest.status);
@@ -246,6 +246,14 @@ function flr() {
             // quizRequest.send();
         }
     }
+}
+
+function flatCurrent(i) {
+    let flCurr = document.querySelector('#floor-current').contentDocument;
+    if (flCurr.querySelector('.select')) {
+        flCurr.querySelector('.select').classList.remove('select');
+    }
+    flCurr.querySelector(`[data-i="${i}"]`).classList.add('select');
 }
 
 function quizAjax(name, phone) {
