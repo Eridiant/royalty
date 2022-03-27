@@ -51,6 +51,7 @@ return [
                 'index' => 'site/index',
                 'plans' => 'site/plans',
                 'contacts' => 'site/contacts',
+                'about' => 'site/about',
             ],
         ],
     ],
