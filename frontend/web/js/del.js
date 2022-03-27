@@ -37,6 +37,33 @@ window.addEventListener('load', () => {
         })
     }
 
+    if (document.querySelector('#building-change')) {
+
+        let change = document.querySelector('#building-change');
+        let num = document.querySelector('#building-change span');
+        let min = change.dataset.min;
+        let max = change.dataset.max;
+        var floorNum = min;
+
+        change.addEventListener('click', (e) => {
+            let target = e.target;
+            if (target.closest('.prev') && floorNum < max) {
+                num.innerHTML = ++floorNum;
+                floorSelected(floorNum);
+            }
+            if (target.closest('.next') && floorNum > min) {
+                console.log('next');
+                num.innerHTML = --floorNum;
+                floorSelected(floorNum);
+            }
+            if (target.closest('.btn')) {
+                floorAjax(floorNum);
+            }
+        });
+
+        
+    }
+
     if (document.querySelector('.contacts')) {
         
         document.forms.callBack.onsubmit = function(e) {
@@ -70,14 +97,25 @@ window.addEventListener('load', () => {
 
         building.addEventListener('click', (e) => {
             if (e.target.closest('.area')) {
-                floorAjax(e.target.dataset.i);
+                floorNum = e.target.dataset.i;
+                floorAjax(floorNum);
+                floorSelected(floorNum);
             }
         })
     }
 
 })
 
-
+function floorSelected(floorNum) {
+    let buildCont = document.querySelector('#building').contentDocument;
+    console.log(buildCont);
+    console.log(buildCont.querySelector('.selected'));
+    
+    if (buildCont.querySelector('.selected')) {
+        buildCont.querySelector('.selected').classList.remove('selected');
+    }
+    buildCont.querySelector(`[data-i="${floorNum}"]`).classList.add('selected');
+}
 
 function floorAjax(floor) {
     // console.log(wrap.dataset.id);

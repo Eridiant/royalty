@@ -46,7 +46,7 @@
         <path d="m 105.9453,977.50931 538.28927,110.68129 209.11906,-56.5794 0.16074,-28.6113 -209.07157,51.7495 -538.39957,-102.86079 z"
         id="path-2" class="area" data-i="2" />
         <path d="m 105.76506,1018.1092 539.13237,128.4762 208.4884,-65.667 -0.13315,-28.4812 -208.85737,60.3462 -538.63025,-121.03507 z"
-        id="path-1" class="area" data-i="1" />
+        id="path-1" class="area selected" data-i="1" />
     </g>
     <style type="text/css">
         .area {
@@ -55,15 +55,15 @@
             stroke-opacity: 1;
             transition: .3s;
         }
-        .areas {
-            cursor: pointer;
-            fill: #4dd48a3b;
-            stroke-opacity: 1;
-            transition: .3s;
-        }
         .area:hover {
             fill: #fff;
             fill-opacity: .6;
+        }
+        @media (max-width: 767px) {
+            .selected {
+                fill: #fff;
+                fill-opacity: .6;
+            }
         }
     </style>
 </svg>

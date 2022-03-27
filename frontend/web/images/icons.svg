@@ -169,7 +169,7 @@
     </symbol>
     <symbol id="rect" width="161" height="25" viewBox="0 0 161 25" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g>
-            <path d="M80.5 0L160.607 24.75H0.392647L80.5 0Z" fill="#1A3C39" fill-opacity="0.5"/>
+            <path d="M80.5 0L160.607 24.75H0.392647L80.5 0Z" fill="currentColor"/>
         </g>
     </symbol>
 
