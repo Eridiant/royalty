@@ -50,6 +50,7 @@ return [
                 '/' => 'site/index',
                 'index' => 'site/index',
                 'plans' => 'site/plans',
+                'contacts' => 'site/contacts',
             ],
         ],
     ],

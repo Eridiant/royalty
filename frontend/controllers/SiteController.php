@@ -175,6 +175,16 @@ class SiteController extends Controller
     }
 
     /**
+     * Displays contacts page.
+     *
+     * @return mixed
+     */
+    public function actionContacts()
+    {
+        return $this->render('contacts');
+    }
+
+    /**
      * Logs in a user.
      *
      * @return mixed
