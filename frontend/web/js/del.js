@@ -91,6 +91,7 @@ window.addEventListener('load', () => {
         building.addEventListener('mouseover', (e) => {
 
             if (e.target.closest('.area')) {
+                console.log(e.target.dataset.i);
                 document.querySelector('.fl').innerHTML = e.target.dataset.i;
             }
         })

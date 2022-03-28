@@ -26,7 +26,7 @@
                     </div>
                     <div class="building-img">
                             <picture>
-                                <img src="/images/plans/building/build.jpg" alt="">
+                                <img src="/images/plans/building/build.png" alt="">
                             </picture>
                         </div>
                         <div class="building-svg">
