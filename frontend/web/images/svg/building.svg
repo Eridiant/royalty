@@ -62,11 +62,9 @@
             fill: #fff;
             fill-opacity: .6;
         }
-        @media (max-width: 767px) {
-            .selected {
-                fill: #fff;
-                fill-opacity: .6;
-            }
+        .selected {
+            fill: #fff;
+            fill-opacity: .6;
         }
     </style>
 </svg>

@@ -24,6 +24,8 @@ use frontend\models\ContactForm;
  */
 class SiteController extends Controller
 {
+    public $bodyClass;
+
     /**
      * {@inheritdoc}
      */
@@ -78,6 +80,8 @@ class SiteController extends Controller
      */
     public function actionIndex()
     {
+        $this->bodyClass = 'index white';
+
         return $this->render('index');
     }
 

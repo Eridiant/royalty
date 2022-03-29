@@ -22,7 +22,7 @@ AppAsset::register($this);
     <title><?= Html::encode($this->title) ?></title>
     <?php $this->head() ?>
 </head>
-<body class="d-flex flex-column h-100">
+<body class="<?= $this->context->bodyClass; ?>">
 <?php $this->beginBody() ?>
 
 <?php require_once('template-header.php'); ?>
