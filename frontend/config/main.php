@@ -52,6 +52,7 @@ return [
                 'plans' => 'site/plans',
                 'contacts' => 'site/contacts',
                 'about' => 'site/about',
+                'infrastructure' => 'site/infrastructure',
             ],
         ],
     ],

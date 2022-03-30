@@ -199,6 +199,16 @@ class SiteController extends Controller
     }
 
     /**
+     * Displays about page.
+     *
+     * @return mixed
+     */
+    public function actionInfrastructure()
+    {
+        return $this->render('infrastructure');
+    }
+
+    /**
      * Logs in a user.
      *
      * @return mixed
