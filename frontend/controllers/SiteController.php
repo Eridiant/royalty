@@ -203,6 +203,16 @@ class SiteController extends Controller
      *
      * @return mixed
      */
+    public function actionGallery()
+    {
+        return $this->render('gallery');
+    }
+
+    /**
+     * Displays about page.
+     *
+     * @return mixed
+     */
     public function actionInfrastructure()
     {
         return $this->render('infrastructure');

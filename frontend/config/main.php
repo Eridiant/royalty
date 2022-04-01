@@ -53,6 +53,7 @@ return [
                 'contacts' => 'site/contacts',
                 'about' => 'site/about',
                 'infrastructure' => 'site/infrastructure',
+                'gallery' => 'site/gallery',
             ],
         ],
     ],
