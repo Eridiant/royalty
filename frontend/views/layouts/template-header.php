@@ -13,6 +13,13 @@
                 <div class="nav-lang radius">
                     <a href="#">ru</a>
                 </div>
+                <a class="sm" href="tel:+70988900043">+7 (098) 890-00-43</a>
+                <a class="sm" href="#">
+                    <svg width="18" height="18"><use xlink:href="/images/icons.svg#whatsapp"></use></svg>
+                </a>
+                <a class="sm" href="#">
+                    <svg width="18" height="18"><use xlink:href="/images/icons.svg#viber"></use></svg>
+                </a>
             </div>
         </div>
     </div>
