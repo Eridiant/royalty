@@ -116,6 +116,20 @@ use yii\helpers\Url;
     <div class="popup"></div>
 </div>
 
+<div class="popup-wrapper popup-success">
+    <div class="popup">
+        <div class="popup-inner sending">
+            <div class="check">&#10003</div>
+            <div class="subtitle">
+                Спасибо
+            </div>
+            <p>
+                Ваша заявка отправлена, мы перезвоним
+            </p>
+        </div>
+    </div>
+</div>
+
 
 
 <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" /> -->

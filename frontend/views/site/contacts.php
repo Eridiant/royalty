@@ -13,7 +13,7 @@
                     <a href="tel:+995514779900"><svg width="21" height="20"><use xlink:href="images/icons.svg#phone"></use></svg> +995 514 77 99 00</a>
                     <a href="mailto:info@kaligraf.ge"><svg width="21" height="16"><use xlink:href="images/icons.svg#mail"></use></svg> info@kaligraf.ge</a>
                     <p><svg width="21" height="24"><use xlink:href="images/icons.svg#address"></use></svg>г. Баутми ул. Жиули Шартава 18</p>
-                    <div class="btn">
+                    <div class="btn act-btn" data-btn="popup-call-back">
                         <span>Обратный звонок</span>
                         <svg width="20" height="20"><use xlink:href="images/icons.svg#phone"></use></svg>
                     </div>
@@ -28,7 +28,7 @@
     </div>
 </div>
 
-<div class="popup-wrapper">
+<div class="popup-wrapper popup-call-back">
     <div class="popup">
         <div class="popup-inner sending">
             <div class="subtitle">
@@ -44,9 +44,10 @@
                     <label for="call-phone"></label>
                     <input name="phone" id="call-phone" pattern="(\+?\d[- .]*){7,15}" type="tel" class=""
                         placeholder="Телефон" required>
-                    <button type="submit" href="#" class="btn callback"><span>Оставить заявку</span></button>
+                    <button type="submit" href="#" class="btn" data-btn="popup-success"><span>Оставить заявку</span></button>
                 </form>
             </div>
         </div>
     </div>
 </div>
+

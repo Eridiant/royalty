@@ -1,4 +1,4 @@
-<div class="popup-inner">
+<div class="popup-inner sending">
     <div class="check">&#10003</div>
     <div class="subtitle">
         Спасибо

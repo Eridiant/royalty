@@ -64,16 +64,30 @@ window.addEventListener('load', () => {
         
     }
 
+    document.addEventListener('click', (e) => {
+        if (e.target.closest('.act-btn')) {
+            e.preventDefault();
+            let act = e.target.closest('.act-btn').dataset.btn;
+            document.querySelector(`.${act}`).classList.add('show');
+        }
+
+        if (e.target.classList.contains('show')) {
+            // document.querySelector('.show').classList.remove('show');
+            document.querySelectorAll('.show').forEach((e) => {
+                e.classList.remove('show');
+            })
+        }
+    })
     if (document.querySelector('.contacts')) {
-        
         document.forms.callBack.onsubmit = function(e) {
             e.preventDefault();
-            // console.log(this.name.value);
-            quizAjax(this.name.value, this.phone.value);
+            callBackAjax(this.name.value, this.phone.value)
+                .then(response => document.querySelector('.popup-success').classList.add('show'))
+                .catch(error => console.error('error'));
         }
     }
 
-    if (document.querySelector('.popup-wrapper')) {
+    if (document.querySelector('.popup-wrapper') && false) {
 		document.body.addEventListener('click', (e) => {
 			if (e.target.classList.contains('popup-wrapper')) {
 				document.querySelectorAll('.popup-wrapper').forEach((e) => {
@@ -257,43 +271,48 @@ function flatCurrent(i) {
     flCurr.querySelector(`[data-i="${i}"]`).classList.add('select');
 }
 
-function quizAjax(name, phone) {
-    // console.log(wrap.dataset.id);
-    let quizRequest = new XMLHttpRequest();
-    quizRequest.open("POST", '/site/callback', true);
-    quizRequest.setRequestHeader('Content-Type', 'application/json');
-    // quizRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-    quizRequest.setRequestHeader('X-CSRF-Token', yii.getCsrfToken());
-    quizRequest.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-    quizRequest.onload = function() {
-        if(quizRequest.readyState == XMLHttpRequest.DONE && quizRequest.status == 200) {
-            // rend(JSON.parse(quizRequest.responseText));
-            // rend(quizRequest.responseText);
-            // let ss = JSON.parse(quizRequest.responseText);
-            // if (ss.data.success) {
-                // console.log(quizRequest.responseText);
-                // console.log(ss.data.success);
-                document.querySelector('.popup-wrapper').classList.add('show');
-                document.querySelector('.popup-wrapper .popup').innerHTML = quizRequest.responseText;
-                document.querySelector('.popup-wrapper .popup-inner').classList.add('sending');
-                // }
-            
+function callBackAjax(name, phone) {
+    return new Promise((succeed, fail) => {
+        // console.log(wrap.dataset.id);
+        let quizRequest = new XMLHttpRequest();
+        quizRequest.open("POST", '/site/callback', true);
+        quizRequest.setRequestHeader('Content-Type', 'application/json');
+        // quizRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+        quizRequest.setRequestHeader('X-CSRF-Token', yii.getCsrfToken());
+        quizRequest.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+        quizRequest.onload = function() {
+            if(quizRequest.readyState == XMLHttpRequest.DONE && quizRequest.status == 200) {
+                // rend(JSON.parse(quizRequest.responseText));
+                // rend(quizRequest.responseText);
+                // let ss = JSON.parse(quizRequest.responseText);
+                // if (ss.data.success) {
+                    // console.log(quizRequest.responseText);
+                    // console.log(ss.data.success);
+                    // document.querySelector('.popup-wrapper').classList.add('show');
+                    // document.querySelector('.popup-wrapper .popup').innerHTML = quizRequest.responseText;
+                    // document.querySelector('.popup-wrapper .popup-inner').classList.add('sending');
+                    // }
+                    succeed(quizRequest.responseText);
 
-        } else if (quizRequest.status == 400) {
-            throw Error('Ошибка: ' + quizRequest.status);
-        } else {
-            throw Error('Ошибка, что-то пошло не так.');
+            } else if (quizRequest.status == 400) {
+                // throw Error('Ошибка: ' + quizRequest.status);
+                fail(new Error(`Request failed: ${quizRequest.status}`));
+            } else {
+                // throw Error('Ошибка, что-то пошло не так.');
+                fail(new Error(`Request failed: ${quizRequest.status}`));
+            }
         }
-    }
-    quizRequest.onerror = function() {console.log(onerror)};
-    // let data = { survey_id: quiz.dataset.id };
-    let data = { 'name':name, 'phone':phone };
+        quizRequest.onerror = function() {console.log(onerror)};
+        // let data = { survey_id: quiz.dataset.id };
+        let data = { 'name':name, 'phone':phone };
 
-    // quizRequest.send('survey_id=2&parent_id=0');
-    quizRequest.send(JSON.stringify(data));
-    // quizRequest.send(encodeURI(data));
-    // quizRequest.send(data);
-    // quizRequest.send();
+        // quizRequest.send('survey_id=2&parent_id=0');
+        quizRequest.send(JSON.stringify(data));
+        // quizRequest.send(encodeURI(data));
+        // quizRequest.send(data);
+        // quizRequest.send();
+    })
+    
 }
 
 function rend(respond) {
