@@ -95,8 +95,13 @@ $this->title = 'Royal';
 <div class="development">
     <div class="container-lg" style="max-width: 1920px; margin-left: auto; margin-right: auto">
         <div class="pattern"></div>
+        <div class="development-bg md">
+            <picture>
+                <img src="/images/index/development/dev-bg.jpg" alt="">
+            </picture>
+        </div>
         <div class="container" style="max-width: 1600px; margin-left: auto; margin-right: auto">
-            <div class="development-img">
+            <div class="development-img mdm">
                 <picture>
                     <img src="/images/index/development/dev.jpg" alt="">
                 </picture>
