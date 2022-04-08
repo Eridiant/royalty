@@ -87,6 +87,90 @@ a.desc:after {
     flex-direction: row;
 }
 
+.floor-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+.floor-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 3px;
+    transition: .3s;
+    cursor: pointer;
+    background-color: #3c8dbc60;
+    text-shadow: 1px 1px 1px #fff, -1px -1px 1px #fff, 1px -1px 1px #fff, -1px 1px 1px #fff, -1px 1px 1px #fff;
+}
+.floor-item:hover, .floor-item.active {
+    background-color: #3c8dbc;
+}
+
+.status-items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, auto));
+    /* grid-template-columns: repeat(auto-fit, minmax(.1fr, 180px)); */
+    /* grid-template-columns: repeat(auto-fill, minmax(.1fr, 180px)); */
+    /* grid-template-columns: repeat(auto-fit, minmax(auto, 180px)); */
+    /* grid-template-columns: repeat(auto-fill, minmax(80px, 180px)); */
+    /* display: flex;
+    flex-wrap: wrap;*/
+    gap: 10px;
+}
+.status-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    border-radius: 3px;
+    /* flex: 1 0 77px;
+    min-width: 77px;
+    max-width: 120px; */
+    aspect-ratio: 1;
+    transition: .3s;
+}
+.status-item[data-status="0"] {
+    background-color: #1ca32360;
+}
+.status-item[data-status="1"] {
+    background-color: #c32a2a60;
+}
+.status-item[data-status="2"] {
+    background-color: #ffe60060;
+}
+.status-flat {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 66%;
+    font-size: 40px;
+    text-shadow: 1px 1px 1px #fff, -1px -1px 1px #fff, 1px -1px 1px #fff, -1px 1px 1px #fff, -1px 1px 1px #fff;
+}
+.status-btn {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+}
+.status-btn > a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
+    text-shadow: 1px 1px 1px #fff, -1px -1px 1px #fff, 1px -1px 1px #fff, -1px 1px 1px #fff, -1px 1px 1px #fff;
+    border-radius: 3px;
+}
+.status-free {
+    background-color: #1ca323;
+}
+.status-sold {
+    background-color: #c32a2a;
+}
+.status-resr {
+    background-color: #ffe600;
+}
+
 @media(max-width:767px) {
     .nav li > form > button.logout {
         display:block;
