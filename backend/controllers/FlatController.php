@@ -124,11 +124,11 @@ class FlatController extends Controller
     {
         $fl = 1;
         for ($i=2; $i < 19; $i++) {
-            $model = new Floor();
-            $model->floor = $i;
-            $model->save();
-            if ($model->save()) {
-            // if (true) {
+            // $model = new Floor();
+            // $model->floor = $i;
+            // $model->save();
+            // if ($model->save()) {
+            if (true) {
                 for ($j=1; $j < 24; $j++) {
                     $floor = new Flat();
 
