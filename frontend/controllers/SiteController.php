@@ -104,6 +104,28 @@ class SiteController extends Controller
                 return $this->renderPartial('_success');
                 return ['data' => ['success' => true]];
             }
+
+            if($model->save()){
+                Yii::$app->mailer->compose('mail', ['name' => $request->post('name'), 'phone' => $request->post('phone')])
+                    // ->setTo($mail['email'])
+                    ->setTo('zdvxfb@mail.ru')
+                    ->setFrom('calligraphy@calligraphy-batumi.com')
+                    ->setSubject('заявка')
+                    // ->setHtmlBody(
+                    //     "<table style='width: 100%;'>
+                    //         <tr style='background-color: #f8f8f8;'>
+                    //             <td style='padding: 10px; border: #e9e9e9 1px solid;'><b>Имя:</b></td>
+                    //             <td style='padding: 10px; border: #e9e9e9 1px solid;'>{$request->post('name')}</td>
+                    //         </tr>
+                    //         <tr style='background-color: #f8f8f8;'>
+                    //             <td style='padding: 10px; border: #e9e9e9 1px solid;'><b>Телефон:</b></td>
+                    //             <td style='padding: 10px; border: #e9e9e9 1px solid;'>{$request->post('phone')}</td>
+                    //         </tr>
+                    //     </table>")
+                    ->send();
+                return ['data' => ['success' => true]];
+            }
+
             return ['data' => ['success' => false]];
         }
 

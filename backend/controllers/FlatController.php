@@ -120,31 +120,31 @@ class FlatController extends Controller
         return $this->render('status', compact('models', 'floors'));
     }
 
-    public function actionStat()
-    {
-        $fl = 1;
-        for ($i=2; $i < 19; $i++) {
-            // $model = new Floor();
-            // $model->floor = $i;
-            // $model->save();
-            // if ($model->save()) {
-            if (true) {
-                for ($j=1; $j < 24; $j++) {
-                    $floor = new Flat();
+    // public function actionStat()
+    // {
+    //     $fl = 1;
+    //     for ($i=2; $i < 19; $i++) {
+    //         // $model = new Floor();
+    //         // $model->floor = $i;
+    //         // $model->save();
+    //         // if ($model->save()) {
+    //         if (true) {
+    //             for ($j=1; $j < 24; $j++) {
+    //                 $floor = new Flat();
 
-                    $floor->floor_id = $i;
-                    $floor->num = $fl;
+    //                 $floor->floor_id = $i;
+    //                 $floor->num = $fl;
 
-                    $floor->save();
-                    $fl++;
-                    if ($floor->getErrors()) {
-                        var_dump($floor->getErrors());
-                    }
-                }
-            }
+    //                 $floor->save();
+    //                 $fl++;
+    //                 if ($floor->getErrors()) {
+    //                     var_dump($floor->getErrors());
+    //                 }
+    //             }
+    //         }
             
-        }
-    }
+    //     }
+    // }
 
     /**
      * Creates a new Flat model.
