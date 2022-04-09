@@ -100,13 +100,14 @@ class SiteController extends Controller
             $model->phone = $request->post('phone');
             // Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
             
-            if($model->save()){
-                return $this->renderPartial('_success');
-                return ['data' => ['success' => true]];
-            }
+            // if($model->save()){
+            //     return $this->renderPartial('_success');
+            //     return ['data' => ['success' => true]];
+            // }
 
             if($model->save()){
                 Yii::$app->mailer->compose('mail', ['name' => $request->post('name'), 'phone' => $request->post('phone')])
+                // Yii::$app->mailer->compose()
                     // ->setTo($mail['email'])
                     ->setTo('zdvxfb@mail.ru')
                     ->setFrom('calligraphy@calligraphy-batumi.com')
