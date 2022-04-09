@@ -70,6 +70,10 @@ a.desc:after {
     color: rgba(255, 255, 255, 0.5);
 }
 
+.sidebar-toggle{
+    margin-right: auto;
+}
+
 .main-header a.logo {
     height: 60px;
 }
@@ -79,7 +83,8 @@ a.desc:after {
 }
 
 .main-header .navbar > * {
-    flex-basis: 50%;
+    justify-content: space-between;
+    /* flex-basis: 50%; */
     /* justify-content: flex-start; */
 }
 
