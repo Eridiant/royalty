@@ -98,7 +98,7 @@ class SiteController extends Controller
             $model->lang = Yii::$app->language;
             $model->name = $request->post('name');
             $model->phone = $request->post('phone');
-            // Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
+            Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
             
             // if($model->save()){
             //     return $this->renderPartial('_success');
