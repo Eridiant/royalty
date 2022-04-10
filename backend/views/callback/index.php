@@ -18,22 +18,26 @@ $this->params['breadcrumbs'][] = $this->title;
         'dataProvider' => $dataProvider,
         // 'filterModel' => $searchModel,
         'columns' => [
-            ['class' => 'yii\grid\SerialColumn'],
+            // ['class' => 'yii\grid\SerialColumn'],
 
             // 'id',
             [
                 'attribute'=>'lang',
                 'label'=>'Локаль',
-                'headerOptions' => ['width' => '5%'],
+                'headerOptions' => ['width' => '5%', 'class' => 'dfm'],
+                'contentOptions' => ['class' => 'dfm'],
             ],
             [
                 'attribute'=>'name',
                 'label'=>'Имя',
                 'headerOptions' => ['width' => '7%'],
             ],
-            'email:email',
             'phone',
-            'country',
+            [
+                'attribute' => 'country',
+                'headerOptions' => ['class' => 'dfm'],
+                'contentOptions' => ['class' => 'dfm'],
+            ],
             [
                 'label' => 'Статус',
                 'attribute'=>'viewed',
@@ -49,8 +53,11 @@ $this->params['breadcrumbs'][] = $this->title;
             // 'subject',
             // 'body:ntext',
             //'viewed',
-            'created_at',
-
+            [
+                'attribute' => 'created_at',
+                'headerOptions' => ['class' => 'dfm'],
+                'contentOptions' => ['class' => 'dfm'],
+            ],
             [
                 'class' => 'yii\grid\ActionColumn',
                 'header'=>'Действия', 

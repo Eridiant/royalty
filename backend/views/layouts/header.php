@@ -48,7 +48,7 @@ use yii\helpers\Html;
                             <?php endforeach; ?>
                         </li>
                         <li class="footer">
-                            <?= Html::a('Посмотреть все сообщения', '/admin/feedback/index') ?>
+                            <?= Html::a('Посмотреть все сообщения', '/admin/callback/index') ?>
                         </li>
                     </ul>
                 </li>

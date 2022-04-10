@@ -183,6 +183,7 @@ a.desc:after {
         width: 100%;
         padding: 10px 0;
     }
+    .dfm {display: none;}
 }
 
 .nav > li > form > button.logout:focus,
