@@ -9,10 +9,11 @@ use Yii;
  *
  * @property int $id
  * @property string $name
- * @property string $email
  * @property string $phone
+ * @property string|null $email
  * @property string|null $subject
  * @property string|null $lang
+ * @property string|null $country
  * @property int|null $viewed
  * @property string $created_at
  */
@@ -35,8 +36,8 @@ class Callback extends \yii\db\ActiveRecord
             [['name', 'phone'], 'required'],
             [['viewed'], 'integer'],
             [['created_at'], 'safe'],
-            [['name', 'subject'], 'string', 'max' => 255],
-            [['email', 'phone', 'lang'], 'string', 'max' => 32],
+            [['name', 'subject', 'country'], 'string', 'max' => 255],
+            [['phone', 'email', 'lang'], 'string', 'max' => 32],
         ];
     }
 
@@ -48,10 +49,11 @@ class Callback extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'name' => 'Name',
-            'email' => 'Email',
             'phone' => 'Phone',
+            'email' => 'Email',
             'subject' => 'Subject',
             'lang' => 'Lang',
+            'country' => 'Country',
             'viewed' => 'Viewed',
             'created_at' => 'Created At',
         ];

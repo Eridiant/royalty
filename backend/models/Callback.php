@@ -13,6 +13,7 @@ use Yii;
  * @property string|null $email
  * @property string|null $subject
  * @property string|null $lang
+ * @property string|null $country
  * @property int|null $viewed
  * @property string $created_at
  */
@@ -35,7 +36,7 @@ class Callback extends \yii\db\ActiveRecord
             [['name', 'phone'], 'required'],
             [['viewed'], 'integer'],
             [['created_at'], 'safe'],
-            [['name', 'subject'], 'string', 'max' => 255],
+            [['name', 'subject', 'country'], 'string', 'max' => 255],
             [['phone', 'email', 'lang'], 'string', 'max' => 32],
         ];
     }
@@ -52,6 +53,7 @@ class Callback extends \yii\db\ActiveRecord
             'email' => 'Email',
             'subject' => 'Subject',
             'lang' => 'Lang',
+            'country' => 'Country',
             'viewed' => 'Viewed',
             'created_at' => 'Created At',
         ];
