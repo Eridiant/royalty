@@ -1,4 +1,5 @@
 <?php
+use yii\helpers\Url;
 use yii\helpers\Html;
 
 /* @var $this \yii\web\View */
@@ -20,82 +21,76 @@ use yii\helpers\Html;
             <ul class="nav navbar-nav">
 
                 <!-- Messages: style can be found in dropdown.less-->
+                <?php
+                    $messages = \backend\models\Callback::find()->where(['viewed' => 0])->orderBy(['created_at' => SORT_DESC])->all();
+                ?>
                 <li class="dropdown messages-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="fa fa-envelope-o"></i>
-                        <span class="label label-success">4</span>
+                        <span class="label label-success"><?= count($messages); ?></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li class="header">You have 4 messages</li>
+                        <li class="header">У вас <?= count($messages); ?> новых сообщения</li>
                         <li>
-                            <!-- inner menu: contains the actual data -->
-                            <ul class="menu">
-                                <li><!-- start message -->
-                                    <a href="#">
-                                        <div class="pull-left">
-                                            <img src="<?= $directoryAsset ?>/img/user2-160x160.jpg" class="img-circle" alt="User Image"/>
-                                        </div>
+                            <?php foreach ($messages as $message): ?>
+                                <ul class="menu">
+                                    <li><!-- start message -->
+                                    <a href="<?=Url::toRoute(['/feedback/views', 'id' => $message->id]) ?>">
                                         <h4>
-                                            Support Team
-                                            <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                                            Имя <?= $message->name; ?>
+                                            <small><i class="fa fa-clock-o"></i><?= Yii::$app->formatter->asRelativeTime($message->created_at); ?></small>
                                         </h4>
-                                        <p>Why not buy a new awesome theme?</p>
+                                        <p><?= $message->phone; ?></p>
                                     </a>
-                                </li>
-                                <!-- end message -->
-                                <li>
-                                    <a href="#">
-                                        <div class="pull-left">
-                                            <img src="<?= $directoryAsset ?>/img/user3-128x128.jpg" class="img-circle" alt="user image"/>
-                                        </div>
-                                        <h4>
-                                            AdminLTE Design Team
-                                            <small><i class="fa fa-clock-o"></i> 2 hours</small>
-                                        </h4>
-                                        <p>Why not buy a new awesome theme?</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="pull-left">
-                                            <img src="<?= $directoryAsset ?>/img/user4-128x128.jpg" class="img-circle" alt="user image"/>
-                                        </div>
-                                        <h4>
-                                            Developers
-                                            <small><i class="fa fa-clock-o"></i> Today</small>
-                                        </h4>
-                                        <p>Why not buy a new awesome theme?</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="pull-left">
-                                            <img src="<?= $directoryAsset ?>/img/user3-128x128.jpg" class="img-circle" alt="user image"/>
-                                        </div>
-                                        <h4>
-                                            Sales Department
-                                            <small><i class="fa fa-clock-o"></i> Yesterday</small>
-                                        </h4>
-                                        <p>Why not buy a new awesome theme?</p>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <div class="pull-left">
-                                            <img src="<?= $directoryAsset ?>/img/user4-128x128.jpg" class="img-circle" alt="user image"/>
-                                        </div>
-                                        <h4>
-                                            Reviewers
-                                            <small><i class="fa fa-clock-o"></i> 2 days</small>
-                                        </h4>
-                                        <p>Why not buy a new awesome theme?</p>
-                                    </a>
-                                </li>
-                            </ul>
+                                    </li>
+                                    <!-- end message -->
+                                </ul>
+                            <?php endforeach; ?>
                         </li>
-                        <li class="footer"><a href="#">See All Messages</a></li>
+                        <li class="footer">
+                            <?= Html::a('Посмотреть все сообщения', '/admin/feedback/index') ?>
+                        </li>
                     </ul>
                 </li>
+                <li class="dropdown notifications-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-bell-o"></i>
+                        <!-- <span class="label label-warning">10</span> -->
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="header">You have 0 notifications</li>
+                        <li>
+                            <!-- inner menu: contains the actual data -->
+                            <!-- <ul class="menu">
+                                <li>
+                                    <a href="#">
+                                        <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                                    </a>
+                                </li>
+                            </ul> -->
+                        </li>
+                        <li class="footer"><a href="#">View all</a></li>
+                    </ul>
+                </li>
+                
+                <!-- User Account: style can be found in dropdown.less -->
+
+                <!--Блок языковых настроек-->
+                <!-- <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?//= strtoupper(Language::getCurrent()->key); ?><span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <?php //foreach ($languages as $language) : ?>
+                            <li>
+                                <a href="<?//= Url::to(['/language/change', 'id' => $language->id]) ?>"><?//= strtoupper($language->key) ?></a>
+                            </li>
+                        <?php //endforeach; ?>
+                    </ul>
+                </li> -->
+                <!--.Блок языковых настроек-->
+
+                <!-- <li>
+                    <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>
+                </li> -->
             </ul>
         </div>
     </nav>

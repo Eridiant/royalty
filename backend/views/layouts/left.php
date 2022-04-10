@@ -22,6 +22,7 @@
                             ['label' => 'Квартиры', 'icon' => 'wpforms', 'url' => ['/flat/status'],],
                         ],
                     ],
+                    ['label' => 'Заявки', 'icon' => 'envelope-open-o', 'url' => ['/callback/index']],
                 ],
             ]
         ) ?>

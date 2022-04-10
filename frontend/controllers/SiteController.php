@@ -18,6 +18,7 @@ use frontend\models\Callback;
 use frontend\models\Floor;
 use frontend\models\Flat;
 use frontend\models\ContactForm;
+use frontend\models\SxGeo;
 
 /**
  * Site controller
@@ -85,6 +86,13 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
+    public function country($ip)
+    {
+        $country = new SxGeo(Yii::getAlias('@webroot') . '/dat/SxGeo.dat', SXGEO_BATCH | SXGEO_MEMORY);
+
+        return $country;
+    } 
+
     public function actionCallback()
     {
 
@@ -98,6 +106,7 @@ class SiteController extends Controller
             $model->lang = Yii::$app->language;
             $model->name = $request->post('name');
             $model->phone = $request->post('phone');
+            $model->country = country($request->userIP);
             Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
             
             // if($model->save()){

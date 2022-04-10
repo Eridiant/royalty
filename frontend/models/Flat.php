@@ -30,7 +30,7 @@ class Flat extends \yii\db\ActiveRecord
         return [
             [['floor_id'], 'required'],
             [['floor_id'], 'integer'],
-            [['floor_id'], 'exist', 'skipOnError' => true, 'targetClass' => Floor::className(), 'targetAttribute' => ['floor_id' => 'id']],
+            [['floor_id'], 'exist', 'skipOnError' => true, 'targetClass' => Floor::class, 'targetAttribute' => ['floor_id' => 'id']],
         ];
     }
 
@@ -52,6 +52,6 @@ class Flat extends \yii\db\ActiveRecord
      */
     public function getFloor()
     {
-        return $this->hasOne(Floor::className(), ['id' => 'floor_id']);
+        return $this->hasOne(Floor::class, ['id' => 'floor_id']);
     }
 }

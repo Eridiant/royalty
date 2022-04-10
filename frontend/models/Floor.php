@@ -54,6 +54,6 @@ class Floor extends \yii\db\ActiveRecord
      */
     public function getFlats()
     {
-        return $this->hasMany(Flat::className(), ['floor_id' => 'id']);
+        return $this->hasMany(Flat::class, ['floor_id' => 'id']);
     }
 }
