@@ -1,4 +1,5 @@
 <?php
+namespace frontend\models;
 /***************************************************************************\
 | Sypex Geo                  version 2.2.3                                  |
 | (c)2006-2014 zapimir       zapimir@zapimir.net       http://sypex.net/    |

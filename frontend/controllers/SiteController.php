@@ -86,11 +86,11 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
-    public function country($ip)
+    public function countries($ip)
     {
         $country = new SxGeo(Yii::getAlias('@webroot') . '/dat/SxGeo.dat', SXGEO_BATCH | SXGEO_MEMORY);
 
-        return $country;
+        return $country->getCountry($ip);
     } 
 
     public function actionCallback()
@@ -106,7 +106,7 @@ class SiteController extends Controller
             $model->lang = Yii::$app->language;
             $model->name = $request->post('name');
             $model->phone = $request->post('phone');
-            $model->country = country($request->userIP);
+            $model->country = $this->country($request->userIP);
             Yii::$app->response->format = \yii\web\Response::FORMAT_JSON;
             
             // if($model->save()){
