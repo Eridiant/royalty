@@ -27,7 +27,8 @@ $this->title = 'Royal';
                         <object type="image/svg+xml" data="/images/svg/royal-bg.svg">
                             <img src="/images/svg/royal-bg.svg" alt="" />
                         </object>
-                        <p>Выберите квартиру своей мечты на берегу моря</p>
+                        <!-- <p>Выберите квартиру своей мечты на берегу моря</p> -->
+                        <p><?=Yii::$app->translate->getT("Выберите квартиру своей мечты на берегу моря")?></p>
                     </div>
                 </div>
             </div>
@@ -52,7 +53,7 @@ $this->title = 'Royal';
                         <object type="image/svg+xml" data="/images/svg/royal.svg">
                             <img src="/images/svg/royal.svg" alt="" />
                         </object>
-                        <p>Выберите квартиру своей мечты на берегу моря</p>
+                        <p><?=Yii::$app->translate->getT("Выберите квартиру своей мечты на берегу моря")?></p>
                     </div>
                 </div>
                 <div class="header-footer-wtapper dt">

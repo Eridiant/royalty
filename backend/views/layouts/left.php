@@ -23,6 +23,12 @@
                         ],
                     ],
                     ['label' => 'Заявки', 'icon' => 'envelope-open-o', 'url' => ['/callback/index']],
+                    [
+                        'label' => 'Локализация',
+                        'icon' => 'language',
+                        'url' => '/admin/language/languages/active',
+                        'permission' => ['canSupper', 'canAdmin']
+                    ],
                 ],
             ]
         ) ?>

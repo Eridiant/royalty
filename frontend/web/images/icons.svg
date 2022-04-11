@@ -207,14 +207,15 @@
         <path d="M15 8.5L0.749999 16.7272L0.75 0.272758L15 8.5Z" fill="currentColor"/>
     </symbol>
 
-    <symbol id="fff" width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <g></g>
+    <symbol id="fff" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" >
+        <g>
+            
+        </g>
     </symbol>
 
     <symbol id="fff" width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g></g>
     </symbol>
-
 </svg>
 
 
