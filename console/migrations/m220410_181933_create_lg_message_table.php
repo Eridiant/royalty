@@ -38,10 +38,10 @@ class m220410_181933_create_lg_message_table extends Migration
      */
     public function safeDown()
     {
-        $this->dropForeignKey(
-            'language-lg_message',
-            '{{%lg_message}}',
-        );
+        // $this->dropForeignKey(
+        //     'language-lg_message',
+        //     '{{%lg_message}}',
+        // );
         $this->dropTable('{{%lg_message}}');
     }
 }
