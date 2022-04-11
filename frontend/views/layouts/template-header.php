@@ -10,8 +10,24 @@
                 <div class="nav-phone radius">
                     <svg width="19" height="19"><use xlink:href="/images/icons.svg#phone"></use></svg>
                 </div>
-                <div class="nav-lang radius">
-                    <a href="#">ru</a>
+                <div class="nav-lang">
+                    <?php $model = \backend\modules\language\models\Language::find()->where(['deleted_at' => null])->all(); ?>
+                    <?php foreach ($model as $lang): ?>
+                        <?php if ($lang->key == $currentLang): ?>
+                            <a class="radius nav-lang-current" href="/site/set-locale?locale=<?=$lang->key?>">
+                                <?= $lang->code; ?>
+                            </a>
+                        <?php endif; ?>
+                    <?php endforeach; ?>
+                    <div class="nav-lang-choose">
+                        <?php foreach ($model as $lang): ?>
+                            <?php if ($lang->key != $currentLang): ?>
+                                <a class="radius" href="/site/set-locale?locale=<?=$lang->key?>">
+                                    <?= $lang->code; ?>
+                                </a>
+                            <?php endif; ?>
+                        <?php endforeach; ?>
+                    </div>
                 </div>
                 <a class="sm" href="tel:+70988900043">+7 (098) 890-00-43</a>
                 <a class="sm" href="#">

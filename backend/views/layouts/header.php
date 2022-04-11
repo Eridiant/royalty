@@ -1,6 +1,7 @@
 <?php
 use yii\helpers\Url;
 use yii\helpers\Html;
+use backend\modules\language\models\Language;
 
 /* @var $this \yii\web\View */
 /* @var $content string */
@@ -76,16 +77,16 @@ use yii\helpers\Html;
                 <!-- User Account: style can be found in dropdown.less -->
 
                 <!--Блок языковых настроек-->
-                <!-- <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?//= strtoupper(Language::getCurrent()->key); ?><span class="caret"></span></a>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown"><?= strtoupper(Language::getCurrent()->key); ?><span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <?php //foreach ($languages as $language) : ?>
+                        <?php foreach ($languages as $language) : ?>
                             <li>
-                                <a href="<?//= Url::to(['/language/change', 'id' => $language->id]) ?>"><?//= strtoupper($language->key) ?></a>
+                                <a href="<?= Url::to(['/language/change', 'id' => $language->id]) ?>"><?= strtoupper($language->key) ?></a>
                             </li>
-                        <?php //endforeach; ?>
+                        <?php endforeach; ?>
                     </ul>
-                </li> -->
+                </li>
                 <!--.Блок языковых настроек-->
 
                 <!-- <li>

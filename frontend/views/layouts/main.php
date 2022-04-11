@@ -11,6 +11,8 @@ use yii\bootstrap4\Nav;
 use yii\bootstrap4\NavBar;
 
 AppAsset::register($this);
+
+$currentLang = Yii::$app->language;
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
