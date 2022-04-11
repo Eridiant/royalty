@@ -37,10 +37,10 @@ class m220410_182000_create_lg_source_message_table extends Migration
      */
     public function safeDown()
     {
-        $this->dropForeignKey(
-            'fk_source_message-message',
-            '{{%lg_message}}',
-        );
+        // $this->dropForeignKey(
+        //     'fk_source_message-message',
+        //     '{{%lg_message}}',
+        // );
         $this->dropTable('{{%lg_source_message}}');
     }
 }
