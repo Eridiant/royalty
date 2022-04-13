@@ -15,7 +15,7 @@ class m220410_181933_create_lg_message_table extends Migration
         $this->createTable('{{%lg_message}}', [
             'id' => $this->integer(11)->notNull(),
             'language' => $this->string(16)->notNull(),
-            'translation' => $this->string(16),
+            'translation' => $this->text(),
         ]);
         $this->addPrimaryKey('id-language_pk', '{{%lg_message}}', ['id', 'language']);
         $this->createIndex(

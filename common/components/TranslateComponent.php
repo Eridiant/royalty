@@ -9,10 +9,10 @@ class TranslateComponent extends Component
 {
     public function getT($key)
     {
-        if (Yii::$app->user->isGuest) {
-            return Yii::t('app', $key);
+        if (!Yii::$app->user->isGuest && Yii::$app->language != 'ru-RU') {
+            return "<span class='translate' data-translate='" . $key . "'>" . Yii::t('frontend', $key) . "</span>";
         } else {
-            return "<p class='translate' data-translate='" . $key . "'>" . Yii::t('frontend', $key) . "</p>";
+            return Yii::t('frontend', $key);
         }
     }
 }

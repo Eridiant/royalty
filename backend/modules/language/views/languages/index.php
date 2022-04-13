@@ -76,6 +76,9 @@ use yii\widgets\Pjax;
     </p>
     <div class="table-admin-container">
         <h3>Translations</h3>
+        <!-- <p style="display: inline-block">
+            <a class="btn btn-primary" href="/site/login">Перевод на сайте</a>
+        </p> -->
         <div class="table-content">
             <?php Pjax::begin(); ?>
             <?php // echo $this->render('_search', ['model' => $searchModel]); ?>

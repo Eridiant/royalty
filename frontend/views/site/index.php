@@ -108,7 +108,7 @@ $this->title = 'Royal';
                 </picture>
             </div>
             <div class="development-wrapper">
-                <p class="cap">о жилом комплексе</p>
+                <p class="cap"><?=Yii::$app->translate->getT("о жилом комплексе")?></p>
                 <p class="title">Royal development</p>
                 <div class="development-text">
                     <p>

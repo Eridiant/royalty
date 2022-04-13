@@ -43,13 +43,15 @@ class LanguagesController extends Controller
             'query' => Language::find()->where(['IS', 'deleted_at', null]),
         ]);
         $searchModel = new TrasnlationsSearch();
-        $dataProvider2 = $searchModel->search($this->request->queryParams);
-        // $dataProvider2 = new ActiveDataProvider([
-        //     'query' => Trasnlations::find(),
-        //     'pagination' => [
-        //       'pageSize' => 20,
-        //     ],
-        // ]);
+        
+        // $dataProvider2 = $searchModel->search($this->request->queryParams);
+        $dataProvider2 = new ActiveDataProvider([
+            'query' => Trasnlations::find(),
+            'pagination' => [
+                'pageSize' => 20,
+            ],
+        ]);
+
         return $this->render('index', [
             'dataProvider' => $dataProvider,
             'dataProvider2' => $dataProvider2,
@@ -216,7 +218,7 @@ class LanguagesController extends Controller
             'model' => $translation,
         ]);
     }
-    
+
     public function actionUpdateBd() {
         $language = Language::find()->select('key')->limit(1)->one();
         $i = 0;

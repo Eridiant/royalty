@@ -41,7 +41,7 @@ $currentLang = Yii::$app->language;
     </div>
     <div class="admin-form">
         <p class="admin-source-text">Ваша заявка отправлена, мы перезвоним</p>
-        <form class="form" action="#" method="post">
+        <form name="trslt" class="form" action="#" method="post">
             <textarea name="translate" placeholder="translate" class="translation"></textarea>
             <button class="btn" type="submit">отправить</button>
         </form>
