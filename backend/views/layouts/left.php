@@ -19,7 +19,7 @@
                             ['label' => 'Этажи', 'icon' => 'building', 'url' => ['/floor/index'],],
                             // ['label' => 'Этажи', 'icon' => 'building', 'url' => ['/floor/multy', 'block' => 'a'],],
                             ['label' => 'Квартиры', 'icon' => 'wpforms', 'url' => ['/flat/index'],],
-                            ['label' => 'Квартиры', 'icon' => 'wpforms', 'url' => ['/flat/status'],],
+                            ['label' => 'Статус', 'icon' => 'wpforms', 'url' => ['/flat/status'],],
                         ],
                     ],
                     ['label' => 'Заявки', 'icon' => 'envelope-open-o', 'url' => ['/callback/index']],

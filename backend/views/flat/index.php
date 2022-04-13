@@ -35,7 +35,7 @@ $this->params['breadcrumbs'][] = $this->title;
             //'balcony_area',
             //'status',
             [
-                'class' => ActionColumn::className(),
+                'class' => ActionColumn::class,
                 'urlCreator' => function ($action, Flat $model, $key, $index, $column) {
                     return Url::toRoute([$action, 'id' => $model->id]);
                 }
