@@ -160,14 +160,14 @@ class SiteController extends Controller
 
             // $model = Floor::findOne(['id' => $request->post('floor')]);
             $model = Flat::find()
-                    ->where('floor_id=:floor_id')
-                    ->addParams([':floor_id' => 1])
+                    ->where('id=:id')
+                    ->addParams([':id' => 1])
                     ->asArray()
                     ->all();
 
             $files = \yii\helpers\FileHelper::findFiles("images/del/flat/1");
-            
-            return $this->renderPartial('_floor', compact('files'));
+
+            return $this->renderPartial('_floor', compact('files', 'model'));
             // return $this->renderAjax('_floor', compact('model'));
             // return $this->renderAjax('_success');
         }

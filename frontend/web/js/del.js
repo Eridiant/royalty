@@ -105,7 +105,7 @@ window.addEventListener('load', () => {
         building.addEventListener('mouseover', (e) => {
 
             if (e.target.closest('.area')) {
-                console.log(e.target.dataset.i);
+                // console.log(e.target.dataset.i);
                 document.querySelector('.fl').innerHTML = e.target.dataset.i;
             }
         })
@@ -113,7 +113,16 @@ window.addEventListener('load', () => {
         building.addEventListener('click', (e) => {
             if (e.target.closest('.area')) {
                 floorNum = e.target.dataset.i;
-                floorAjax(floorNum);
+                floorAjax(floorNum)
+                .then (response => {
+                    console.log(response);
+                    document.querySelector('#plans').innerHTML = response;
+                    if ( document.querySelector('.floor') ) {
+                        document.querySelector('.plans-bg').classList.add('dn');
+                        document.querySelector('.building').classList.add('dn');
+                        setTimeout(flr, 1000);
+                    }
+                })
                 floorSelected(floorNum);
             }
         })
@@ -133,46 +142,41 @@ function floorSelected(floorNum) {
 }
 
 function floorAjax(floor) {
-    // console.log(wrap.dataset.id);
-    let quizRequest = new XMLHttpRequest();
-    quizRequest.open("POST", '/site/floor', true);
-    quizRequest.setRequestHeader('Content-Type', 'application/json');
-    // quizRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-    quizRequest.setRequestHeader('X-CSRF-Token', yii.getCsrfToken());
-    quizRequest.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
-    quizRequest.onload = function() {
-        if(quizRequest.readyState == XMLHttpRequest.DONE && quizRequest.status == 200) {
-            // rend(JSON.parse(quizRequest.responseText));
-            // rend(quizRequest.responseText);
-            // let ss = JSON.parse(quizRequest.responseText);
-            // if (ss.data.success) {
-                // console.log(quizRequest.responseText);
-                // console.log(ss.data.success);
+    return new Promise((succeed, fail) => {
+        // console.log(wrap.dataset.id);
+        let quizRequest = new XMLHttpRequest();
+        quizRequest.open("POST", '/site/floor', true);
+        quizRequest.setRequestHeader('Content-Type', 'application/json');
+        // quizRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
+        quizRequest.setRequestHeader('X-CSRF-Token', yii.getCsrfToken());
+        quizRequest.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
+        quizRequest.onload = function() {
+            if(quizRequest.readyState == XMLHttpRequest.DONE && quizRequest.status == 200) {
+                // rend(JSON.parse(quizRequest.responseText));
+                // rend(quizRequest.responseText);
+                // let ss = JSON.parse(quizRequest.responseText);
+                // if (ss.data.success) {
+                    // console.log(quizRequest.responseText);
+                    // console.log(ss.data.success);
+                    succeed(quizRequest.responseText);
+                    
 
-                document.querySelector('#plans').innerHTML = quizRequest.responseText;
-                // document.querySelector('.popup-wrapper .popup-inner').classList.add('sending');
-                // }
-                if ( document.querySelector('.floor') ) {
-                    document.querySelector('.plans-bg').classList.add('dn');
-                    document.querySelector('.building').classList.add('dn');
-                    setTimeout(flr, 1000);
-                }
-
-        } else if (quizRequest.status == 400) {
-            throw Error('Ошибка: ' + quizRequest.status);
-        } else {
-            throw Error('Ошибка, что-то пошло не так.');
+            } else if (quizRequest.status == 400) {
+                fail(new Error(`Request failed: ${quizRequest.status}`));
+            } else {
+                fail(new Error('Ошибка, что-то пошло не так.'));
+            }
         }
-    }
-    quizRequest.onerror = function() {console.log(onerror)};
-    // let data = { survey_id: quiz.dataset.id };
-    let data = { 'floor':floor };
+        quizRequest.onerror = function() {console.log(onerror)};
+        // let data = { survey_id: quiz.dataset.id };
+        let data = { 'floor':floor };
 
-    // quizRequest.send('survey_id=2&parent_id=0');
-    quizRequest.send(JSON.stringify(data));
-    // quizRequest.send(encodeURI(data));
-    // quizRequest.send(data);
-    // quizRequest.send();
+        // quizRequest.send('survey_id=2&parent_id=0');
+        quizRequest.send(JSON.stringify(data));
+        // quizRequest.send(encodeURI(data));
+        // quizRequest.send(data);
+        // quizRequest.send();
+    })
 }
 
 

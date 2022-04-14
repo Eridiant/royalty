@@ -16,7 +16,7 @@ window.addEventListener('load', () => {
         e.preventDefault();
         document.querySelector('.current-translation').innerHTML = this.translate.value;
         document.querySelector('.current-translation').classList.remove('current-translation');
-        form.classList.remove('show');
+        form.classList.remove('active');
         trsltAjax(document.querySelector('.admin-source-text').innerHTML, this.translate.value)
             .then(response => document.querySelector('.translation').innerHTML = '')
             .catch(error => console.error('error'));
@@ -39,7 +39,7 @@ function trsltAjax(key, translation) {
                 fail(new Error(`Request failed: ${quizRequest.status}`));
             } else {
                 // throw Error('Ошибка, что-то пошло не так.');
-                fail(new Error(`Request failed: ${quizRequest.status}`));
+                fail(new Error('Ошибка, что-то пошло не так.'));
             }
         }
         quizRequest.onerror = function() {console.log(onerror)};
