@@ -208,13 +208,13 @@ $this->title = 'Royal';
                     <div class="location-slider-wrapper">
                         <div class="location-slider swiper">
                             <div class="swiper-wrapper">
-                            <div class="swiper-slide">
+                                <div class="swiper-slide">
                                     <div class="location-slider-img">
                                         <picture>
                                             <img src="/images/index/location/loc-1.jpg">
                                         </picture>
                                     </div>
-                                    <p>Колесо обозрения</p>
+                                    <p>Пляж</p>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
@@ -222,7 +222,7 @@ $this->title = 'Royal';
                                             <img src="/images/index/location/loc-2.jpg">
                                         </picture>
                                     </div>
-                                    <p>Памятник «Али и Нино»</p>
+                                    <p>Башня Азбуки</p>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
@@ -246,7 +246,7 @@ $this->title = 'Royal';
                                             <img src="/images/index/location/loc-5.jpg">
                                         </picture>
                                     </div>
-                                    <p>Памятник «Али и Нино»</p>
+                                    <p>Батуми вечер</p>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
@@ -254,7 +254,7 @@ $this->title = 'Royal';
                                             <img src="/images/index/location/loc-6.jpg">
                                         </picture>
                                     </div>
-                                    <p>Памятник «Али и Нино»</p>
+                                    <p>Вид с моря</p>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
@@ -262,7 +262,7 @@ $this->title = 'Royal';
                                             <img src="/images/index/location/loc-7.jpg">
                                         </picture>
                                     </div>
-                                    <p>Памятник «Али и Нино»</p>
+                                    <p>Батуми ночью</p>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
@@ -270,7 +270,7 @@ $this->title = 'Royal';
                                             <img src="/images/index/location/loc-8.jpg">
                                         </picture>
                                     </div>
-                                    <p>Памятник «Али и Нино»</p>
+                                    <p>Площадь Европы</p>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
@@ -278,7 +278,7 @@ $this->title = 'Royal';
                                             <img src="/images/index/location/loc-9.jpg">
                                         </picture>
                                     </div>
-                                    <p>Памятник «Али и Нино»</p>
+                                    <p>Дом Юстиции</p>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
@@ -286,7 +286,7 @@ $this->title = 'Royal';
                                             <img src="/images/index/location/loc-10.jpg">
                                         </picture>
                                     </div>
-                                    <p>Памятник «Али и Нино»</p>
+                                    <p>Колесо обозрения</p>
                                 </div>
                             </div>
                         </div>
@@ -403,10 +403,14 @@ $this->title = 'Royal';
                     <div class="cap">квартиры</div>
                     <div class="apartments-desc">
                         <p class="current" data-num="0">
-                            Повседневная практика показывает, что начало повседневной работы по формированию позиции обеспечивает широкому кругу (специалистов) участие в формировании новых предложений. Разнообразный и богатый опыт консультация с широким активом позволяет оценить значение существенных 
+                            Материалы в отделке использовались натуральные и экологичные —  такие как камень, дерево, отделочные смехи. Минималистское пространство не будет отвлекать вас от пейзажа за окном.
                         </p>
-                        <p data-num="1">22222222222222222222 2222222222222222 2 222222222222222 2 222222222</p>
-                        <p data-num="2">3333 3 33333333333 3 3 33333333333333 3333333333333</p>
+                        <p data-num="1">
+                            Материалы в отделке использовались натуральные и экологичные —  такие как камень, дерево, отделочные смехи. Минималистское пространство не будет отвлекать вас от пейзажа за окном.
+                        </p>
+                        <p data-num="2">
+                            Материалы в отделке использовались натуральные и экологичные —  такие как камень, дерево, отделочные смехи. Минималистское пространство не будет отвлекать вас от пейзажа за окном.
+                        </p>
                     </div>
                 </div>
                 <a href="<?= Url::toRoute('/site/plans') ?>" class="apartments-btn btn">

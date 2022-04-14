@@ -5,7 +5,7 @@ window.addEventListener('load', () => {
         
         if (target.closest('.translate')) {
             console.log(target);
-            form.classList.add('show');
+            form.classList.add('active');
             document.querySelector('.admin-source-text').innerHTML = target.closest('.translate').dataset.translate;
             document.querySelector('.translation').innerHTML = target.closest('.translate').innerHTML;
             target.closest('.translate').classList.add('current-translation');
