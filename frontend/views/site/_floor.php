@@ -63,7 +63,7 @@
                     </div>
                     <div class="flat-wrapper">
                         <div class="flat-logo">
-                            <object id="floor" type="image/svg+xml" data="/images/svg/royal-build-grd.svg">
+                            <object type="image/svg+xml" data="/images/svg/royal-build-grd.svg">
                                 <img src="/images/svg/royal-build-grd.svg" alt="" />
                             </object>
                         </div>

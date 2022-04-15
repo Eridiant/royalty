@@ -52,7 +52,7 @@ window.addEventListener('load', () => {
                 floorSelected(floorNum);
             }
             if (target.closest('.next') && floorNum > min) {
-                console.log('next');
+                // console.log('next');
                 num.innerHTML = --floorNum;
                 floorSelected(floorNum);
             }
@@ -113,16 +113,17 @@ window.addEventListener('load', () => {
         building.addEventListener('click', (e) => {
             if (e.target.closest('.area')) {
                 floorNum = e.target.dataset.i;
-                floorAjax(floorNum)
-                .then (response => {
-                    console.log(response);
-                    document.querySelector('#plans').innerHTML = response;
-                    if ( document.querySelector('.floor') ) {
-                        document.querySelector('.plans-bg').classList.add('dn');
-                        document.querySelector('.building').classList.add('dn');
-                        setTimeout(flr, 1000);
-                    }
-                })
+                let data = { 'floor':floorNum }
+                floorAjax(data)
+                    .then (response => {
+                        // console.log(JSON.parse(response).data.model);
+                        document.querySelector('#plans').innerHTML = JSON.parse(response).data.rend;
+                        if ( document.querySelector('.floor') ) {
+                            document.querySelector('.plans-bg').classList.add('dn');
+                            document.querySelector('.building').classList.add('dn');
+                            flr(JSON.parse(response).data.model);
+                        }
+                    })
                 floorSelected(floorNum);
             }
         })
@@ -132,8 +133,8 @@ window.addEventListener('load', () => {
 
 function floorSelected(floorNum) {
     let buildCont = document.querySelector('#building').contentDocument;
-    console.log(buildCont);
-    console.log(buildCont.querySelector('.selected'));
+    // console.log(buildCont);
+    // console.log(buildCont.querySelector('.selected'));
     
     if (buildCont.querySelector('.selected')) {
         buildCont.querySelector('.selected').classList.remove('selected');
@@ -141,7 +142,7 @@ function floorSelected(floorNum) {
     buildCont.querySelector(`[data-i="${floorNum}"]`).classList.add('selected');
 }
 
-function floorAjax(floor) {
+function floorAjax(data) {
     return new Promise((succeed, fail) => {
         // console.log(wrap.dataset.id);
         let quizRequest = new XMLHttpRequest();
@@ -169,7 +170,7 @@ function floorAjax(floor) {
         }
         quizRequest.onerror = function() {console.log(onerror)};
         // let data = { survey_id: quiz.dataset.id };
-        let data = { 'floor':floor };
+        // let data = { 'floor':floor };
 
         // quizRequest.send('survey_id=2&parent_id=0');
         quizRequest.send(JSON.stringify(data));
@@ -179,24 +180,46 @@ function floorAjax(floor) {
     })
 }
 
+// function fillData(model, status) {
+//     let floor = document.querySelector('#test').contentDocument.querySelectorAll('.area');
+    
+//     for (let i = 0; i < floor.length; i++) {
+//         // const element = array[i];
+//         floor[i].dataset.flat = model[i].num;
+//     }
+// }
 
-function flr() {
-    let floor = document.querySelector('#floor').contentDocument;
+function flr(model) {
+    // let floor = document.querySelector('#floor').contentDocument;
+    let floor = document.querySelector('#floor');
     let flat = document.querySelector('.flat');
     let flatCont = flat.contentDocument;
+    floor.addEventListener('load', (e) => {
+        let floor = document.querySelector('#floor').contentDocument;
+        for (let i = 0; i < model.length; i++) {
+            // console.log(floor.querySelector(`[data-i="${i+1}"]`));
+            // console.log(floor.querySelector(`#path-${i+1}`));
+            floor.querySelector(`[data-i="${i+1}"]`).dataset.num = model[i].num;
+            floor.querySelector(`[data-i="${i+1}"]`).dataset.status = model[i].status;
+        }
+        floor.addEventListener('click', (e) => {
+            if (e.target.closest('.area')) {
+                flatAjax(e.target.dataset.i);
+                // document.querySelector('.floor-change').innerHTML = e.target.dataset.i;
+                flat.classList.add('show');
+            }
+        })
+    })
+
+    
+
     document.querySelector('.floor-btn').addEventListener('click', (e) => {
         document.querySelector('.plans-bg').classList.remove('dn');
         document.querySelector('.building').classList.remove('dn');
         document.querySelector('#plans').innerHTML = '';
     })
 
-    floor.addEventListener('click', (e) => {
-        if (e.target.closest('.area')) {
-            flatAjax(e.target.dataset.i);
-            // document.querySelector('.floor-change').innerHTML = e.target.dataset.i;
-            flat.classList.add('show');
-        }
-    })
+    
     document.querySelector('.flat-btn').addEventListener('click', (e) => {
         flat.classList.remove('show');
     })
@@ -322,6 +345,6 @@ function callBackAjax(name, phone) {
 function rend(respond) {
     // let wrap = document.querySelector('.quiz-wrap');
     // wrap.innerHTML = respond;
-    console.log(respond);
+    // console.log(respond);
     
 }
