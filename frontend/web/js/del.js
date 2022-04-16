@@ -40,20 +40,32 @@ window.addEventListener('load', () => {
     if (document.querySelector('#building-change')) {
 
         let change = document.querySelector('#building-change');
-        let num = document.querySelector('#building-change span');
-        let min = change.dataset.min;
-        let max = change.dataset.max;
-        var floorNum = min;
+        let min = Number(change.dataset.min);
+        let max = Number(change.dataset.max);
+        var floorNum = Number(min);
+        floorNum = Number(floorNum);
 
-        change.addEventListener('click', (e) => {
+        document.addEventListener('click', (e) => {
             let target = e.target;
+            let nums = document.querySelectorAll('.floor-changes');
             if (target.closest('.prev') && floorNum < max) {
-                num.innerHTML = ++floorNum;
+                ++floorNum;
+                nums.forEach(el => el.innerHTML = floorNum);
+                let data = { 'floor':floorNum };
+                floorAjax(data)
+                    .then (response => {
+                        fl(JSON.parse(response).data.model);
+                    });
                 floorSelected(floorNum);
             }
             if (target.closest('.next') && floorNum > min) {
-                // console.log('next');
-                num.innerHTML = --floorNum;
+                --floorNum;
+                nums.forEach(el => el.innerHTML = floorNum);
+                let data = { 'floor':floorNum };
+                floorAjax(data)
+                    .then (response => {
+                        fl(JSON.parse(response).data.model);
+                    });
                 floorSelected(floorNum);
             }
             if (target.closest('.btn')) {
@@ -188,7 +200,20 @@ function floorAjax(data) {
 //         floor[i].dataset.flat = model[i].num;
 //     }
 // }
-
+function fl(model) {
+    let floor = document.querySelector('#floor').contentDocument.querySelectorAll('.area');
+    for (let i = 0; i < model.length; i++) {
+        // console.log(floor.querySelector(`[data-i="${i+1}"]`));
+        // console.log(floor.querySelector(`#path-${i+1}`));
+        // floor.querySelector(`[data-i="${i+1}"]`).dataset.num = model[i].num;
+        // floor.querySelector(`[data-i="${i+1}"]`).dataset.status = model[i].status;
+        floor[i].dataset.num = model[i].num;
+        floor[i].dataset.status = model[i].status;
+        floor[i].dataset.area = model[i].total_area;
+        floor[i].dataset.live = model[i].living_space;
+        floor[i].dataset.balcony = model[i].balcony_area;
+    }
+}
 function flr(model) {
     // let floor = document.querySelector('#floor').contentDocument;
     let floor = document.querySelector('#floor');

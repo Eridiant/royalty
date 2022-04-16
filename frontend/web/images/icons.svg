@@ -207,9 +207,9 @@
         <path d="M15 8.5L0.749999 16.7272L0.75 0.272758L15 8.5Z" fill="currentColor"/>
     </symbol>
 
-    <symbol id="fff" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" >
+    <symbol id="vertical-arrow" width="44" height="17" viewBox="0 0 44 17" fill="none" xmlns="http://www.w3.org/2000/svg" >
         <g>
-            
+            <path d="M3 14L22.8736 3L41 14" stroke="#B09470" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
         </g>
     </symbol>
 
@@ -217,7 +217,6 @@
         <g></g>
     </symbol>
 </svg>
-
 
 
 

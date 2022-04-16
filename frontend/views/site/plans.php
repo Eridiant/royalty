@@ -20,9 +20,9 @@
                         </p>
                     </div>
                     <div class="building-choice">
-                    <div class="building-change lgm" id="building-change" data-min="1" data-max="18">
+                    <div class="building-change lgm" id="building-change" data-min="2" data-max="18">
                         <svg class="prev" width="161" height="25"><use xlink:href="images/icons.svg#rect"></use></svg>
-                        <p class="btn"><span>1</span> этаж</p>
+                        <p class="btn"><span class="floor-changes">2</span> этаж</p>
                         <svg class="next" width="161" height="25"><use xlink:href="images/icons.svg#rect"></use></svg>
                     </div>
                     <div class="building-img">
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <div class="building-floor lg">
-                        <p class="fl num">1</p>
+                        <p class="fl num floor-changes">2</p>
                         <p>этаж</p>
                     </div>
                 </div>

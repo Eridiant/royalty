@@ -26,8 +26,14 @@
                             </div>
                         </div>
                         <div class="floor-change lg">
-                            <p class="floor-change-num num">1</p>
+                            <div class="building-floor-svg prev">
+                                <svg class="arrow-up prev" width="44" height="17"><use xlink:href="images/icons.svg#vertical-arrow"></use></svg>
+                            </div>
+                            <p class="floor-change-num num floor-changes">2</p>
                             <p class="floor-change-text">этаж</p>
+                            <div class="building-floor-svg next">
+                                <svg class="arrow-down next" width="44" height="17"><use xlink:href="images/icons.svg#vertical-arrow"></use></svg>
+                            </div>
                         </div>
                     </div>
                     <div class="floor-btn">
