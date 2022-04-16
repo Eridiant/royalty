@@ -77,7 +77,7 @@
                             <svg width="62" height="24"><use xlink:href="/images/icons.svg#arrow-right"></use></svg>
                             <span>К выбору квартир</span>
                         </div>
-                        <div class="subtitle">Квартира №34</div>
+                        <div id="flat-num" class="subtitle">Квартира №<span>34</span></div>
                         <div class="flat-inner">
                             <div class="flat-inner-location item md">
                                 <span>Расположение квартиры на этаже:</span>
@@ -95,8 +95,9 @@
                                 </div>
                             </div>
                             <div class="flat-inner-items items item">
-                                <p>Общая площадь объекта 38 м2 </p>
-                                <p>Жилая площадь 23 м2  </p>
+                                <p id="area">Общая площадь объекта <span>38</span> м<sup>2</sup> </p>
+                                <p id="live">Жилая площадь <span>23</span> м<sup>2</sup>  </p>
+                                <p id="balcony">Балкон <span>23</span> м<sup>2</sup>  </p>
                                 <p>Отопление электричество/газ </p>
                             </div>
                         </div>

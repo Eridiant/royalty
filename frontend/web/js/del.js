@@ -69,7 +69,16 @@ window.addEventListener('load', () => {
                 floorSelected(floorNum);
             }
             if (target.closest('.btn')) {
-                floorAjax(floorNum);
+                let data = { 'floor':floorNum };
+                floorAjax(data)
+                    .then (response => {
+                        document.querySelector('#plans').innerHTML = JSON.parse(response).data.rend;
+                        if ( document.querySelector('.floor') ) {
+                            document.querySelector('.plans-bg').classList.add('dn');
+                            document.querySelector('.building').classList.add('dn');
+                            flr(JSON.parse(response).data.model);
+                        }
+                    });
             }
         });
 
@@ -201,17 +210,19 @@ function floorAjax(data) {
 //     }
 // }
 function fl(model) {
-    let floor = document.querySelector('#floor').contentDocument.querySelectorAll('.area');
-    for (let i = 0; i < model.length; i++) {
-        // console.log(floor.querySelector(`[data-i="${i+1}"]`));
-        // console.log(floor.querySelector(`#path-${i+1}`));
-        // floor.querySelector(`[data-i="${i+1}"]`).dataset.num = model[i].num;
-        // floor.querySelector(`[data-i="${i+1}"]`).dataset.status = model[i].status;
-        floor[i].dataset.num = model[i].num;
-        floor[i].dataset.status = model[i].status;
-        floor[i].dataset.area = model[i].total_area;
-        floor[i].dataset.live = model[i].living_space;
-        floor[i].dataset.balcony = model[i].balcony_area;
+    if (document.querySelector('#floor')) {
+        let floor = document.querySelector('#floor').contentDocument.querySelectorAll('.area');
+        for (let i = 0; i < model.length; i++) {
+            // console.log(floor.querySelector(`[data-i="${i+1}"]`));
+            // console.log(floor.querySelector(`#path-${i+1}`));
+            // floor.querySelector(`[data-i="${i+1}"]`).dataset.num = model[i].num;
+            // floor.querySelector(`[data-i="${i+1}"]`).dataset.status = model[i].status;
+            floor[i].dataset.num = model[i].num;
+            floor[i].dataset.status = model[i].status;
+            floor[i].dataset.area = model[i].total_area;
+            floor[i].dataset.live = model[i].living_space;
+            floor[i].dataset.balcony = model[i].balcony_area;
+        }
     }
 }
 function flr(model) {
@@ -236,7 +247,12 @@ function flr(model) {
         }
         document.querySelector('#floor').contentDocument.addEventListener('click', (e) => {
             if (e.target.closest('.area')) {
-                flatAjax(e.target.dataset.i);
+                let i = e.target.dataset.i;
+                flatAjax(i);
+                document.querySelector('#flat-num span').innerHTML = floor[i-1].dataset.num;
+                document.querySelector('#area span').innerHTML = floor[i-1].dataset.area;
+                document.querySelector('#live span').innerHTML = floor[i-1].dataset.live;
+                document.querySelector('#balcony span').innerHTML = floor[i-1].dataset.balcony;
                 // document.querySelector('.floor-change').innerHTML = e.target.dataset.i;
                 flat.classList.add('show');
             }
