@@ -160,7 +160,7 @@ class SiteController extends Controller
 
             // $model = Floor::findOne(['id' => $request->post('floor')]);
             $model = Flat::find()
-                    ->select(['num', 'status'])
+                    ->select(['num', 'status', 'total_area', 'living_space'])
                     ->where('floor_id=:floor_id')
                     ->addParams([':floor_id' => $request->post('floor')])
                     ->asArray()

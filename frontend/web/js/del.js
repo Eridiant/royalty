@@ -195,14 +195,18 @@ function flr(model) {
     let flat = document.querySelector('.flat');
     let flatCont = flat.contentDocument;
     floor.addEventListener('load', (e) => {
-        let floor = document.querySelector('#floor').contentDocument;
+        let floor = document.querySelector('#floor').contentDocument.querySelectorAll('.area');
         for (let i = 0; i < model.length; i++) {
             // console.log(floor.querySelector(`[data-i="${i+1}"]`));
             // console.log(floor.querySelector(`#path-${i+1}`));
-            floor.querySelector(`[data-i="${i+1}"]`).dataset.num = model[i].num;
-            floor.querySelector(`[data-i="${i+1}"]`).dataset.status = model[i].status;
+            // floor.querySelector(`[data-i="${i+1}"]`).dataset.num = model[i].num;
+            // floor.querySelector(`[data-i="${i+1}"]`).dataset.status = model[i].status;
+            floor[i].dataset.num = model[i].num;
+            floor[i].dataset.status = model[i].status;
+            floor[i].dataset.status = model[i].area;
+            floor[i].dataset.status = model[i].live;
         }
-        floor.addEventListener('click', (e) => {
+        document.querySelector('#floor').contentDocument.addEventListener('click', (e) => {
             if (e.target.closest('.area')) {
                 flatAjax(e.target.dataset.i);
                 // document.querySelector('.floor-change').innerHTML = e.target.dataset.i;
