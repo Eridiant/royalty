@@ -194,6 +194,8 @@ function flr(model) {
     let floor = document.querySelector('#floor');
     let flat = document.querySelector('.flat');
     let flatCont = flat.contentDocument;
+    document.querySelector('.num').innerHTML = model[1].floor_id;
+    console.log(model[1].floor_id);
     floor.addEventListener('load', (e) => {
         let floor = document.querySelector('#floor').contentDocument.querySelectorAll('.area');
         for (let i = 0; i < model.length; i++) {
@@ -203,8 +205,9 @@ function flr(model) {
             // floor.querySelector(`[data-i="${i+1}"]`).dataset.status = model[i].status;
             floor[i].dataset.num = model[i].num;
             floor[i].dataset.status = model[i].status;
-            floor[i].dataset.status = model[i].area;
-            floor[i].dataset.status = model[i].live;
+            floor[i].dataset.area = model[i].total_area;
+            floor[i].dataset.live = model[i].living_space;
+            floor[i].dataset.balcony = model[i].balcony_area;
         }
         document.querySelector('#floor').contentDocument.addEventListener('click', (e) => {
             if (e.target.closest('.area')) {
