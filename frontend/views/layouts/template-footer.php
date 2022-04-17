@@ -58,6 +58,7 @@ use yii\helpers\Url;
                 <object type="image/svg+xml" data="/images/svg/logo.svg">
                     <img src="/images/svg/logo.svg" alt="" />
                 </object>
+                <a href="/"></a>
             </div>
             <div class="top-social">
                 <a href="#">

@@ -5,6 +5,7 @@
                 <object type="image/svg+xml" data="/images/svg/logo.svg">
                     <img src="/images/svg/logo.svg" alt="" />
                 </object>
+                <a href="/"></a>
             </div>
             <div class="nav-wrap">
                 <div class="nav-phone radius">

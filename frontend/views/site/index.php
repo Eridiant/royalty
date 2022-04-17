@@ -64,7 +64,8 @@ $this->title = 'Royal';
                                     <svg width="19" height="19"><use xlink:href="/images/icons.svg#phone"></use></svg>
                                 </a>
                             </div> -->
-                            <a href="tel:+70988900043">+7 (098) 890-00-43</a>
+                            <a href="tel:+995558499966">+995 (558) 49-99-66</a>
+                            <a href="tel:+995558499922">+995 (558) 49-99-22</a>
                             <!-- <a href="#" class="gold">
                                 <svg width="18" height="18"><use xlink:href="/images/icons.svg#whatsapp"></use></svg>
                             </a>
@@ -89,6 +90,20 @@ $this->title = 'Royal';
                     </div>
                 </div>
             </div>
+        </div>
+        <div class="header-footer-row social pa">
+            <a href="#">
+                <svg width="27" height="27"><use xlink:href="/images/icons.svg#fb"></use></svg>
+            </a>
+            <a href="#">
+                <svg width="27" height="27"><use xlink:href="/images/icons.svg#youtube"></use></svg>
+            </a>
+            <a href="#">
+                <svg width="27" height="27"><use xlink:href="/images/icons.svg#instagram"></use></svg>
+            </a>
+            <a href="#">
+                <svg width="27" height="27"><use xlink:href="/images/icons.svg#telegram"></use></svg>
+            </a>
         </div>
     </div>
 </div>
