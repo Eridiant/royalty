@@ -20,6 +20,10 @@ window.addEventListener('load', () => {
             thumbs: {
                 swiper: thumbs,
             },
+            navigation: {
+                nextEl: ".apartments-slider-next",
+                prevEl: ".apartments-slider-prev",
+            },
         });
 
         let tabs = document.querySelector('.apartments-tabs');
@@ -287,6 +291,10 @@ function flr(model) {
                 spaceBetween: 20,
                 thumbs: {
                     swiper: thumbs,
+                },
+                navigation: {
+                    nextEl: ".apartments-slider-next",
+                    prevEl: ".apartments-slider-prev",
                 },
             });
         }
