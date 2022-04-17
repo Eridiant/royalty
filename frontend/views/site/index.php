@@ -172,25 +172,14 @@ $this->title = 'Royal';
 
 <div class="panorama">
     <div class="container-lg" style="max-width: 1920px; margin-left: auto; margin-right: auto">
-        <div class="panoramas-wrapper">
+        <!-- <div class="panoramas-wrapper">
             <div class="panorama-inner panorama-show">
                 <picture>
-                    <!-- <source srcset="images/del/bg14.jpg" media="(max-width: 420px)">
-                    <source srcset="images/del/bg13.jpg" media="(max-width: 1280px)">
-                    <source srcset="images/del/bg12.jpg" media="(max-width: 1500px)">
-                    <source srcset="images/del/bg11.jpg" media="(min-width: 1501px)">
-                    <source type="image/jpeg" srcset="images/dist/header/header_bg.jpg, images/dist/header/header_bg-2x.jpg 2x"> -->
                     <img src="/images/del/panorama.jpg" alt="">
                 </picture>
             </div>
             <div class="header-bg-inner">
                 <picture>
-                    <!-- <source srcset="images/del/bg14.jpg" media="(max-width: 420px)">
-                    <source srcset="images/del/bg13.jpg" media="(max-width: 1280px)">
-                    <source srcset="images/del/bg12.jpg" media="(max-width: 1500px)">
-                    <source srcset="images/del/bg11.jpg" media="(min-width: 1501px)">
-                    <source type="image/jpeg" srcset="images/dist/header/header_bg_night.jpg, images/dist/header/header_bg_night-2x.jpg 2x">
-                    <img src="images/dist/header/header_bg_night.jpg" alt=""> -->
                 </picture>
             </div>
         </div>
@@ -198,6 +187,22 @@ $this->title = 'Royal';
             <svg width="24" height="24"><use xlink:href="images/icons.svg#sun"></use></svg>
             <svg class="panorama-switch-rt" width="71" height="30"><use xlink:href="images/icons.svg#switcher"></use></svg>
             <svg width="21" height="21"><use xlink:href="images/icons.svg#moon"></use></svg>
+        </div> -->
+        <div class="panorama-slider swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <picture>
+                        <img src="/images/index/panorama/panorama-1.jpg" alt="">
+                    </picture>
+                </div>
+                <div class="swiper-slide">
+                    <picture>
+                        <img src="/images/index/panorama/panorama-2.jpg" alt="">
+                    </picture>
+                </div>
+            </div>
+            <div class="swiper-button-next panorama-button-next"></div>
+            <div class="swiper-button-prev panorama-button-prev"></div>
         </div>
     </div>
 </div>

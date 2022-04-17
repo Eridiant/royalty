@@ -20,8 +20,6 @@
                         <a href="#">Жилой дом</a>
                         <a href="#">Ход строительства</a>
                         <a href="#">Батуми</a>
-                        <a href="#">Команда</a>
-                        <a href="#">Видео отчет о ходе строительства</a>
                     </div>
                     <a href="#" class="btn">
                         <svg width="14" height="16"><use xlink:href="/images/icons.svg#pdf"></use></svg>
