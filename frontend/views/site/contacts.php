@@ -10,9 +10,10 @@
             <div class="contacts-inner">
                 <div class="contacts-contacts">
                     <p class="subtitle">Контакты</p>
-                    <a href="tel:+995514779900"><svg width="21" height="20"><use xlink:href="images/icons.svg#phone"></use></svg> +995 514 77 99 00</a>
-                    <a href="mailto:info@kaligraf.ge"><svg width="21" height="16"><use xlink:href="images/icons.svg#mail"></use></svg> info@kaligraf.ge</a>
-                    <p><svg width="21" height="24"><use xlink:href="images/icons.svg#address"></use></svg>г. Баутми ул. Жиули Шартава 18</p>
+                    <a href="tel:+995558499966"><svg width="21" height="20"><use xlink:href="images/icons.svg#phone"></use></svg> +995 (558) 49-99-66</a>
+                    <a href="tel:+995558499922"><svg width="21" height="20"><use xlink:href="images/icons.svg#phone"></use></svg> +995 (558) 49-99-22</a>
+                    <a href="mailto:info@kaligraf.ge"><svg width="21" height="16"><use xlink:href="images/icons.svg#mail"></use></svg> info@royalresidence.ge</a>
+                    <p><svg width="21" height="24"><use xlink:href="images/icons.svg#address"></use></svg>Rejeb nizharadze  nomer 5</p>
                     <div class="btn act-btn" data-btn="popup-call-back">
                         <span>Обратный звонок</span>
                         <svg width="20" height="20"><use xlink:href="images/icons.svg#phone"></use></svg>

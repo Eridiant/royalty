@@ -34,10 +34,13 @@ use yii\helpers\Url;
                     <a class="radius" href="tel:+70988900043">
                         <svg width="19" height="19"><use xlink:href="/images/icons.svg#phone"></use></svg>
                     </a>
-                    <a href="tel:+70988900043"></a>
-                        +7 (098) 890-00-43
+                    <a href="tel:+995558499966"></a>
+                        +995 (558) 49-99-66
                     </a>
-                    <p>г. Москва, ул. Пражская 88/23</p>
+                    <a href="tel:+995558499922"></a>
+                        +995 (558) 49-99-22
+                    </a>
+                    <p>Rejeb nizharadze  nomer 5</p>
                 </div>
             </div>
         </div>
