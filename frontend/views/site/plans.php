@@ -59,3 +59,26 @@
         </div>
     </div>
 </div>
+
+<div class="popup-wrapper popup-call-back">
+    <div class="popup">
+        <div class="popup-inner sending">
+            <div class="subtitle">
+                Узнать цену
+            </div>
+            <p>
+                Заполнте поля и мы Вам перезвоним в течение 15 минут
+            </p>
+            <div class="">
+                <form name="callBack" class="form" action="#" method="post">
+                    <label for="call-name"></label>
+                    <input name="name" id="call-name" type="text" placeholder="Имя" required>
+                    <label for="call-phone"></label>
+                    <input name="phone" id="call-phone" pattern="(\+?\d[- .]*){7,15}" type="tel" class=""
+                        placeholder="Телефон" required>
+                    <button type="submit" href="#" class="btn" data-btn="popup-success"><span>Оставить заявку</span></button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

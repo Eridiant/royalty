@@ -106,7 +106,11 @@
                             </div>
                         </div>
                         <div class="flat-buttons">
-                            <div class="btn">Узнать цену</div>
+                            <!-- <div class="btn">Узнать цену</div> -->
+                            <div class="btn act-btn" data-btn="popup-call-back">
+                                <span>Узнать цену</span>
+                                <svg width="20" height="20"><use xlink:href="images/icons.svg#phone"></use></svg>
+                            </div>
                             <div class="btn btn-brd xsm">Забронировать квартиру</div>
                             <div class="">
                                 <svg width="14" height="16"><use xlink:href="/images/icons.svg#pdf"></use></svg>
