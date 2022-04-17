@@ -59,18 +59,18 @@ $this->title = 'Royal';
                 <div class="header-footer-wtapper dt">
                     <div class="header-footer">
                         <div class="header-footer-row">
-                            <div class="nav-radius">
+                            <!-- <div class="nav-radius">
                                 <a href="tel:+70988900043">
                                     <svg width="19" height="19"><use xlink:href="/images/icons.svg#phone"></use></svg>
                                 </a>
-                            </div>
+                            </div> -->
                             <a href="tel:+70988900043">+7 (098) 890-00-43</a>
-                            <a href="#" class="gold">
+                            <!-- <a href="#" class="gold">
                                 <svg width="18" height="18"><use xlink:href="/images/icons.svg#whatsapp"></use></svg>
                             </a>
                             <a href="#" class="gold">
                                 <svg width="18" height="18"><use xlink:href="/images/icons.svg#viber"></use></svg>
-                            </a>
+                            </a> -->
                         </div>
                         <div class="header-footer-row social">
                             <a href="#">

@@ -9,7 +9,7 @@
                         </object>
                     </div>
                     <div class="floor-choice">
-                        <div class="floor-legend sm">
+                        <div class="floor-legend lg">
                             <p class="floor-reserved">Бронь</p>
                             <p class="floor-sold">Продано</p>
                         </div>
@@ -25,14 +25,18 @@
                                 </object>
                             </div>
                         </div>
-                        <div class="floor-change lg">
+                        <div class="floor-change">
                             <div class="building-floor-svg prev">
-                                <svg class="arrow-up prev" width="44" height="17"><use xlink:href="images/icons.svg#vertical-arrow"></use></svg>
+                                <svg class="arrow-up md" width="44" height="17"><use xlink:href="images/icons.svg#vertical-arrow"></use></svg>
+                                <svg class="arrow-up mdm" width="161" height="25"><use xlink:href="images/icons.svg#rect"></use></svg>
                             </div>
-                            <p class="floor-change-num num floor-changes">2</p>
-                            <p class="floor-change-text">этаж</p>
+                            <div class="floor-change-floor">
+                                <p class="floor-change-num num floor-changes">2</p>
+                                <p class="floor-change-text">этаж</p>
+                            </div>
                             <div class="building-floor-svg next">
-                                <svg class="arrow-down next" width="44" height="17"><use xlink:href="images/icons.svg#vertical-arrow"></use></svg>
+                                <svg class="arrow-down md" width="44" height="17"><use xlink:href="images/icons.svg#vertical-arrow"></use></svg>
+                                <svg class="arrow-down mdm" width="161" height="25"><use xlink:href="images/icons.svg#rect"></use></svg>
                             </div>
                         </div>
                     </div>
@@ -77,7 +81,7 @@
                             <svg width="62" height="24"><use xlink:href="/images/icons.svg#arrow-right"></use></svg>
                             <span>К выбору квартир</span>
                         </div>
-                        <div id="flat-num" class="subtitle">Квартира №<span>34</span></div>
+                        <div id="flat-num" class="subtitle">Квартира №<span>1</span></div>
                         <div class="flat-inner">
                             <div class="flat-inner-location item md">
                                 <span>Расположение квартиры на этаже:</span>
@@ -95,9 +99,9 @@
                                 </div>
                             </div>
                             <div class="flat-inner-items items item">
-                                <p id="area">Общая площадь объекта <span>38</span> м<sup>2</sup> </p>
-                                <p id="live">Жилая площадь <span>23</span> м<sup>2</sup>  </p>
-                                <p id="balcony">Балкон <span>23</span> м<sup>2</sup>  </p>
+                                <p id="area">Общая площадь объекта <span>34.95</span> м<sup>2</sup> </p>
+                                <p id="live">Жилая площадь <span>29.4</span> м<sup>2</sup>  </p>
+                                <p id="balcony">Балкон <span>5.55</span> м<sup>2</sup>  </p>
                                 <p>Отопление электричество/газ </p>
                             </div>
                         </div>
