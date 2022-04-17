@@ -229,7 +229,7 @@ $this->title = 'Royal';
                                             <img src="/images/index/location/loc-1.jpg">
                                         </picture>
                                     </div>
-                                    <p>Пляж</p>
+                                    <p>Первая линия от моря в 70 метрах</p>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
@@ -237,7 +237,7 @@ $this->title = 'Royal';
                                             <img src="/images/index/location/loc-2.jpg">
                                         </picture>
                                     </div>
-                                    <p>Башня Азбуки</p>
+                                    <p>Парк отдых 6000 кв.м</p>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
@@ -245,7 +245,7 @@ $this->title = 'Royal';
                                             <img src="/images/index/location/loc-3.jpg">
                                         </picture>
                                     </div>
-                                    <p>Набережная Батуми</p>
+                                    <p>Набережная 10 км</p>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
@@ -253,7 +253,7 @@ $this->title = 'Royal';
                                             <img src="/images/index/location/loc-4.jpg">
                                         </picture>
                                     </div>
-                                    <p>Памятник «Али и Нино»</p>
+                                    <p>Торговый центр 3000 кв.м</p>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
@@ -261,7 +261,7 @@ $this->title = 'Royal';
                                             <img src="/images/index/location/loc-5.jpg">
                                         </picture>
                                     </div>
-                                    <p>Батуми вечер</p>
+                                    <p>Детская площадка 200 кв.метров</p>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
@@ -269,7 +269,7 @@ $this->title = 'Royal';
                                             <img src="/images/index/location/loc-6.jpg">
                                         </picture>
                                     </div>
-                                    <p>Вид с моря</p>
+                                    <p>Автобусная остановка</p>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
@@ -277,7 +277,7 @@ $this->title = 'Royal';
                                             <img src="/images/index/location/loc-7.jpg">
                                         </picture>
                                     </div>
-                                    <p>Батуми ночью</p>
+                                    <p>Супермаркет</p>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
@@ -285,23 +285,7 @@ $this->title = 'Royal';
                                             <img src="/images/index/location/loc-8.jpg">
                                         </picture>
                                     </div>
-                                    <p>Площадь Европы</p>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="location-slider-img">
-                                        <picture>
-                                            <img src="/images/index/location/loc-9.jpg">
-                                        </picture>
-                                    </div>
-                                    <p>Дом Юстиции</p>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="location-slider-img">
-                                        <picture>
-                                            <img src="/images/index/location/loc-10.jpg">
-                                        </picture>
-                                    </div>
-                                    <p>Колесо обозрения</p>
+                                    <p>Аэропорт в 5 минутах</p>
                                 </div>
                             </div>
                         </div>
@@ -310,6 +294,9 @@ $this->title = 'Royal';
                             <svg width="62" height="24" class="location-button-prev"><use xlink:href="images/icons.svg#arrow-right"></use></svg>
                         </div>
                     </div>
+                    <p>
+                        Royal development располагается в центральной части нового бульвара, вся инфраструктура находиться в шаговой доступности.
+                    </p>
                 </div>
             </div>
         </div>
