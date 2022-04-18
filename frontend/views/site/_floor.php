@@ -23,6 +23,10 @@
                                 <object id="floor" type="image/svg+xml" data="/images/svg/floor.svg">
                                     ваш браузер устарел
                                 </object>
+                                <div class="focus">
+                                    <p class="focus-flat"></p>
+                                    <p class="focus-status"></p>
+                                </div>
                             </div>
                         </div>
                         <div class="floor-change">

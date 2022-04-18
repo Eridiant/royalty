@@ -150,42 +150,42 @@ class FlatController extends Controller
     //     }
     // }
 
-    public function actionStat()
-    {
-        $fl = 392;
-        $area = [34.95,35.35,35.35,35.35,35.25,33.90,69.70,48.05,69.85,35.15,35.35,35.35,35.35,35.35,35.35,35.35,35.35,35.35,35.15,69.85,48.05,69.60,42.45];
-        $live = [29.40,29.90,29.90,29.90,29.80,28.35,51.85,38.55,52,29.65,29.90,29.90,29.90,29.90,29.90,29.90,29.90,29.90,29.65,52,38.55,51.75,35.80];
-        $balcone = [5.55,5.45,5.45,5.45,5.45,5.55,17.85,9.50,17.85,5.50,5.45,5.45,5.45,5.45,5.45,5.45,5.45,5.45,5.50,17.85,9.50,17.85,6.65];
-        // for ($i=2; $i < 19; $i++) {
-            // $model = new Floor();
-            // $model->floor = $i;
-            // $model->save();
-            $i = 18;
-            // if ($model->save()) {
-            if (true) {
-                for ($j=1; $j < 24; $j++) {
-                    $floor = new Flat();
-                    // $floor = Flat::find()
-                    //     ->where(['id' => $fl])
-                    //     ->one();
+    // public function actionStat()
+    // {
+    //     $fl = 392;
+    //     $area = [34.95,35.35,35.35,35.35,35.25,33.90,69.70,48.05,69.85,35.15,35.35,35.35,35.35,35.35,35.35,35.35,35.35,35.35,35.15,69.85,48.05,69.60,42.45];
+    //     $live = [29.40,29.90,29.90,29.90,29.80,28.35,51.85,38.55,52,29.65,29.90,29.90,29.90,29.90,29.90,29.90,29.90,29.90,29.65,52,38.55,51.75,35.80];
+    //     $balcone = [5.55,5.45,5.45,5.45,5.45,5.55,17.85,9.50,17.85,5.50,5.45,5.45,5.45,5.45,5.45,5.45,5.45,5.45,5.50,17.85,9.50,17.85,6.65];
+    //     // for ($i=2; $i < 19; $i++) {
+    //         // $model = new Floor();
+    //         // $model->floor = $i;
+    //         // $model->save();
+    //         $i = 18;
+    //         // if ($model->save()) {
+    //         if (true) {
+    //             for ($j=1; $j < 24; $j++) {
+    //                 $floor = new Flat();
+    //                 // $floor = Flat::find()
+    //                 //     ->where(['id' => $fl])
+    //                 //     ->one();
 
-                    $floor->floor_id = $i;
-                    $floor->num = $fl;
-                    $floor->total_area = $area[$j-1];
-                    $floor->living_space = $live[$j-1];
-                    $floor->balcony_area = $balcone[$j-1];
+    //                 $floor->floor_id = $i;
+    //                 $floor->num = $fl;
+    //                 $floor->total_area = $area[$j-1];
+    //                 $floor->living_space = $live[$j-1];
+    //                 $floor->balcony_area = $balcone[$j-1];
 
-                    $floor->save();
+    //                 $floor->save();
                     
-                    $fl++;
-                    if ($floor->getErrors()) {
-                        var_dump($floor->getErrors());
-                    }
-                }
-            }
+    //                 $fl++;
+    //                 if ($floor->getErrors()) {
+    //                     var_dump($floor->getErrors());
+    //                 }
+    //             }
+    //         }
             
-        // }
-    }
+    //     // }
+    // }
 
     /**
      * Creates a new Flat model.

@@ -261,6 +261,25 @@ function flr(model) {
                 flat.classList.add('show');
             }
         })
+
+        let focusa = document.querySelector('.floor .focus');
+        console.log(focusa);
+        document.querySelector('#floor').contentDocument.addEventListener('mousemove', (e) => {
+            if (e.target.classList.contains('area')) {
+                let target = e.target;
+                // floorNum.innerHTML = target.dataset.floor;
+                // focus.style.backgroundColor = "blue";
+                focusa.classList.add('focus-pocus');
+                
+                // focusa.style = `top: ${target.getBoundingClientRect().top * 0.9}px; left: ${target.getBoundingClientRect().right + 10}px;`;
+                focusa.style = `top: ${e.offsetY - 60}px; left: ${e.offsetX + 10}px;`;
+                focusa.innerHTML = target.dataset.num;
+            }
+        });
+        document.querySelector('#floor').contentDocument.addEventListener('mouseout', (e) => {
+            focusa.classList.remove('focus-pocus');
+        })
+
     })
 
     
