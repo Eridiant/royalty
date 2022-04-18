@@ -165,8 +165,9 @@ class SiteController extends Controller
                     ->addParams([':floor_id' => $request->post('floor')])
                     ->asArray()
                     ->all();
-
-            $files = \yii\helpers\FileHelper::findFiles("images/del/flat/1");
+            $mod = $request->post('floor') % 23;
+            
+            $files = \yii\helpers\FileHelper::findFiles("images/flat/{$mod}");
             $rend = $this->renderPartial('_floor', compact('files'));
             
             
