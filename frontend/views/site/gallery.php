@@ -1,4 +1,16 @@
-<div class="gallery">
+<?php
+
+/** @var yii\web\View $this */
+/** @var string $name */
+/** @var string $message */
+/** @var Exception $exception */
+
+use yii\helpers\Html;
+use yii\helpers\Url;
+
+$this->title = 'Галерея';
+?>
+<div class="gallery <?= $rend; ?>">
     <div class="container-lg" style="max-width: 1920px; margin-left: auto; margin-right: auto">
         <div class="gallery-wrapper">
             <div class="gallery-img">
@@ -17,9 +29,9 @@
                 <div class="gallery-text">
                     <h1 class="title">Галлерея</h1>
                     <div class="gallery-item item">
-                        <a href="#">Жилой дом</a>
-                        <a href="#">Ход строительства</a>
-                        <a href="#">Батуми</a>
+                        <a class="gall" href="<?= Url::toRoute('/site/gallery') ?>">Жилой дом</a>
+                        <a class="construction" href="<?= Url::toRoute('/site/construction') ?>">Ход строительства</a>
+                        <a class="batumy" href="<?= Url::toRoute('/site/batumy') ?>">Батуми</a>
                     </div>
                     <a href="#" class="btn">
                         <svg width="14" height="16"><use xlink:href="/images/icons.svg#pdf"></use></svg>
@@ -31,53 +43,7 @@
     </div>
 </div>
 
-<div class="slider">
-    <div class="container-lg" style="max-width: 1920px; margin-left: auto; margin-right: auto">
-        <div class="pattern"></div>
-        <div class="container" style="max-width: 1600px; margin-left: auto; margin-right: auto">
-            <div class="slider-slider swiper">
-                <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                        <picture>
-                            <img src="/images/del/header.jpg" alt="">
-                        </picture>
-                        <div class="slider-svg">
-                            <svg class="slider" width="113" height="113"><use xlink:href="/images/icons.svg#slider"></use></svg>
-                            <svg class="rectangle" width="15" height="17"><use xlink:href="/images/icons.svg#rectangle"></use></svg>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <picture>
-                            <img src="/images/del/header.jpg" alt="">
-                        </picture>
-                        <div class="slider-svg">
-                            <svg class="slider" width="113" height="113"><use xlink:href="/images/icons.svg#slider"></use></svg>
-                            <svg class="rectangle" width="15" height="17"><use xlink:href="/images/icons.svg#rectangle"></use></svg>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <picture>
-                            <img src="/images/del/header.jpg" alt="">
-                        </picture>
-                        <div class="slider-svg">
-                            <svg class="slider" width="113" height="113"><use xlink:href="/images/icons.svg#slider"></use></svg>
-                            <svg class="rectangle" width="15" height="17"><use xlink:href="/images/icons.svg#rectangle"></use></svg>
-                        </div>
-                    </div>
-                    <div class="swiper-slide">
-                        <picture>
-                            <img src="/images/del/header.jpg" alt="">
-                        </picture>
-                        <div class="slider-svg">
-                            <svg class="slider" width="113" height="113"><use xlink:href="/images/icons.svg#slider"></use></svg>
-                            <svg class="rectangle" width="15" height="17"><use xlink:href="/images/icons.svg#rectangle"></use></svg>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
+<?= $this->render("_{$rend}") ?>
 
 <div class="dev">
     <div class="container-lg" style="max-width: 1920px; margin-left: auto; margin-right: auto">

@@ -245,7 +245,20 @@ class SiteController extends Controller
      */
     public function actionGallery()
     {
-        return $this->render('gallery');
+        $rend = 'gall';
+        return $this->render('gallery', compact('rend'));
+    }
+
+    public function actionConstruction()
+    {
+        $rend = 'construction';
+        return $this->render('gallery', compact('rend'));
+    }
+
+    public function actionBatumy()
+    {
+        $rend = 'batumy';
+        return $this->render('gallery', compact('rend'));
     }
 
     /**

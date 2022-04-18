@@ -54,6 +54,8 @@ return [
                 'about' => 'site/about',
                 'infrastructure' => 'site/infrastructure',
                 'gallery' => 'site/gallery',
+                'batumy' => 'site/batumy',
+                'construction' => 'site/construction',
                 'site/set-locale' => 'site/set-locale',
             ],
         ],
