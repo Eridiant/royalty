@@ -105,7 +105,7 @@ use yii\helpers\Url;
                 <ul>
                     <li><a href="<?= Url::toRoute('/site/index') ?>">Главная</a></li>
                     <li><a href="<?= Url::toRoute('/site/plans') ?>">Планировка</a></li>
-                    <li><a href="<?= Url::toRoute('/site/about') ?>">О компании</a></li>
+                    <!-- <li><a href="<?//= Url::toRoute('/site/about') ?>">О компании</a></li> -->
                     <li><a href="<?= Url::toRoute('/site/infrastructure') ?>">Инфраструктура</a></li>
                     <li><a href="<?= Url::toRoute('/site/gallery') ?>">Галлерея</a></li>
                     <li><a href="<?= Url::toRoute('/site/contacts') ?>">Контакты</a></li>
