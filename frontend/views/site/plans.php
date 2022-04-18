@@ -15,14 +15,14 @@
                         </object>
                         <p class="cap">Выберите этаж</p>
                         <p>
-                            Жилые квартиры начинаются с 2 по 18 этаж.
+                            Жилые квартиры начинаются с 1 по 18 этаж.
                             Если у вас возникнут вопросы, оставьте номер телефона или напишите нам сообщение и мы ответим в ближайшее время.
                         </p>
                     </div>
                     <div class="building-choice">
-                    <div class="building-change lgm" id="building-change" data-min="2" data-max="18">
+                    <div class="building-change lgm" id="building-change" data-min="1" data-max="18">
                         <svg class="prev" width="161" height="25"><use xlink:href="images/icons.svg#rect"></use></svg>
-                        <p class="btn"><span class="floor-changes">2</span> этаж</p>
+                        <p class="btn"><span class="floor-changes">1</span> этаж</p>
                         <svg class="next" width="161" height="25"><use xlink:href="images/icons.svg#rect"></use></svg>
                     </div>
                     <div class="building-img">

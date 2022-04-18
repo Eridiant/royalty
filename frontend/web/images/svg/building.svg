@@ -49,7 +49,7 @@
         <path d="m 141.71666,1726.725 1339.52504,5.225 5.8666,-22.825 v -0.4583 -50.4167 L 141.625,1653.575 Z"
         id="path-2" class="area" data-i="2" />
         <path d="M 141.73891,1806.4056 1481.15,1811.7 l 6.05,-22.1833 V 1737.45 l -1345.48333,-4.2167 z"
-        id="path-1" class="areo" data-i="1" />
+        id="path-1" class="area" data-i="1" />
     </g>
     <style type="text/css">
         .area, .areo {

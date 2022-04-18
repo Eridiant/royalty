@@ -6,7 +6,7 @@ use yii\helpers\Url;
 $this->title = 'Статус квартир';
 ?>
 
-<div class="floor-items" data-current="2">
+<div class="floor-items" data-current="1">
     <?php foreach ($floors as $key => $floor): ?>
         <div class="floor-item<?= $key == 0 ? ' active' : '' ; ?>" data-floor="<?= $floor->floor; ?>">
             <?= $floor->floor; ?>

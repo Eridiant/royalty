@@ -114,37 +114,41 @@ class FlatController extends Controller
         }
 
         $models = Flat::find()
-        ->where(['floor_id' => 2])
+        ->where(['floor_id' => 1])
         ->all();
         $floors = Floor::find()->all();
         return $this->render('status', compact('models', 'floors'));
     }
 
-    // public function actionStat()
-    // {
-    //     $fl = 1;
-    //     for ($i=2; $i < 19; $i++) {
-    //         // $model = new Floor();
-    //         // $model->floor = $i;
-    //         // $model->save();
-    //         // if ($model->save()) {
-    //         if (true) {
-    //             for ($j=1; $j < 24; $j++) {
-    //                 $floor = new Flat();
+    public function actionStat()
+    {
+        $fl = 1;
+        for ($i=2; $i < 19; $i++) {
+            // $model = new Floor();
+            // $model->floor = $i;
+            // $model->save();
+            // if ($model->save()) {
+            if (true) {
+                for ($j=1; $j < 24; $j++) {
+                    // $floor = new Flat();
 
-    //                 $floor->floor_id = $i;
-    //                 $floor->num = $fl;
+                    $floor = Flat::find()
+                        ->where(['id' => $fl])
+                        ->one();
 
-    //                 $floor->save();
-    //                 $fl++;
-    //                 if ($floor->getErrors()) {
-    //                     var_dump($floor->getErrors());
-    //                 }
-    //             }
-    //         }
+                    $floor->floor_id = $i - 1;
+                    // $floor->num = $fl;
+
+                    $floor->save();
+                    $fl++;
+                    if ($floor->getErrors()) {
+                        var_dump($floor->getErrors());
+                    }
+                }
+            }
             
-    //     }
-    // }
+        }
+    }
 
     // public function actionStat()
     // {
