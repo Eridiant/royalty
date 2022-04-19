@@ -1,6 +1,6 @@
 <div class="map">
     <div class="container-lg" style="max-width: 1920px; margin-left: auto; margin-right: auto">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d95470.6388733359!2d41.55906710390968!3d41.602618345671715!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x406786304ea2d221%3A0x7a3053a9e12ea967!2z0JHQsNGC0YPQvNC4LCDQk9GA0YPQt9C40Y8!5e0!3m2!1sru!2s!4v1648391291438!5m2!1sru!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1990.6169153523354!2d41.59324362088274!3d41.62212559382382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s41.62230491491541%2C%2041.59460414225088!5e0!3m2!1sru!2s!4v1650356254295!5m2!1sru!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 </div>
 <div class="contacts">

@@ -188,7 +188,7 @@ $this->title = 'Royal';
             <svg class="panorama-switch-rt" width="71" height="30"><use xlink:href="images/icons.svg#switcher"></use></svg>
             <svg width="21" height="21"><use xlink:href="images/icons.svg#moon"></use></svg>
         </div> -->
-        <div class="panorama-slider swiper">
+        <div class="panorama-slider swiper" style="--swiper-navigation-color: var(--white-color); --swiper-navigation-size: 70px">
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <picture>

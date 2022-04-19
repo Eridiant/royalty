@@ -31,16 +31,21 @@ use yii\helpers\Url;
                     </div>
                 </div>
                 <div class="footer-adders">
-                    <a class="radius" href="tel:+70988900043">
+                    <a class="radius" href="tel:+995558499966">
                         <svg width="19" height="19"><use xlink:href="/images/icons.svg#phone"></use></svg>
                     </a>
                     <a href="tel:+995558499966"></a>
                         +995 (558) 49-99-66
                     </a>
-                    <a href="tel:+995558499922"></a>
-                        +995 (558) 49-99-22
-                    </a>
-                    <p>Rejeb nizharadze  nomer 5</p>
+                    <p>
+                        <a class="radius" href="tel:+995558499922">
+                            <svg width="19" height="19"><use xlink:href="/images/icons.svg#phone"></use></svg>
+                        </a>
+                        <a href="tel:+995558499922"></a>
+                            +995 (558) 49-99-22
+                        </a>
+                    </p>
+                    <p>address: Rejeb nizharadze nomer 5</p>
                 </div>
             </div>
         </div>
