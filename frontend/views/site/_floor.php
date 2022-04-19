@@ -121,7 +121,7 @@ use yii\helpers\Url;
                             <div class="btn btn-brd xsm">Забронировать квартиру</div>
                             <div class="">
                                 <svg width="14" height="16"><use xlink:href="/images/icons.svg#pdf"></use></svg>
-                                <a id="pdf" href="<?=Url::toRoute(['site/pdf', 'floor' => 1, 'flat' => 1, 'img' => 20]) ?>">
+                                <a id="pdf" href="<?=Url::toRoute(['site/pdf', 'floor' => 1, 'flat' => 1, 'img' => 20]) ?>" target="_blank">
                                     Скачать планировку
                                 </a>
                             </div>
