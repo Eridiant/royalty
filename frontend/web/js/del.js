@@ -252,7 +252,7 @@ function flr(model) {
         document.querySelector('#floor').contentDocument.addEventListener('click', (e) => {
             if (e.target.closest('.area')) {
                 let i = e.target.dataset.i;
-                flatAjax(i);
+                flatAjax(e.target.id.match(/[0-9/.]+/)[0]);
                 document.querySelector('#flat-num span').innerHTML = floor[i-1].dataset.num;
                 document.querySelector('#area span').innerHTML = floor[i-1].dataset.area;
                 document.querySelector('#live span').innerHTML = floor[i-1].dataset.live;
