@@ -225,6 +225,7 @@ class SiteController extends Controller
         $floor = $request->get('floor');
         $flat = $request->get('flat');
         $imgs = $request->get('img');
+        $imgs = $imgs % 23;
 
         // ?block=a&floor=11&flat=1
         // $model='';
