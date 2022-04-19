@@ -30,7 +30,7 @@
                         <?php endforeach; ?>
                     </div>
                 </div>
-                <a class="sm" href="tel:+70988900043">+7 (098) 890-00-43</a>
+                <a class="sm" href="tel:+995558499966">+995 (558) 49-99-66</a>
                 <a class="sm" href="#">
                     <svg width="18" height="18"><use xlink:href="/images/icons.svg#whatsapp"></use></svg>
                 </a>
