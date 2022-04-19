@@ -1,4 +1,5 @@
 <?php
+use yii\helpers\Url;
 
 ?>
 
@@ -120,7 +121,9 @@
                             <div class="btn btn-brd xsm">Забронировать квартиру</div>
                             <div class="">
                                 <svg width="14" height="16"><use xlink:href="/images/icons.svg#pdf"></use></svg>
-                                <span>Скачать планировку</span>
+                                <a href="<?=Url::toRoute(['site/pdf', 'floor' => 1, 'flat' => 20, 'img' => "кв20.jpg"]) ?>">
+                                    Скачать планировку
+                                </a>
                             </div>
                         </div>
                     </div>

@@ -219,6 +219,32 @@ class SiteController extends Controller
         return $this->render('plans');
     }
 
+    public function actionPdf()
+    {
+        $request = Yii::$app->request;
+        $floor = $request->get('floor');
+        $flat = $request->get('flat');
+        $img = $request->get('img');
+
+        // ?block=a&floor=11&flat=1
+        // $model='';
+
+        $model = Flat::find()
+                ->where('floor_id=:floor_id')
+                ->addParams([':floor_id' => $floor])
+                ->andWhere('num=:num')
+                ->addParams([':num' => $flat])
+                ->exists();
+
+        if (!$model) {
+            throw new NotFoundHttpException('The requested page does not exist.');
+        }
+
+        $this->bodyClass = 'other bl';
+
+        return $this->renderPartial('pdf', compact('floor', 'flat', 'img'));
+    }
+
     /**
      * Displays contacts page.
      *
