@@ -21,6 +21,11 @@
                     </div>
                     <div class="swiper-slide">
                         <picture>
+                            <img src="/images/gallery/gallery/gallery-4.jpg" alt="">
+                        </picture>
+                    </div>
+                    <div class="swiper-slide">
+                        <picture>
                             <img src="/images/gallery/gallery/gallery-5.jpg" alt="">
                         </picture>
                     </div>

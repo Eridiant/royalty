@@ -21,11 +21,6 @@
                     </div>
                     <div class="swiper-slide">
                         <picture>
-                            <img src="/images/gallery/batumy/batumy-4.jpg" alt="">
-                        </picture>
-                    </div>
-                    <div class="swiper-slide">
-                        <picture>
                             <img src="/images/gallery/batumy/batumy-5.jpg" alt="">
                         </picture>
                     </div>
