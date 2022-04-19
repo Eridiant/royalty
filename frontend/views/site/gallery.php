@@ -10,11 +10,12 @@ use yii\helpers\Url;
 
 $this->title = 'Галерея';
 ?>
-<div class="gallery <?= $rend; ?>">
+<div class="gallery <?= $rend == "gallery" ? "gall" : $rend ; ?>">
     <div class="container-lg" style="max-width: 1920px; margin-left: auto; margin-right: auto">
         <div class="gallery-wrapper">
             <div class="gallery-img">
-                <picture>
+                <?= $this->render("_{$rend}-slide") ?>
+                <!-- <picture>
                     <img src="/images/del/header.jpg" alt="">
                 </picture>
                 <div class="gallery-video">
@@ -23,7 +24,7 @@ $this->title = 'Галерея';
                 <div class="gallery-cub">
                     <svg class="gallery-3d" width="59" height="37"><use xlink:href="/images/icons.svg#3d"></use></svg>
                     <svg width="36" height="36"><use xlink:href="/images/icons.svg#cub"></use></svg>
-                </div>
+                </div> -->
             </div>
             <div class="gallery-inner">
                 <div class="gallery-text">

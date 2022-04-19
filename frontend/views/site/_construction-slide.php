@@ -1,10 +1,6 @@
-<div class="slider">
-    <div class="container-lg" style="max-width: 1920px; margin-left: auto; margin-right: auto">
-        <div class="pattern"></div>
-        <div class="container" style="max-width: 1600px; margin-left: auto; margin-right: auto">
-            <div thumbsSlider="" class="slider-slider swiper">
+            <div class="gallery-slider swiper" style="--swiper-navigation-color: var(--white-color)">
                 <div class="swiper-wrapper">
-                    <div class="swiper-slide">
+                <div class="swiper-slide">
                         <picture>
                             <img src="/images/gallery/construction/construction-1.jpg" alt="">
                         </picture>
@@ -25,7 +21,6 @@
                         </picture>
                     </div>
                 </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
             </div>
-        </div>
-    </div>
-</div>

@@ -277,7 +277,7 @@ class SiteController extends Controller
      */
     public function actionGallery()
     {
-        $rend = 'gall';
+        $rend = 'gallery';
         return $this->render('gallery', compact('rend'));
     }
 
