@@ -20,7 +20,7 @@ $currentLang = $cookies->getValue('_locale', 'en-US');
     <div class="container">
         <div class="wrapper"><!-- <a href="/images/blocks/pdf/<?//= $block; ?>/<?//= $floor_num; ?>/1.pdf" alt="Calligraphy Towers. <?=Yii::t('frontend', 'Квартиры в Батуми')?>" class="contacts-call btn btn-blue"> -->
             <div class="wrapper-img"> 
-                <img class="img"src="/images/flat/<?= $flat; ?>/<?= $img; ?>" alt="">
+                <img class="img"src="<?= $img; ?>" alt="">
             </div>
             <div class="inner">
                 <p><?= Url::home(true); ?></p>

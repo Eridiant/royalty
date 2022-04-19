@@ -224,7 +224,7 @@ class SiteController extends Controller
         $request = Yii::$app->request;
         $floor = $request->get('floor');
         $flat = $request->get('flat');
-        $img = $request->get('img');
+        $imgs = $request->get('img');
 
         // ?block=a&floor=11&flat=1
         // $model='';
@@ -235,14 +235,18 @@ class SiteController extends Controller
                 ->andWhere('num=:num')
                 ->addParams([':num' => $flat])
                 ->exists();
-
-        if (!$model) {
+                
+        $img = \yii\helpers\FileHelper::findFiles("images/flat/{$imgs}")[0];
+        if (!$model || !$img) {
             throw new NotFoundHttpException('The requested page does not exist.');
         }
 
+
+        // $img = "кв20.jpg";
+
         $this->bodyClass = 'other bl';
 
-        return $this->renderPartial('pdf', compact('floor', 'flat', 'img'));
+        return $this->renderPartial('pdf', compact('floor', 'flat', 'img', 'imgs'));
     }
 
     /**
