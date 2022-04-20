@@ -30,11 +30,13 @@
                         <?php endforeach; ?>
                     </div>
                 </div>
-                <a class="sm" href="tel:+995558499966">+995 (558) 49-99-66</a>
-                <a class="sm" href="#">
+                <a class="sm" href="tel:+995558499966">
+                    +995 (558) 49-99-66
+                </a>
+                <a class="sm" href="https://wa.me/955558499966">
                     <svg width="18" height="18"><use xlink:href="/images/icons.svg#whatsapp"></use></svg>
                 </a>
-                <a class="sm" href="#">
+                <a class="sm" href="viber://add?number=955558499966">
                     <svg width="18" height="18"><use xlink:href="/images/icons.svg#viber"></use></svg>
                 </a>
             </div>
