@@ -253,10 +253,10 @@ function flr(model) {
                 let i = e.target.dataset.i;
                 let img = e.target.id.match(/[0-9/.]+/)[0];
                 flatAjax(img);
-                document.querySelector('#flat-num span').innerHTML = floor[i-1].dataset.num;
-                document.querySelector('#area span').innerHTML = floor[i-1].dataset.area;
-                document.querySelector('#live span').innerHTML = floor[i-1].dataset.live;
-                document.querySelector('#balcony span').innerHTML = floor[i-1].dataset.balcony;
+                document.querySelector('#flat-num span:not(.translate)').innerHTML = floor[i-1].dataset.num;
+                document.querySelector('#area span:not(.translate)').innerHTML = floor[i-1].dataset.area;
+                document.querySelector('#live span:not(.translate)').innerHTML = floor[i-1].dataset.live;
+                document.querySelector('#balcony span:not(.translate)').innerHTML = floor[i-1].dataset.balcony;
                 // document.querySelector('.floor-change').innerHTML = e.target.dataset.i;
                 document.querySelector('#pdf').href = `/pdf?floor=${model[0].floor_id}&flat=${floor[i-1].dataset.num}&img=${img}`;
                 flat.classList.add('show');

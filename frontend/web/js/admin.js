@@ -4,18 +4,30 @@ window.addEventListener('load', () => {
         let target = e.target;
         
         if (target.closest('.translate')) {
-            console.log(target);
             form.classList.add('active');
             document.querySelector('.admin-source-text').innerHTML = target.closest('.translate').dataset.translate;
-            document.querySelector('.translation').innerHTML = target.closest('.translate').innerHTML;
+            document.querySelector('.form .translation').value = target.innerHTML;
             target.closest('.translate').classList.add('current-translation');
+        } else if (!target.closest('.admin-form')) {
+            form.classList.remove('active');
+        }
+        if (target.closest('.admin-source-text')) {
+            let text = document.createElement("textarea");
+            document.body.appendChild(text);
+            text.value = document.querySelector('.admin-source-text').innerHTML;
+            text.select();
+            document.execCommand("copy");
+            text.remove();
+            // console.log(text);
+            // document.querySelector('.admin-source-text').select();    
+            // document.execCommand("copy");
         }
     });
 
     document.forms.trslt.onsubmit = function(e) {
         e.preventDefault();
         document.querySelector('.current-translation').innerHTML = this.translate.value;
-        document.querySelector('.current-translation').classList.remove('current-translation');
+        document.querySelectorAll('.current-translation').forEach(el => el.classList.remove('current-translation'))
         form.classList.remove('active');
         trsltAjax(document.querySelector('.admin-source-text').innerHTML, this.translate.value)
             .then(response => document.querySelector('.translation').innerHTML = '')
