@@ -14,7 +14,7 @@ use yii\helpers\Url;
                     </object>
                 </div>
                 <div class="footer-social">
-                    <p>Соцсети:</p>
+                    <p><?=Yii::$app->translate->getT("Соцсети")?>:</p>
                     <div class="footer-social-icons">
                         <a href="https://www.facebook.com/RoyalDevelopmentBatumi">
                             <svg width="20" height="20"><use xlink:href="images/icons.svg#fb"></use></svg>
@@ -45,11 +45,11 @@ use yii\helpers\Url;
                             +995 (558) 49-99-22
                         </a>
                     </p>
-                    <p>address: Rejeb nizharadze nomer 5</p>
+                    <p><?=Yii::$app->translate->getT("address: Rejeb nizharadze nomer 5")?></p>
                 </div>
             </div>
         </div>
-        <a href="#" class="footer-polit mb">Политики конфиденциальности</a>
+        <a href="<?= Url::toRoute('/site/privacy-policy') ?>" class="footer-polit mb"><?=Yii::t('frontend', 'Политики конфиденциальности')?></a>
     </div>
 </footer>
 
@@ -105,15 +105,15 @@ use yii\helpers\Url;
         <div class="content-wrapper">
             <div class="content-nav">
                 <ul>
-                    <li><a href="<?= Url::toRoute('/site/index') ?>">Главная</a></li>
-                    <li><a href="<?= Url::toRoute('/site/plans') ?>">Планировка</a></li>
+                    <li><a href="<?= Url::toRoute('/site/index') ?>"><?=Yii::t('frontend', 'Главная')?></a></li>
+                    <li><a href="<?= Url::toRoute('/site/plans') ?>"><?=Yii::t('frontend', 'Планировка')?></a></li>
                     <!-- <li><a href="<?//= Url::toRoute('/site/about') ?>">О компании</a></li> -->
-                    <li><a href="<?= Url::toRoute('/site/infrastructure') ?>">Инфраструктура</a></li>
-                    <li><a href="<?= Url::toRoute('/site/gallery') ?>">Галлерея</a></li>
-                    <li><a href="<?= Url::toRoute('/site/contacts') ?>">Контакты</a></li>
+                    <li><a href="<?= Url::toRoute('/site/infrastructure') ?>"><?=Yii::t('frontend', 'Инфраструктура')?></a></li>
+                    <li><a href="<?= Url::toRoute('/site/gallery') ?>"><?=Yii::t('frontend', 'Галлерея')?></a></li>
+                    <li><a href="<?= Url::toRoute('/site/contacts') ?>"><?=Yii::t('frontend', 'Контакты')?></a></li>
                 </ul>
             </div>
-            <a class="content-footer" href="#">Политики конфиденциальности</a>
+            <a class="content-footer" href="<?= Url::toRoute('/site/privacy-policy') ?>"><?=Yii::t('frontend', 'Политики конфиденциальности')?></a>
         </div>
     </div>
 </div>
@@ -127,15 +127,16 @@ use yii\helpers\Url;
         <div class="popup-inner sending">
             <div class="check">&#10003</div>
             <div class="subtitle">
-                Спасибо
+                <?=Yii::$app->translate->getT("Спасибо")?>
             </div>
             <p>
-                Ваша заявка отправлена, мы перезвоним
+                <?=Yii::$app->translate->getT("Ваша заявка отправлена, мы перезвоним")?>
             </p>
         </div>
     </div>
 </div>
-
+<!-- <?//=Yii::t('frontend', '')?>
+<?//=Yii::$app->translate->getT("")?> -->
 
 
 <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" /> -->

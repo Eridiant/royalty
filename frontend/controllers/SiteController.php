@@ -270,6 +270,14 @@ class SiteController extends Controller
         return $this->render('about');
     }
 
+    public function actionPrivacyPolicy()
+    {
+
+        // $this->bodyClass = 'other bl';
+
+        return $this->render('policy');
+    }
+
     /**
      * Displays about page.
      *

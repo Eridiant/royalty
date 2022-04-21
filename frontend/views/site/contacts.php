@@ -9,13 +9,13 @@
             <div class="pattern"></div>
             <div class="contacts-inner">
                 <div class="contacts-contacts">
-                    <p class="subtitle">Контакты</p>
+                    <p class="subtitle"><?=Yii::$app->translate->getT("Контакты")?></p>
                     <a href="tel:+995558499966"><svg width="21" height="20"><use xlink:href="images/icons.svg#phone"></use></svg> +995 (558) 49-99-66</a>
                     <a href="tel:+995558499922"><svg width="21" height="20"><use xlink:href="images/icons.svg#phone"></use></svg> +995 (558) 49-99-22</a>
                     <a href="mailto:info@kaligraf.ge"><svg width="21" height="16"><use xlink:href="images/icons.svg#mail"></use></svg> info@royalresidence.ge</a>
-                    <p><svg width="21" height="24"><use xlink:href="images/icons.svg#address"></use></svg>Rejeb nizharadze  nomer 5</p>
+                    <p><svg width="21" height="24"><use xlink:href="images/icons.svg#address"></use></svg><?=Yii::$app->translate->getT("Rejeb nizharadze nomer 5")?></p>
                     <div class="btn act-btn" data-btn="popup-call-back">
-                        <span>Обратный звонок</span>
+                        <span><?=Yii::t('frontend', 'Обратный звонок')?></span>
                         <svg width="20" height="20"><use xlink:href="images/icons.svg#phone"></use></svg>
                     </div>
                 </div>
@@ -33,22 +33,23 @@
     <div class="popup">
         <div class="popup-inner sending">
             <div class="subtitle">
-                Обратный звонок
+                <?=Yii::t('frontend', 'Обратный звонок')?>
             </div>
             <p>
-                Заполнте поля и мы Вам перезвоним в течение 15 минут
+                <?=Yii::$app->translate->getT("Заполнте поля и мы Вам перезвоним в течение 15 минут")?>
             </p>
             <div class="">
                 <form name="callBack" class="form" action="#" method="post">
                     <label for="call-name"></label>
-                    <input name="name" id="call-name" type="text" placeholder="Имя" required>
+                    <input name="name" id="call-name" type="text" placeholder="<?=Yii::t('frontend', 'Имя')?>" required>
                     <label for="call-phone"></label>
                     <input name="phone" id="call-phone" pattern="(\+?\d[- .]*){7,15}" type="tel" class=""
-                        placeholder="Телефон" required>
-                    <button type="submit" href="#" class="btn" data-btn="popup-success"><span>Оставить заявку</span></button>
+                        placeholder="<?=Yii::t('frontend', 'Телефон')?>" required>
+                    <button type="submit" href="#" class="btn" data-btn="popup-success"><span><?=Yii::t('frontend', 'Оставить заявку')?></span></button>
                 </form>
             </div>
         </div>
     </div>
 </div>
+
 

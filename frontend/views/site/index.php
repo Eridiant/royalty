@@ -127,10 +127,10 @@ $this->title = 'Royal';
                 <p class="title">Royal development</p>
                 <div class="development-text">
                     <p>
-                        “Royal development” - это премиальный жилой комплекс на 1-й береговой линии, в 150 метрах от моря. В продаже  апартаменты комфорт и бизнес класса от 28 кв.метров с видом на море и горы.
+                        <?=Yii::$app->translate->getT("“Royal development” - это премиальный жилой комплекс на 1-й береговой линии, в 150 метрах от моря. В продаже  апартаменты комфорт и бизнес класса от 28 кв.метров с видом на море и горы.")?>
                     </p>
                     <p>
-                        Жилой комплекс “Royal development” привлекателен для инвестирования и постоянного проживания, концепция современного и роскошного ЖК для жизни и бизнеса, ЖК расположен в городе Батуми, Грузия
+                        <?=Yii::$app->translate->getT("Жилой комплекс “Royal development” привлекателен для инвестирования и постоянного проживания, концепция современного и роскошного ЖК для жизни и бизнеса, ЖК расположен в городе Батуми, Грузия")?>
                     </p>
                 </div>
                 <div class="development-items">
@@ -138,31 +138,31 @@ $this->title = 'Royal';
                         <a href="#" class="radius">
                             <svg width="18" height="18"><use xlink:href="/images/icons.svg#anchor"></use></svg>
                         </a>
-                        <p>Близко к морю 150 метров</p>
+                        <p><?=Yii::$app->translate->getT("Близко к морю 150 метров")?></p>
                     </div>
                     <div class="development-item">
                         <a href="#" class="radius">
                             <svg width="18" height="18"><use xlink:href="/images/icons.svg#key"></use></svg>
                         </a>
-                        <p>Планировочные решения от 28 кв.</p>
+                        <p><?=Yii::$app->translate->getT("Планировочные решения от 28 кв.")?></p>
                     </div>
                     <div class="development-item">
                         <a href="#" class="radius">
                             <svg width="18" height="18"><use xlink:href="/images/icons.svg#hotel"></use></svg>
                         </a>
-                        <p>Архитектура и концепция ЖК</p>
+                        <p><?=Yii::$app->translate->getT("Архитектура и концепция ЖК")?></p>
                     </div>
                     <div class="development-item">
                         <a href="#" class="radius">
                             <svg width="18" height="18"><use xlink:href="/images/icons.svg#secure"></use></svg>
                         </a>
-                        <p>Надежный застройщик и аккредитация банка</p>
+                        <p><?=Yii::$app->translate->getT("Надежный застройщик и аккредитация банка")?></p>
                     </div>
                     <div class="development-item">
                         <a href="#" class="radius">
                             <svg width="19" height="18"><use xlink:href="/images/icons.svg#money"></use></svg>
                         </a>
-                        <p>Условия приобретения и ценовая политика</p>
+                        <p><?=Yii::$app->translate->getT("Условия приобретения и ценовая политика")?></p>
                     </div>
                 </div>
             </div>
@@ -217,14 +217,14 @@ $this->title = 'Royal';
         <div class="container" style="max-width: 1600px; margin-left: auto; margin-right: auto">
             <div class="location-wrapper">
                 <div class="location-inner">
-                    <p class="cap">о жилом комплексе</p>
-                    <p class="title">Расположение</p>
+                    <p class="cap"><?=Yii::$app->translate->getT("о жилом комплексе")?></p>
+                    <p class="title"><?=Yii::$app->translate->getT("Расположение")?></p>
                     <div class="location-map-mb">
                         <picture>
                             <img src="/images/index/location/map-mb-2x.jpg" alt="" />
                         </picture>
                     </div>
-                    <p class="cap">рядом с комплексом</p>
+                    <p class="cap"><?=Yii::$app->translate->getT("рядом с комплексом")?></p>
                     <div class="location-slider-wrapper">
                         <div class="location-slider swiper">
                             <div class="swiper-wrapper">
@@ -234,7 +234,7 @@ $this->title = 'Royal';
                                             <img src="/images/index/location/loc-1.jpg">
                                         </picture>
                                     </div>
-                                    <p>Первая линия от моря в 70 метрах</p>
+                                    <p><?=Yii::$app->translate->getT("Первая линия от моря в 70 метрах")?></p>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
@@ -242,7 +242,7 @@ $this->title = 'Royal';
                                             <img src="/images/index/location/loc-2.jpg">
                                         </picture>
                                     </div>
-                                    <p>Парк отдых 6000 кв.м</p>
+                                    <p><?=Yii::$app->translate->getT("Парк отдых 6000 кв.м")?></p>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
@@ -250,7 +250,7 @@ $this->title = 'Royal';
                                             <img src="/images/index/location/loc-3.jpg">
                                         </picture>
                                     </div>
-                                    <p>Набережная 10 км</p>
+                                    <p><?=Yii::$app->translate->getT("Набережная 10 км")?></p>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
@@ -258,7 +258,7 @@ $this->title = 'Royal';
                                             <img src="/images/index/location/loc-4.jpg">
                                         </picture>
                                     </div>
-                                    <p>Торговый центр 3000 кв.м</p>
+                                    <p><?=Yii::$app->translate->getT("Торговый центр 3000 кв.м")?></p>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
@@ -266,7 +266,7 @@ $this->title = 'Royal';
                                             <img src="/images/index/location/loc-5.jpg">
                                         </picture>
                                     </div>
-                                    <p>Детская площадка 200 кв.метров</p>
+                                    <p><?=Yii::$app->translate->getT("Детская площадка 200 кв.метров")?></p>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
@@ -274,7 +274,7 @@ $this->title = 'Royal';
                                             <img src="/images/index/location/loc-6.jpg">
                                         </picture>
                                     </div>
-                                    <p>Автобусная остановка</p>
+                                    <p><?=Yii::$app->translate->getT("Автобусная остановка")?></p>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
@@ -282,7 +282,7 @@ $this->title = 'Royal';
                                             <img src="/images/index/location/loc-7.jpg">
                                         </picture>
                                     </div>
-                                    <p>Супермаркет</p>
+                                    <p><?=Yii::$app->translate->getT("Супермаркет")?></p>
                                 </div>
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
@@ -290,7 +290,7 @@ $this->title = 'Royal';
                                             <img src="/images/index/location/loc-8.jpg">
                                         </picture>
                                     </div>
-                                    <p>Аэропорт в 5 минутах</p>
+                                    <p><?=Yii::$app->translate->getT("Аэропорт в 5 минутах")?></p>
                                 </div>
                             </div>
                         </div>
@@ -300,7 +300,7 @@ $this->title = 'Royal';
                         </div>
                     </div>
                     <p>
-                        Royal development располагается в центральной части нового бульвара, вся инфраструктура находиться в шаговой доступности.
+                        <?=Yii::$app->translate->getT("Royal development располагается в центральной части нового бульвара, вся инфраструктура находиться в шаговой доступности.")?>
                     </p>
                 </div>
             </div>
@@ -313,8 +313,8 @@ $this->title = 'Royal';
         <div class="pattern"></div>
         <div class="container" style="max-width: 1600px; margin-left: auto; margin-right: auto">
             <div class="apartments-title-wrapper mb">
-                <div class="cap">квартиры</div>
-                <h2 class="title">Для любой семьи</h2>
+                <div class="cap"><?=Yii::$app->translate->getT("квартиры")?></div>
+                <h2 class="title"><?=Yii::$app->translate->getT("Для любой семьи")?></h2>
             </div>
             <div class="apartments-slider-wrapper">
                 <div class="apartments-slider swiper">
@@ -387,8 +387,8 @@ $this->title = 'Royal';
                 </div>
             </div>
             <div class="apartments-tab">
-                <div class="cap dt">квартиры</div>
-                <h2 class="title dt">Для любой семьи</h2>
+                <div class="cap dt"><?=Yii::$app->translate->getT("квартиры")?></div>
+                <h2 class="title dt"><?=Yii::$app->translate->getT("Для любой семьи")?></h2>
                 <div class="apartments-types">
                     <ul class="apartments-tabs">
                         <li class="active" data-num="0">
@@ -407,21 +407,21 @@ $this->title = 'Royal';
                             <p>56 m<sup>2</sup></p>
                         </li>
                     </ul>
-                    <div class="cap">квартиры</div>
+                    <div class="cap"><?=Yii::$app->translate->getT("квартиры")?></div>
                     <div class="apartments-desc">
                         <p class="current" data-num="0">
-                            Материалы в отделке использовались натуральные и экологичные —  такие как камень, дерево, отделочные смехи. Минималистское пространство не будет отвлекать вас от пейзажа за окном.
+                            <?=Yii::$app->translate->getT("Материалы в отделке использовались натуральные и экологичные —  такие как камень, дерево, отделочные смехи. Минималистское пространство не будет отвлекать вас от пейзажа за окном.")?>
                         </p>
                         <p data-num="1">
-                            Материалы в отделке использовались натуральные и экологичные —  такие как камень, дерево, отделочные смехи. Минималистское пространство не будет отвлекать вас от пейзажа за окном.
+                            <?=Yii::$app->translate->getT("Материалы в отделке использовались натуральные и экологичные —  такие как камень, дерево, отделочные смехи. Минималистское пространство не будет отвлекать вас от пейзажа за окном.")?>
                         </p>
                         <p data-num="2">
-                            Материалы в отделке использовались натуральные и экологичные —  такие как камень, дерево, отделочные смехи. Минималистское пространство не будет отвлекать вас от пейзажа за окном.
+                            <?=Yii::$app->translate->getT("Материалы в отделке использовались натуральные и экологичные —  такие как камень, дерево, отделочные смехи. Минималистское пространство не будет отвлекать вас от пейзажа за окном.")?>
                         </p>
                     </div>
                 </div>
                 <a href="<?= Url::toRoute('/site/plans') ?>" class="apartments-btn btn">
-                    <span>Выбрать квартиру</span>
+                    <span><?=Yii::t('frontend', 'Выбрать квартиру')?></span>
                     <svg width="62" height="24"><use xlink:href="/images/icons.svg#arrow-right"></use></svg>
                 </a>
             </div>
@@ -435,24 +435,23 @@ $this->title = 'Royal';
         <div class="pattern right"></div>
         <div class="container" style="max-width: 1120px; margin-left: auto; margin-right: auto">
             <div class="contacts-wrapper">
-                <p class="cap">остались вопросы?</p>
-                <p class="title">Напишите нам</p>
+                <p class="cap"><?=Yii::$app->translate->getT("остались вопросы?")?></p>
+                <p class="title"><?=Yii::$app->translate->getT("Напишите нам")?></p>
                 <div class="contacts-content">
                     <p>
-                        Наш менеджер перезвонит Вам в течении <b>15 минут</b> и подберет для Вас наилучший вариант
+                        <?=Yii::$app->translate->getT("Наш менеджер перезвонит Вам в течении")?> <b><?=Yii::$app->translate->getT("15 минут")?></b> <?=Yii::$app->translate->getT("и подберет для Вас наилучший вариант")?>
                     </p>
                 </div>
                 <form name="callBack" class="form" action="#" method="post">
                     <label for="call-name"></label>
-                    <input name="name" id="call-name" type="text" placeholder="Имя" required>
+                    <input name="name" id="call-name" type="text" placeholder="<?=Yii::t('frontend', 'Имя')?>" required>
                     <label for="call-phone"></label>
-                    <input name="phone" id="call-phone" pattern="(\+?\d[- .]*){7,15}" type="tel" class="" placeholder="Телефон" required>
-                    <button type="submit" href="#" class="btn callback"><span>Оставить заявку</span></button>
+                    <input name="phone" id="call-phone" pattern="(\+?\d[- .]*){7,15}" type="tel" class="" placeholder="<?=Yii::t('frontend', 'Телефон')?>" required>
+                    <button type="submit" href="#" class="btn callback"><span><?=Yii::t('frontend', 'Оставить заявку')?></span></button>
                 </form>
             </div>
         </div>
     </div>
 </div>
 <!-- contacts end -->
-
 

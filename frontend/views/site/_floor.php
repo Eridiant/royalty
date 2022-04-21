@@ -11,8 +11,8 @@ use yii\helpers\Url;
                     </div>
                     <div class="floor-choice">
                         <div class="floor-legend lg">
-                            <p class="floor-reserved">Бронь</p>
-                            <p class="floor-sold">Продано</p>
+                            <p class="floor-reserved"><?=Yii::$app->translate->getT("Бронь")?></p>
+                            <p class="floor-sold"><?=Yii::$app->translate->getT("Продано")?></p>
                         </div>
                         <div class="floor-flat">
                             <div class="floor-img">
@@ -22,7 +22,7 @@ use yii\helpers\Url;
                             </div>
                             <div class="floor-svg">
                                 <object id="floor" type="image/svg+xml" data="/images/svg/floor.svg">
-                                    ваш браузер устарел
+                                    <?=Yii::t('frontend', 'ваш браузер устарел')?>
                                 </object>
                                 <div class="focus">
                                     <p class="focus-flat"></p>
@@ -37,7 +37,7 @@ use yii\helpers\Url;
                             </div>
                             <div class="floor-change-floor">
                                 <p class="floor-change-num num floor-changes">2</p>
-                                <p class="floor-change-text">этаж</p>
+                                <p class="floor-change-text"><?=Yii::$app->translate->getT("этаж")?></p>
                             </div>
                             <div class="building-floor-svg next">
                                 <svg class="arrow-down md" width="44" height="17"><use xlink:href="images/icons.svg#vertical-arrow"></use></svg>
@@ -47,7 +47,7 @@ use yii\helpers\Url;
                     </div>
                     <div class="floor-btn">
                         <svg width="62" height="24"><use xlink:href="/images/icons.svg#arrow-right"></use></svg>
-                        <span>К выбору этажа'</span>
+                        <span><?=Yii::t('frontend', 'К выбору этажа')?>'</span>
                     </div>
                 </div>
                 <!-- квартира -->
@@ -86,12 +86,12 @@ use yii\helpers\Url;
                         </div>
                         <div class="flat-btn md">
                             <svg width="62" height="24"><use xlink:href="/images/icons.svg#arrow-right"></use></svg>
-                            <span>К выбору квартир</span>
+                            <span><?=Yii::t('frontend', 'К выбору квартир')?></span>
                         </div>
-                        <div id="flat-num" class="subtitle">Квартира №<span>1</span></div>
+                        <div id="flat-num" class="subtitle"><?=Yii::$app->translate->getT("Квартира")?> №<span>1</span></div>
                         <div class="flat-inner">
                             <div class="flat-inner-location item md">
-                                <span>Расположение квартиры на этаже:</span>
+                                <span><?=Yii::$app->translate->getT("Расположение квартиры на этаже")?>:</span>
                                 <div class="flat-inner-img">
                                     <div class="floor-img">
                                         <picture>
@@ -100,29 +100,29 @@ use yii\helpers\Url;
                                     </div>
                                     <div class="floor-svg">
                                         <object id="floor-current" type="image/svg+xml" data="/images/svg/floor-current.svg">
-                                            ваш браузер устарел
+                                            <?=Yii::t('frontend', 'ваш браузер устарел')?>
                                         </object>
                                     </div>
                                 </div>
                             </div>
                             <div class="flat-inner-items items item">
-                                <p id="area">Общая площадь объекта <span>34.95</span> м<sup>2</sup> </p>
-                                <p id="live">Жилая площадь <span>29.4</span> м<sup>2</sup>  </p>
-                                <p id="balcony">Балкон <span>5.55</span> м<sup>2</sup>  </p>
-                                <p>Отопление электричество/газ </p>
+                                <p id="area"><?=Yii::$app->translate->getT("Общая площадь объекта")?> <span>34.95</span> м<sup>2</sup> </p>
+                                <p id="live"><?=Yii::$app->translate->getT("Жилая площадь")?> <span>29.4</span> м<sup>2</sup>  </p>
+                                <p id="balcony"><?=Yii::$app->translate->getT("Балкон")?> <span>5.55</span> м<sup>2</sup>  </p>
+                                <p><?=Yii::$app->translate->getT("Отопление электричество/газ")?> </p>
                             </div>
                         </div>
                         <div class="flat-buttons">
                             <!-- <div class="btn">Узнать цену</div> -->
                             <div class="btn act-btn" data-btn="popup-call-back">
-                                <span>Узнать цену</span>
+                                <span><?=Yii::t('frontend', 'Узнать цену')?></span>
                                 <svg width="20" height="20"><use xlink:href="images/icons.svg#phone"></use></svg>
                             </div>
-                            <div class="btn btn-brd xsm">Забронировать квартиру</div>
+                            <div class="btn btn-brd xsm act-btn" data-btn="popup-call-back"><?=Yii::t('frontend', 'Забронировать квартиру')?></div>
                             <div class="">
                                 <svg width="14" height="16"><use xlink:href="/images/icons.svg#pdf"></use></svg>
                                 <a id="pdf" href="<?=Url::toRoute(['site/pdf', 'floor' => 1, 'flat' => 1, 'img' => 20]) ?>" target="_blank">
-                                    Скачать планировку
+                                    <?=Yii::t('frontend', 'Скачать планировку')?>
                                 </a>
                             </div>
                         </div>
