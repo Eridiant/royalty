@@ -74,7 +74,7 @@ $this->title = 'Royal';
                             </a> -->
                         </div>
                         <div class="header-footer-row social">
-                            <a href="#">
+                            <a href="https://www.facebook.com/RoyalDevelopmentBatumi">
                                 <svg width="27" height="27"><use xlink:href="/images/icons.svg#fb"></use></svg>
                             </a>
                             <a href="#">
@@ -92,7 +92,7 @@ $this->title = 'Royal';
             </div>
         </div>
         <div class="header-footer-row social pa">
-            <a href="#">
+            <a href="https://www.facebook.com/RoyalDevelopmentBatumi">
                 <svg width="27" height="27"><use xlink:href="/images/icons.svg#fb"></use></svg>
             </a>
             <a href="#">

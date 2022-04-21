@@ -14,6 +14,7 @@ use yii\bootstrap4\NavBar;
 AppAsset::register($this);
 
 $currentLang = Yii::$app->language;
+$model = \backend\modules\language\models\Language::find()->where(['deleted_at' => null])->all(); 
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>

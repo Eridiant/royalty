@@ -16,7 +16,7 @@ use yii\helpers\Url;
                 <div class="footer-social">
                     <p>Соцсети:</p>
                     <div class="footer-social-icons">
-                        <a href="#">
+                        <a href="https://www.facebook.com/RoyalDevelopmentBatumi">
                             <svg width="20" height="20"><use xlink:href="images/icons.svg#fb"></use></svg>
                         </a>
                         <a href="#">
@@ -69,7 +69,7 @@ use yii\helpers\Url;
                 <a href="/"></a>
             </div>
             <div class="top-social">
-                <a href="#">
+                <a href="https://www.facebook.com/RoyalDevelopmentBatumi">
                     <svg width="27" height="27"><use xlink:href="/images/icons.svg#fb"></use></svg>
                 </a>
                 <a href="#">
@@ -84,25 +84,22 @@ use yii\helpers\Url;
             </div>
             <!-- <div class="content-empty"></div> -->
         </div>
-        <div class="lang lang-menu">
-            <div class="lang-choosed radius">
-                ru
-            </div>
-            <div class="lang-choose">
-                <ul>
-                    <li><a href="#">
-                        ge
-                    </a></li>
-                    <li><a href="#">
-                        en
-                    </a></li>
-                    <li><a href="#">
-                        ru
-                    </a></li>
-                    <li><a href="#">
-                        he
-                    </a></li>
-                </ul>
+        <div class="lang lang-menu nav-lang">
+            <?php foreach ($model as $lang): ?>
+                <?php if ($lang->key == $currentLang): ?>
+                    <a class="radius nav-lang-current" href="/site/set-locale?locale=<?=$lang->key?>">
+                        <?= $lang->code; ?>
+                    </a>
+                <?php endif; ?>
+            <?php endforeach; ?>
+            <div class="nav-lang-choose">
+                <?php foreach ($model as $lang): ?>
+                    <?php if ($lang->key != $currentLang): ?>
+                        <a class="radius" href="/site/set-locale?locale=<?=$lang->key?>">
+                            <?= $lang->code; ?>
+                        </a>
+                    <?php endif; ?>
+                <?php endforeach; ?>
             </div>
         </div>
         <div class="content-wrapper">

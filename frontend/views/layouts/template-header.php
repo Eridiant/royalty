@@ -12,7 +12,6 @@
                     <svg width="19" height="19"><use xlink:href="/images/icons.svg#phone"></use></svg>
                 </div>
                 <div class="nav-lang">
-                    <?php $model = \backend\modules\language\models\Language::find()->where(['deleted_at' => null])->all(); ?>
                     <?php foreach ($model as $lang): ?>
                         <?php if ($lang->key == $currentLang): ?>
                             <a class="radius nav-lang-current" href="/site/set-locale?locale=<?=$lang->key?>">

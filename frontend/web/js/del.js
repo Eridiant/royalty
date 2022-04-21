@@ -235,7 +235,6 @@ function flr(model) {
     let flat = document.querySelector('.flat');
     let flatCont = flat.contentDocument;
     document.querySelector('.num').innerHTML = model[1].floor_id;
-    console.log(model[1].floor_id);
     floor.addEventListener('load', (e) => {
         let floor = document.querySelector('#floor').contentDocument.querySelectorAll('.area');
         for (let i = 0; i < model.length; i++) {
@@ -265,7 +264,6 @@ function flr(model) {
         })
 
         let focusa = document.querySelector('.floor .focus');
-        console.log(focusa);
         document.querySelector('#floor').contentDocument.addEventListener('mousemove', (e) => {
             if (e.target.classList.contains('area')) {
                 let target = e.target;
