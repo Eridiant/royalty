@@ -69,5 +69,18 @@ return [
             'class' => 'common\components\LanguageSelector',
         ],
     ],
+    'as beforeRequest' => [  //if guest user access site so, redirect to login page.
+        'class' => 'yii\filters\AccessControl',
+        'rules' => [
+            [
+                'actions' => ['login', 'error'],
+                'allow' => true,
+            ],
+            [
+                'allow' => true,
+                'roles' => ['@'],
+            ],
+        ],
+    ],
     'params' => $params,
 ];
