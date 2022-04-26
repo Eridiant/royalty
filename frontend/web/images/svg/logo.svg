@@ -34,7 +34,7 @@
         .change {
             fill: #fff;
         }
-        @media (max-width: 40px) {
+        @media (max-width: 37px) {
             .change {
                 fill: #1A3C39;
             }
