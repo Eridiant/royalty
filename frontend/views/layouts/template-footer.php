@@ -109,7 +109,7 @@ use yii\helpers\Url;
                     <li><a href="<?= Url::toRoute('/site/plans') ?>"><?=Yii::t('frontend', 'Планировка')?></a></li>
                     <!-- <li><a href="<?//= Url::toRoute('/site/about') ?>">О компании</a></li> -->
                     <li><a href="<?= Url::toRoute('/site/infrastructure') ?>"><?=Yii::t('frontend', 'Инфраструктура')?></a></li>
-                    <li><a href="<?= Url::toRoute('/site/gallery') ?>"><?=Yii::t('frontend', 'Галлерея')?></a></li>
+                    <li><a href="<?= Url::toRoute('/site/gallery') ?>"><?=Yii::t('frontend', 'Галерея')?></a></li>
                     <li><a href="<?= Url::toRoute('/site/contacts') ?>"><?=Yii::t('frontend', 'Контакты')?></a></li>
                 </ul>
             </div>

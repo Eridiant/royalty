@@ -28,7 +28,7 @@ $this->title = 'Галерея';
             </div>
             <div class="gallery-inner">
                 <div class="gallery-text">
-                    <h1 class="title"><?=Yii::$app->translate->getT("Галлерея")?></h1>
+                    <h1 class="title"><?=Yii::$app->translate->getT("Галерея")?></h1>
                     <div class="gallery-item item">
                         <a class="gall" href="<?= Url::toRoute('/site/gallery') ?>"><?=Yii::t('frontend', 'Жилой дом')?></a>
                         <a class="construction" href="<?= Url::toRoute('/site/construction') ?>"><?=Yii::t('frontend', 'Ход строительства')?></a>

@@ -273,7 +273,7 @@ class SiteController extends Controller
     public function actionPrivacyPolicy()
     {
 
-        // $this->bodyClass = 'other bl';
+        $this->bodyClass = 'privacy';
 
         return $this->render('policy');
     }
