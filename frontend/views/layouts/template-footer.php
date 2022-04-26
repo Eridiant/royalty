@@ -49,7 +49,7 @@ use yii\helpers\Url;
                 </div>
             </div>
         </div>
-        <a href="<?= Url::toRoute('/site/privacy-policy') ?>" class="footer-polit mb"><?=Yii::t('frontend', 'Политики конфиденциальности')?></a>
+        <a href="<?= Url::toRoute('/site/privacy-policy') ?>" class="footer-polit mb"><?=Yii::t('frontend', 'Политика конфиденциальности')?></a>
     </div>
 </footer>
 
@@ -113,7 +113,7 @@ use yii\helpers\Url;
                     <li><a href="<?= Url::toRoute('/site/contacts') ?>"><?=Yii::t('frontend', 'Контакты')?></a></li>
                 </ul>
             </div>
-            <a class="content-footer" href="<?= Url::toRoute('/site/privacy-policy') ?>"><?=Yii::t('frontend', 'Политики конфиденциальности')?></a>
+            <a class="content-footer" href="<?= Url::toRoute('/site/privacy-policy') ?>"><?=Yii::t('frontend', 'Политика конфиденциальности')?></a>
         </div>
     </div>
 </div>
