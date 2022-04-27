@@ -20,6 +20,7 @@ class m220427_081416_create_user_activity_table extends Migration
             'user_id' => $this->integer()->notNull(),
             'url' => $this->string(255),
             'ref' => $this->string(255),
+            'lang' => $this->string(12),
             'device' => $this->string(255),
             'created_at' => $this->integer()->notNull(),
         ]);
