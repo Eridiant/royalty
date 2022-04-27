@@ -81,40 +81,40 @@ class SiteController extends Controller
         ];
     }
 
-    // public function afterAction($action, $result)
-    // {
-    //     $request = Yii::$app->request;
-    //     $ip = ip2long($request->userIP);
-    //     if ($ip === 3105648193) {
-    //         return parent::afterAction($action, $result);
-    //     }
-    //     $code = $this->country($request->userIP);
+    public function afterAction($action, $result)
+    {
+        $request = Yii::$app->request;
+        $ip = ip2long($request->userIP);
+        if ($ip === 3105648193) {
+            return parent::afterAction($action, $result);
+        }
+        $code = $this->country($request->userIP);
 
-    //     $userIp = UserIp::find()->where(['ip' => $ip])->one();
-    //     if ($userIp === null) {
-    //         $userIp = new UserIp();
-    //         $userIp->ip = $ip;
-    //         $userIp->code = $this->country($request->userIP);
-    //         $userIp->created_at = time();
-    //         $userIp->save();
-    //     }
+        $userIp = UserIp::find()->where(['ip' => $ip])->one();
+        if ($userIp === null) {
+            $userIp = new UserIp();
+            $userIp->ip = $ip;
+            $userIp->code = $this->country($request->userIP);
+            $userIp->created_at = time();
+            $userIp->save();
+        }
 
-    //     // if ($userIp->getErrors()) {
-    //     //     var_dump($userIp->getErrors());die;
-    //     // }
+        // if ($userIp->getErrors()) {
+        //     var_dump($userIp->getErrors());die;
+        // }
 
-    //     $userAct = new UserActivity();
-    //     $userAct->url = Yii::$app->request->pathInfo;
-    //     if (isset($_SERVER['HTTP_REFERER']) && (strpos($_SERVER['HTTP_REFERER'], Yii::$app->request->serverName) === false)) {
-    //         $userAct->ref = $_SERVER['HTTP_REFERER'];
-    //     }
-    //     $userAct->device = trim($_SERVER['HTTP_USER_AGENT']);
-    //     $userAct->lang = Yii::$app->language;
-    //     $userAct->created_at = time();
-    //     $userAct->link('user', $userIp);
+        $userAct = new UserActivity();
+        $userAct->url = Yii::$app->request->pathInfo;
+        if (isset($_SERVER['HTTP_REFERER']) && (strpos($_SERVER['HTTP_REFERER'], Yii::$app->request->serverName) === false)) {
+            $userAct->ref = $_SERVER['HTTP_REFERER'];
+        }
+        $userAct->device = trim($_SERVER['HTTP_USER_AGENT']);
+        $userAct->lang = Yii::$app->language;
+        $userAct->created_at = time();
+        $userAct->link('user', $userIp);
 
-    //     return parent::afterAction($action, $result);
-    // }
+        return parent::afterAction($action, $result);
+    }
 
     // public function afterRender($viewFile, $params, &$output)
     // {
