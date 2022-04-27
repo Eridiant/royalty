@@ -186,6 +186,17 @@ a.desc:after {
     .dfm {display: none;}
 }
 
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.chart {
+    flex-basis: 50%;
+    min-width: 320px;
+    height: 300px;
+}
+
 .nav > li > form > button.logout:focus,
 .nav > li > form > button.logout:hover {
     text-decoration: none;

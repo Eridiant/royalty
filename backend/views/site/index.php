@@ -6,7 +6,9 @@ use yii\helpers\Html;
 /** @var yii\web\View $this */
 
 $this->title = 'Royal';
+
 ?>
+
 <div class="site-index">
 
     <div class="body-content">
@@ -17,6 +19,9 @@ $this->title = 'Royal';
         <h4>
             <?= Html::a('перевод', '/site/login', ['class' => 'log']) ?>
         </h4>
+        <div class="row">
+            <div class="ct-chart ct-perfect-fourth chart"></div>
+        </div>
 
     </div>
 </div>
