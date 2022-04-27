@@ -19,6 +19,9 @@ use frontend\models\Floor;
 use frontend\models\Flat;
 use frontend\models\ContactForm;
 use frontend\models\SxGeo;
+use frontend\models\UserIp;
+use frontend\models\UserActivity;
+
 
 /**
  * Site controller
@@ -77,6 +80,59 @@ class SiteController extends Controller
             ]
         ];
     }
+
+    public function afterAction($action, $result)
+    {
+        $request = Yii::$app->request;
+        $ip = ip2long($request->userIP);
+        $code = $this->country($request->userIP);
+
+        $userIp = UserIp::find()->where(['ip' => $ip])->one();
+        if ($userIp === null) {
+            $userIp = new UserIp();
+            $userIp->ip = $ip;
+            $userIp->code = $this->country($request->userIP);
+            $userIp->created_at = time();
+            $userIp->save();
+        }
+
+        if ($userIp->getErrors()) {
+            var_dump($userIp->getErrors());die;
+        }
+
+        $userAct = new UserActivity();
+        $userAct->url = $_SERVER['REQUEST_URI'];
+        $userAct->created_at = time();
+        $userAct->link('user', $userIp);
+
+        return parent::afterAction($action, $result);
+    }
+
+    // public function afterRender($viewFile, $params, &$output)
+    // {
+    //     $request = Yii::$app->request;
+    //     $ip = ip2long($request->userIP);
+    //     $code = $this->country($request->userIP);
+
+    //     $userIp = UserIp::find()->where(['ip' => $ip])->one();
+    //     if ($userIp === null) {
+    //         $userIp = new UserIp();
+    //         $userIp->ip = $ip;
+    //         $userIp->code = $this->country($request->userIP);
+    //         $userIp->created_at = time();
+    //         $userIp->save();
+    //     }
+
+    //     if ($userIp->getErrors()) {
+    //         var_dump($userIp->getErrors());die;
+    //     }
+
+    //     $userAct = new UserActivity();
+    //     $userAct->url = $_SERVER['REQUEST_URI'];
+    //     $userAct->created_at = time();
+    //     $userAct->link('user', $userIp);
+    //     parent::afterRender($viewFile, $params, $output);
+    // }
 
     /**
      * Displays homepage.

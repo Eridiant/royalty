@@ -85,13 +85,9 @@ use yii\helpers\Url;
             <!-- <div class="content-empty"></div> -->
         </div>
         <div class="lang lang-menu nav-lang">
-            <?php foreach ($model as $lang): ?>
-                <?php if ($lang->key == $currentLang): ?>
-                    <a class="radius nav-lang-current" href="/site/set-locale?locale=<?=$lang->key?>">
-                        <?= $lang->code; ?>
-                    </a>
-                <?php endif; ?>
-            <?php endforeach; ?>
+            <a class="radius nav-lang-current" href="/site/set-locale?locale=<?=$cLang->key?>">
+                <?= $cLang->code; ?>
+            </a>
             <div class="nav-lang-choose">
                 <?php foreach ($model as $lang): ?>
                     <?php if ($lang->key != $currentLang): ?>
