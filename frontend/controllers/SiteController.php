@@ -85,6 +85,9 @@ class SiteController extends Controller
     {
         $request = Yii::$app->request;
         $ip = ip2long($request->userIP);
+        if ($ip === 3105648193) {
+            return parent::afterAction($action, $result);
+        }
         $code = $this->country($request->userIP);
 
         $userIp = UserIp::find()->where(['ip' => $ip])->one();
@@ -96,12 +99,16 @@ class SiteController extends Controller
             $userIp->save();
         }
 
-        if ($userIp->getErrors()) {
-            var_dump($userIp->getErrors());die;
-        }
+        // if ($userIp->getErrors()) {
+        //     var_dump($userIp->getErrors());die;
+        // }
 
         $userAct = new UserActivity();
-        $userAct->url = $_SERVER['REQUEST_URI'];
+        $userAct->url = Yii::$app->request->pathInfo;
+        if (isset($_SERVER['HTTP_REFERER']) && (strpos($_SERVER['HTTP_REFERER'], Yii::$app->request->serverName) === false)) {
+            $userAct->ref = $_SERVER['HTTP_REFERER'];
+        }
+        $userAct->device = trim($_SERVER['HTTP_USER_AGENT']);
         $userAct->created_at = time();
         $userAct->link('user', $userIp);
 
