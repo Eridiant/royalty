@@ -28,4 +28,6 @@
    RewriteCond %{REQUEST_FILENAME} !-f [OR]
    RewriteCond %{REQUEST_FILENAME} !-d
    RewriteRule ^.*$ frontend/web/index.php
+   RewriteRule ^robots.txt$ frontend/web/robots.txt$1 [L]
+   RewriteRule ^favicon.ico$ frontend/web/favicon.ico$1 [L]
 </IfModule>
