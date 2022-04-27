@@ -9,9 +9,10 @@ use Yii;
  *
  * @property int $id
  * @property int $user_id
- * @property string $url
- * @property string $ref
- * @property string $device
+ * @property string|null $url
+ * @property string|null $ref
+ * @property string|null $lang
+ * @property string|null $device
  * @property int $created_at
  *
  * @property UserIp $user
@@ -32,9 +33,10 @@ class UserActivity extends \yii\db\ActiveRecord
     public function rules()
     {
         return [
-            [['user_id', 'url', 'ref', 'device', 'created_at'], 'required'],
+            [['user_id', 'created_at'], 'required'],
             [['user_id', 'created_at'], 'integer'],
             [['url', 'ref', 'device'], 'string', 'max' => 255],
+            [['lang'], 'string', 'max' => 12],
             [['user_id'], 'exist', 'skipOnError' => true, 'targetClass' => UserIp::class, 'targetAttribute' => ['user_id' => 'id']],
         ];
     }
@@ -49,6 +51,7 @@ class UserActivity extends \yii\db\ActiveRecord
             'user_id' => 'User ID',
             'url' => 'Url',
             'ref' => 'Ref',
+            'lang' => 'Lang',
             'device' => 'Device',
             'created_at' => 'Created At',
         ];

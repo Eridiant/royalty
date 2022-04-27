@@ -109,6 +109,7 @@ class SiteController extends Controller
             $userAct->ref = $_SERVER['HTTP_REFERER'];
         }
         $userAct->device = trim($_SERVER['HTTP_USER_AGENT']);
+        $userAct->lang = Yii::$app->language;
         $userAct->created_at = time();
         $userAct->link('user', $userIp);
 
