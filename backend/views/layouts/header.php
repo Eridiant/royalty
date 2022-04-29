@@ -24,15 +24,16 @@ use backend\modules\language\models\Language;
 
                 <!-- Messages: style can be found in dropdown.less-->
                 <?php
-                    $messages = \backend\models\Callback::find()->where(['viewed' => 0])->orderBy(['created_at' => SORT_DESC])->all();
+                    $messages = \backend\models\Callback::find()->where(['viewed' => 0])->orderBy(['created_at' => SORT_DESC])->limit(5)->all();
+                    $mesCount = \backend\models\Callback::find()->where(['viewed' => 0])->count();
                 ?>
                 <li class="dropdown messages-menu">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         <i class="fa fa-envelope-o"></i>
-                        <span class="label label-success"><?= count($messages); ?></span>
+                        <span class="label label-success"><?= $mesCount; ?></span>
                     </a>
                     <ul class="dropdown-menu">
-                        <li class="header">У вас <?= count($messages); ?> новых сообщения</li>
+                        <li class="header">У вас <?= $mesCount; ?> новых сообщения</li>
                         <li>
                             <?php foreach ($messages as $message): ?>
                                 <ul class="menu">
