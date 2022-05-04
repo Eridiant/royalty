@@ -193,11 +193,14 @@ a.desc:after {
 
 .item {
     flex: 1 0 50%;
+    min-width: 320px;
 }
 
-.chart {
-    min-width: 320px;
-    height: 300px;
+.ct-label {
+    font-size: 16px;
+    fill: #000;
+    color: #000;
+    text-shadow: 1px 1px 1px #fff, -1px -1px 1px #fff, 1px -1px 1px #fff, -1px 1px 1px #fff, -1px 1px 1px #fff;
 }
 
 .nav > li > form > button.logout:focus,
