@@ -19,9 +19,9 @@ $this->title = 'Royal';
         <h4>
             <?= Html::a('перевод', '/site/login', ['class' => 'log']) ?>
         </h4>
-        <div class="row">
+        <!-- <div class="row">
             <div class="ct-chart ct-perfect-fourth chart"></div>
-        </div>
+        </div> -->
 
     </div>
 </div>

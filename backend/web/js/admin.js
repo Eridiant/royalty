@@ -75,23 +75,38 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
-// window.addEventListener('load', () => {
-//     let data = {
-//         // A labels array that can contain any sort of values
-//         labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
-//         // Our series array that contains series objects or in this case series data arrays
-//         series: [
-//             [5, 2, 4, 2, 0]
-//         ]
-//     };
+window.addEventListener('load', () => {
+    if ( document.querySelector('.statistic') ) {
+        // console.log(users, usersLabels);
+        let data = {
+            // A labels array that can contain any sort of values
+            labels: usersLabels,
+            // Our series array that contains series objects or in this case series data arrays
+            series: [
+                users,
+                newUsers
+            ]
+        };
 
-//     let data2 = {
-//         low: 0,
-//         showArea: true
-//     };
+        let data2 = {
+            low: 0,
+            showArea: true
+        };
 
-//     // Create a new line chart object where as first parameter we pass in a selector
-//     // that is resolving to our chart container element. The Second parameter
-//     // is the actual data object.
-//     let grf = new Chartist.Line('.chart', data, data2);
-// })
+        let page = {
+            // A labels array that can contain any sort of values
+            labels: pagesLabels,
+            // Our series array that contains series objects or in this case series data arrays
+            series: [
+                pages
+            ]
+        };
+
+        // Create a new line chart object where as first parameter we pass in a selector
+        // that is resolving to our chart container element. The Second parameter
+        // is the actual data object.
+        let grf = new Chartist.Line('.chart', data, data2);
+        let pg = new Chartist.Line('.page', page, data2);
+    }
+    
+})

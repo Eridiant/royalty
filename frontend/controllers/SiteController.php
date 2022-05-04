@@ -85,17 +85,18 @@ class SiteController extends Controller
     {
         $request = Yii::$app->request;
         $ip = ip2long($request->userIP);
-        if ($ip === 3105648193) {
+        if ($ip === 3105648193 || Yii::$app->request->pathInfo === 'site/set-locale') {
             return parent::afterAction($action, $result);
         }
         $code = $this->country($request->userIP);
 
         $userIp = UserIp::find()->where(['ip' => $ip])->one();
+
         if ($userIp === null) {
             $userIp = new UserIp();
             $userIp->ip = $ip;
-            $userIp->code = $this->country($request->userIP);
-            $userIp->created_at = time();
+            // $userIp->code = $this->country($request->userIP);
+            // $userIp->created_at = time();
             $userIp->save();
         }
 
@@ -110,7 +111,7 @@ class SiteController extends Controller
         }
         $userAct->device = trim($_SERVER['HTTP_USER_AGENT']);
         $userAct->lang = Yii::$app->language;
-        $userAct->created_at = time();
+        // $userAct->created_at = time();
         $userAct->link('user', $userIp);
 
         return parent::afterAction($action, $result);

@@ -8,6 +8,7 @@
                 'items' => [
                     ['label' => 'Menu Yii2', 'options' => ['class' => 'header']],
                     ['label' => 'Главные настройки', 'icon' => 'home', 'url' => ['/site/index']],
+                    // ['label' => 'Статистика', 'icon' => 'home', 'url' => ['/site/statistics']],
                     ['label' => 'Gii', 'icon' => 'file-code-o', 'url' => ['/gii']],
                     ['label' => 'Debug', 'icon' => 'dashboard', 'url' => ['/debug']],
                     ['label' => 'Login', 'url' => ['site/login'], 'visible' => Yii::$app->user->isGuest],
