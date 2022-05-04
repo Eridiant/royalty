@@ -209,23 +209,51 @@ class SiteController extends Controller
         }
 
         // IP
-        $UserIps = UserIp::find()->where(['city'=> null])->all();
+        $UserIps = UserIp::find()->where(['checked'=> null])->all();
         foreach ($UserIps as $UserIp) {
             $country = $this->geoCity(long2ip($UserIp->ip));
-            // $country = $this->getCity(long2ip($UserIp->ip));
-            var_dump('<pre>');
-            var_dump($country);
-            // var_dump($country ? $country["country"]["name_ru"] : '');
-            var_dump('</pre>');
-            die;
-            
-            // $UserIp->country = $country["country"]["name_ru"];
-            // $UserIp->city = 1;
-            // $UserIp->save();
-        }die;
-        
+            if ($country) {
+                $UserIp->country = $country["country"]["name_ru"];
+                $UserIp->region = $country["region"]["name_ru"];
+                $UserIp->city = $country["city"]["name_ru"];
+                $UserIp->checked = 1;
+                $UserIp->save();
+            }
+        }
 
         // VIEW
+
+        $countries = UserIp::find()
+            ->select(['country', 'COUNT(*) AS cnt'])
+            ->where(['!=', 'country', ""])
+            ->groupBy(['country'])
+            ->orderBy(['cnt' => SORT_DESC])
+            ->limit(5)
+            ->asArray()
+            ->all();
+
+        $languages = UserActivity::find()
+            ->select(['lang', 'COUNT(*) AS cnt'])
+            // ->where('approved = 1')
+            ->groupBy(['lang'])
+            ->orderBy(['cnt' => SORT_DESC])
+            ->asArray()
+            ->all();
+
+
+        $country = [];
+        $countryLabels = [];
+        foreach ($countries as $countr) {
+            $country[] = $countr["cnt"];
+            $countryLabels[] = $countr["country"];
+        }
+        $lang = [];
+        $langLabels = [];
+        foreach ($languages as $langu) {
+            $lang[] = $langu["cnt"];
+            $langLabels[] = $langu["lang"];
+        }
+
         $intr = intval(date('U')) - 3600 * 24 * 30;
         $dayStats = DayStat::find()
             ->with(['userChart', 'userNew', 'pageByDay'])
@@ -235,6 +263,7 @@ class SiteController extends Controller
             ->all();
 
         $intr = intval(date('U')) - 3600 * 24 * 2;
+
         $dataStats = DataStat::find()
             ->with(['pageChart'])
             ->where(['>=', 'date', $intr])
@@ -258,7 +287,7 @@ class SiteController extends Controller
             $pages[] = $data->pageChart->page;
             $pagesLabels[] = $data->hour;
         }
-        return $this->render('statistics', compact('dayStats', 'dataStats', 'users', 'newUsers', 'pageByDay', 'usersLabels', 'pages', 'pagesLabels'));
+        return $this->render('statistics', compact('dayStats', 'dataStats', 'users', 'newUsers', 'pageByDay', 'usersLabels', 'pages', 'pagesLabels', 'country', 'lang', 'countryLabels', 'langLabels'));
     }
 
     private function geoCity($ip)

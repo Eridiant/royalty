@@ -20,6 +20,8 @@ use Yii;
  */
 class UserIp extends \yii\db\ActiveRecord
 {
+    public $cnt;
+
     /**
      * {@inheritdoc}
      */

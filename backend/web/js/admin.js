@@ -77,7 +77,51 @@ document.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('load', () => {
     if ( document.querySelector('.statistic') ) {
-        // console.log(users, usersLabels);
+        console.log(countryLabels, country);
+        // 'country', 'lang', 'countryLabels', 'langLabels'
+
+        var lgs = {
+            labels: langLabels,
+            series: lang
+        };
+
+        var options = {
+            labelInterpolationFnc: function(value) {
+                return value
+            }
+        };
+
+        new Chartist.Pie('.lang', lgs, options);
+
+        var cnt = {
+            labels: countryLabels,
+            series: country
+        };
+
+        var optionsCnt = {
+            labelInterpolationFnc: function(value) {
+                return value
+            }
+        };
+        new Chartist.Pie('.country', cnt, optionsCnt);
+        
+        // var datadata = {
+        //     labels: ['Bananas', 'Apples', 'Grapes'],
+        //     series: [20, 15, 40]
+        // };
+        
+        // var options = {
+        //     labelInterpolationFnc: function(value) {
+        //         return value
+        //     }
+        // };
+
+        // new Chartist.Pie('.lang', datadata, options);
+
+
+
+
+
         let data = {
             // A labels array that can contain any sort of values
             labels: usersLabels,
