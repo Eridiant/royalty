@@ -11,7 +11,9 @@ use Yii;
  * @property int $ip
  * @property string|null $code
  * @property string|null $country
+ * @property string|null $region
  * @property string|null $city
+ * @property int|null $checked
  * @property int $created_at
  *
  * @property UserActivity[] $userActivities
@@ -33,9 +35,10 @@ class UserIp extends \yii\db\ActiveRecord
     {
         return [
             [['ip', 'created_at'], 'required'],
-            [['ip', 'created_at'], 'integer'],
+            [['ip', 'checked', 'created_at'], 'integer'],
             [['code'], 'string', 'max' => 10],
             [['country', 'city'], 'string', 'max' => 64],
+            [['region'], 'string', 'max' => 128],
         ];
     }
 
@@ -49,7 +52,9 @@ class UserIp extends \yii\db\ActiveRecord
             'ip' => 'Ip',
             'code' => 'Code',
             'country' => 'Country',
+            'region' => 'Region',
             'city' => 'City',
+            'checked' => 'Checked',
             'created_at' => 'Created At',
         ];
     }
@@ -61,6 +66,6 @@ class UserIp extends \yii\db\ActiveRecord
      */
     public function getUserActivities()
     {
-        return $this->hasMany(UserActivity::class, ['user_id' => 'id']);
+        return $this->hasMany(UserActivity::className(), ['user_id' => 'id']);
     }
 }

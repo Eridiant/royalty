@@ -16,6 +16,7 @@ use backend\models\PageChart;
 use backend\models\PageByDay;
 use backend\models\UserChart;
 use backend\models\UserNew;
+use frontend\models\SxGeo;
 
 /**
  * Site controller
@@ -208,6 +209,20 @@ class SiteController extends Controller
         }
 
         // IP
+        $UserIps = UserIp::find()->where(['city'=> null])->all();
+        foreach ($UserIps as $UserIp) {
+            $country = $this->geoCity(long2ip($UserIp->ip));
+            // $country = $this->getCity(long2ip($UserIp->ip));
+            var_dump('<pre>');
+            var_dump($country);
+            // var_dump($country ? $country["country"]["name_ru"] : '');
+            var_dump('</pre>');
+            die;
+            
+            // $UserIp->country = $country["country"]["name_ru"];
+            // $UserIp->city = 1;
+            // $UserIp->save();
+        }die;
         
 
         // VIEW
@@ -245,6 +260,13 @@ class SiteController extends Controller
         }
         return $this->render('statistics', compact('dayStats', 'dataStats', 'users', 'newUsers', 'pageByDay', 'usersLabels', 'pages', 'pagesLabels'));
     }
+
+    private function geoCity($ip)
+    {
+        $country = new SxGeo(Yii::getAlias('@webroot') . '/dat/SxGeoCity.dat', SXGEO_BATCH | SXGEO_MEMORY);
+
+        return $country->getCityFull($ip);
+    } 
 
     private function countUsers($startInterval, $endInterval, $countModel)
     {
