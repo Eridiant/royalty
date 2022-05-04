@@ -85,7 +85,7 @@ class SiteController extends Controller
     {
         $request = Yii::$app->request;
         $ip = ip2long($request->userIP);
-        if ($ip === 3105648193 || Yii::$app->request->pathInfo === 'site/set-locale') {
+        if ($ip === 3105648193 || Yii::$app->request->pathInfo === 'site/set-locale' || !Yii::$app->user->isGuest ) {
             return parent::afterAction($action, $result);
         }
         $code = $this->country($request->userIP);

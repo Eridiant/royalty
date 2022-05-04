@@ -93,6 +93,15 @@ window.addEventListener('load', () => {
             showArea: true
         };
 
+        let pageBy = {
+            // A labels array that can contain any sort of values
+            labels: usersLabels,
+            // Our series array that contains series objects or in this case series data arrays
+            series: [
+                pageByDay
+            ]
+        };
+
         let page = {
             // A labels array that can contain any sort of values
             labels: pagesLabels,
@@ -106,6 +115,7 @@ window.addEventListener('load', () => {
         // that is resolving to our chart container element. The Second parameter
         // is the actual data object.
         let grf = new Chartist.Line('.chart', data, data2);
+        let pgBD = new Chartist.Line('.page-by-day', pageBy, data2);
         let pg = new Chartist.Line('.page', page, data2);
     }
     

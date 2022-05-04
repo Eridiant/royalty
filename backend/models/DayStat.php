@@ -13,6 +13,7 @@ use Yii;
  * @property int $day
  * @property int $date
  *
+ * @property PageByDay[] $pageByDays
  * @property UserChart[] $userCharts
  * @property UserNew[] $userNews
  */
@@ -49,6 +50,16 @@ class DayStat extends \yii\db\ActiveRecord
             'day' => 'Day',
             'date' => 'Date',
         ];
+    }
+
+    /**
+     * Gets query for [[PageByDays]].
+     *
+     * @return \yii\db\ActiveQuery
+     */
+    public function getPageByDay()
+    {
+        return $this->hasOne(PageByDay::class, ['data_id' => 'id']);
     }
 
     /**

@@ -13,6 +13,7 @@ use backend\models\UserIp;
 use backend\models\DataStat;
 use backend\models\DayStat;
 use backend\models\PageChart;
+use backend\models\PageByDay;
 use backend\models\UserChart;
 use backend\models\UserNew;
 
@@ -117,6 +118,7 @@ class SiteController extends Controller
             // );
             // var_dump('</pre>');
             $users = $this->countUsers($startInterval, $endInterval, $countModel);
+            $pages = $this->countUsers($startInterval, $endInterval, $countModel);
             $newUsers = $this->countNewUsers($startInterval, $endInterval);
 
             $transaction = Yii::$app->db->beginTransaction();
@@ -134,6 +136,10 @@ class SiteController extends Controller
                 $userNew = new UserNew();
                 $userNew->user = $newUsers;
                 $userNew->link('data', $dayStat);
+
+                $pageByDay = new PageByDay();
+                $pageByDay->page = $pages;
+                $pageByDay->link('data', $dayStat);
 
                 $transaction->commit();
             } catch (\Exception $e) {
@@ -204,12 +210,13 @@ class SiteController extends Controller
         // VIEW
         $intr = intval(date('U')) - 3600 * 24 * 30;
         $dayStats = DayStat::find()
-            ->with(['userChart', 'userNew'])
+            ->with(['userChart', 'userNew', 'pageByDay'])
             ->where(['>=', 'date', $intr])
             // ->select('date')
             // ->asArray()
             ->all();
 
+        $intr = intval(date('U')) - 3600 * 24 * 2;
         $dataStats = DataStat::find()
             ->with(['pageChart'])
             ->where(['>=', 'date', $intr])
@@ -219,6 +226,7 @@ class SiteController extends Controller
 
         foreach ($dayStats as $day) {
             $users[] = $day->userChart->user;
+            $pageByDay[] = $day->pageByDay->page;
             $newUsers[] = $day->userNew->user;
             $usersLabels[] = $day->day;
         }
@@ -226,7 +234,7 @@ class SiteController extends Controller
             $pages[] = $data->pageChart->page;
             $pagesLabels[] = $data->hour;
         }
-        return $this->render('statistics', compact('dayStats', 'dataStats', 'users', 'newUsers', 'usersLabels', 'pages', 'pagesLabels'));
+        return $this->render('statistics', compact('dayStats', 'dataStats', 'users', 'newUsers', 'pageByDay', 'usersLabels', 'pages', 'pagesLabels'));
     }
 
     private function countUsers($startInterval, $endInterval, $countModel)

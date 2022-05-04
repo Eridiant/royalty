@@ -191,8 +191,11 @@ a.desc:after {
     flex-wrap: wrap;
 }
 
+.item {
+    flex: 1 0 50%;
+}
+
 .chart {
-    flex-basis: 50%;
     min-width: 320px;
     height: 300px;
 }
