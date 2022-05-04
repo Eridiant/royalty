@@ -77,8 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 window.addEventListener('load', () => {
     if ( document.querySelector('.statistic') ) {
-        console.log(countryLabels, country);
-        // 'country', 'lang', 'countryLabels', 'langLabels'
+        // console.log(countryLabels, country);
 
         var lgs = {
             labels: langLabels,
