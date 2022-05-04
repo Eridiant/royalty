@@ -207,6 +207,9 @@ class SiteController extends Controller
             $dataStat = new dataStat();
         }
 
+        // IP
+        
+
         // VIEW
         $intr = intval(date('U')) - 3600 * 24 * 30;
         $dayStats = DayStat::find()
@@ -223,6 +226,12 @@ class SiteController extends Controller
             // ->select('date')
             // ->asArray()
             ->all();
+            $users = [];
+            $pageByDay = [];
+            $newUsers = [];
+            $usersLabels = [];
+            $pages = [];
+            $pagesLabels = [];
 
         foreach ($dayStats as $day) {
             $users[] = $day->userChart->user;

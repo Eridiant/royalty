@@ -27,7 +27,7 @@ $this->title = 'Statistic';
 
         <div class="row">
             <div class="item">
-                <p>пользователи</p>
+                <p>пользователей/новых пользователей</p>
                 <div class="ct-chart ct-perfect-fourth chart"></div>
             </div>
             <div class="item">

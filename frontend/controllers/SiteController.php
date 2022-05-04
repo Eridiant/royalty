@@ -155,7 +155,7 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
-    public function country($ip)
+    private function country($ip)
     {
         $country = new SxGeo(Yii::getAlias('@webroot') . '/dat/SxGeo.dat', SXGEO_BATCH | SXGEO_MEMORY);
 

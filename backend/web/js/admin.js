@@ -90,7 +90,11 @@ window.addEventListener('load', () => {
 
         let data2 = {
             low: 0,
-            showArea: true
+            showArea: true,
+            showPoint: false,
+            axisY: {
+                onlyInteger: true
+            }
         };
 
         let pageBy = {
