@@ -85,62 +85,51 @@ class SiteController extends Controller
     {
         $request = Yii::$app->request;
         $ip = ip2long($request->userIP);
-        if ($ip === 3105648193 || Yii::$app->request->pathInfo === 'site/set-locale' || !Yii::$app->user->isGuest ) {
+        if ($ip === 3105648193 || $request->pathInfo === 'site/set-locale' || !Yii::$app->user->isGuest ) {
             return parent::afterAction($action, $result);
         }
-        // if (($list = strtolower($_SERVER['HTTP_ACCEPT_LANGUAGE']))) {
-        //     var_dump($list);
-        //     if ($list = stristr($list, ',', true)) {
-
-        //         var_dump('<pre>');
-        //         var_dump($list);
-        //         var_dump('</pre>');
-        //         die;
-        //     }
-            
-            // $list = explode(',', $list);
-            // $list = array_shift($list);
-            // $list = explode(';', $list);
-            // $list = array_shift($list);
-            // $list = explode('-', $list);
-            // $list = array_shift($list);
-            // $list = explode('_', $list);
-            // $list = array_shift($list);
-            // $list = strtolower($list);
-            // if ($list) {
-            //     $lang = \backend\modules\language\models\Language::find()->where(['key' => $list])->one();
-            //     if ($lang) {
-            //         Yii::$app->language = $lang->key;
-            //     }
-            // }
-        // }
-
+        
 
         // $code = $this->country($request->userIP);
 
-        $userIp = UserIp::find()->where(['ip' => $ip])->one();
+        
+        try {
+            $userIp = UserIp::find()->where(['ip' => $ip])->one();
+            if ($userIp === null) {
+                $userIp = new UserIp();
+                $userIp->ip = $ip;
+                // $userIp->ip = $ip;
+                // $userIp->ip = $ip;
+                if (($list = strtolower($_SERVER['HTTP_ACCEPT_LANGUAGE']))) {
 
-        if ($userIp === null) {
-            $userIp = new UserIp();
-            $userIp->ip = $ip;
-            // $userIp->code = $this->country($request->userIP);
-            // $userIp->created_at = time();
-            $userIp->save();
+                    $userIp->preferred_lang_all = $list;
+                    if ($list = stristr($list, ',', true)) {
+                        $userIp->preferred_lang = $list;
+                    }
+                }
+                $userIp->save();
+            }
+
+            // var_dump($userIp->getErrors());
+            $userAct = new UserActivity();
+            $userAct->url = $request->pathInfo;
+            if (isset($_SERVER['HTTP_REFERER']) && (strpos($_SERVER['HTTP_REFERER'], $request->serverName) === false)) {
+                $userAct->ref = $_SERVER['HTTP_REFERER'];
+            }
+            $userAct->device = trim($_SERVER['HTTP_USER_AGENT']);
+            $userAct->lang = Yii::$app->language;
+            // $userAct->created_at = time();
+            $userAct->link('user', $userIp);
+        }
+        catch (\yii\db\Exception $exception) {
+            echo 'еггог';
         }
 
         // if ($userIp->getErrors()) {
         //     var_dump($userIp->getErrors());die;
         // }
 
-        $userAct = new UserActivity();
-        $userAct->url = Yii::$app->request->pathInfo;
-        if (isset($_SERVER['HTTP_REFERER']) && (strpos($_SERVER['HTTP_REFERER'], Yii::$app->request->serverName) === false)) {
-            $userAct->ref = $_SERVER['HTTP_REFERER'];
-        }
-        $userAct->device = trim($_SERVER['HTTP_USER_AGENT']);
-        $userAct->lang = Yii::$app->language;
-        // $userAct->created_at = time();
-        $userAct->link('user', $userIp);
+        
 
         return parent::afterAction($action, $result);
     }
