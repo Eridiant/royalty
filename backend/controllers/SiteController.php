@@ -212,7 +212,10 @@ class SiteController extends Controller
         $UserIps = UserIp::find()->where(['checked'=> null])->all();
         foreach ($UserIps as $UserIp) {
             $country = $this->geoCity(long2ip($UserIp->ip));
+            // $country = $this->geoCity('185.28.110.65');
+
             if ($country) {
+                $userIp->code = $country["country"]["iso"];
                 $UserIp->country = $country["country"]["name_ru"];
                 $UserIp->region = $country["region"]["name_ru"];
                 $UserIp->city = $country["city"]["name_ru"];

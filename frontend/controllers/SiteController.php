@@ -114,7 +114,9 @@ class SiteController extends Controller
             //     }
             // }
         // }
-        $code = $this->country($request->userIP);
+
+
+        // $code = $this->country($request->userIP);
 
         $userIp = UserIp::find()->where(['ip' => $ip])->one();
 
