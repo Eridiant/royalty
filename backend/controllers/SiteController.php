@@ -87,37 +87,21 @@ class SiteController extends Controller
             $dayStat = new DayStat();
             $startInterval = intval(floor($userIp[0]["created_at"] / (3600 * 24)) * 3600 * 24);
         } else {
-            // $startInterval = intval(floor($dayStat["date"] / (3600 * 24)) * 3600 * 24);
             $startInterval = $dayStat["date"] + 3600 * 24;
         }
 
         $endInterval = $startInterval + (3600 * 24) - 1;
         $countModel = UserActivity::find();
         $interrupt = false;
-        // var_dump('<pre>');
-        // var_dump(
-        //     \Yii::$app->formatter->asDate($startInterval, "php:Y-m-d H:i:s"),
-        //     \Yii::$app->formatter->asDate($endInterval, "php:Y-m-d H:i:s"),
-        //     $endInterval,
-        //     \Yii::$app->formatter->asDate(date('U'), "php:Y-m-d H:i:s"),
-        //     intval(date('U')),
-        //     $endInterval < intval(date('U'))
-        // );
-        // var_dump('</pre>');
+        // foreach ($countModel->asArray()->all() as $value) {
+        //     var_dump('<pre>');
+        //     var_dump(\Yii::$app->formatter->asDate($value["created_at"], "php:Y-m-d H:i:s"), $value);
+        //     var_dump('</pre>');
+        // }
         // die;
         
-
         while ($endInterval < intval(date('U')) && !$interrupt) {
-            // var_dump('<pre>');
-            // var_dump(
-            //     \Yii::$app->formatter->asDate($startInterval, "php:Y-m-d H:i:s"),
-            //     \Yii::$app->formatter->asDate($endInterval, "php:Y-m-d H:i:s"),
-            //     $endInterval,
-            //     \Yii::$app->formatter->asDate(date('U'), "php:Y-m-d H:i:s"),
-            //     intval(date('U')),
-            //     $endInterval < intval(date('U'))
-            // );
-            // var_dump('</pre>');
+
             $users = $this->countUsers($startInterval, $endInterval, $countModel);
             $pages = $this->countUsers($startInterval, $endInterval, $countModel);
             $newUsers = $this->countNewUsers($startInterval, $endInterval);

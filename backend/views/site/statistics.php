@@ -32,11 +32,11 @@ $this->title = 'Statistic';
     <div class="body-content">
         <div class="row">
             <div class="item">
-                <h4>предпочитаемые языки/настройки браузера</h4>
+                <h4>язык в настройках браузера</h4>
                 <div class="ct-chart ct-perfect-fourth lang-pref"></div>
             </div>
             <div class="item">
-                <h4>выбраный язык </h4>
+                <h4>выбранный язык</h4>
                 <div class="ct-chart ct-perfect-fourth lang"></div>
             </div>
         </div>
@@ -46,7 +46,7 @@ $this->title = 'Statistic';
                 <div class="ct-chart ct-perfect-fourth country"></div>
             </div>
             <div class="item">
-                <h4>пользователей/новых пользователей</h4>
+                <h4>пользователи/новые пользователи</h4>
                 <div class="ct-chart ct-perfect-fourth chart"></div>
             </div>
         </div>
