@@ -79,6 +79,18 @@ window.addEventListener('load', () => {
     if ( document.querySelector('.statistic') ) {
         // console.log(countryLabels, country);
 
+        var pref = {
+            labels: langPrefLabels,
+            series: langPref
+        };
+
+        var optionsPref = {
+            labelInterpolationFnc: function(value) {
+                return value
+            }
+        };
+        new Chartist.Pie('.lang-pref', pref, optionsPref);
+
         var lgs = {
             labels: langLabels,
             series: lang

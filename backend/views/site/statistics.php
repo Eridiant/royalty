@@ -24,33 +24,41 @@ $this->title = 'Statistic';
     var countryLabels = <?= json_encode($countryLabels); ?>;
     var lang = <?= json_encode($lang); ?>;
     var langLabels = <?= json_encode($langLabels); ?>;
+    var langPref = <?= json_encode($langPref); ?>;
+    var langPrefLabels = <?= json_encode($langPrefLabels); ?>;
 </script>
 
 <section class="statistic content">
     <div class="body-content">
         <div class="row">
             <div class="item">
-                <p>страны</p>
-                <div class="ct-chart ct-perfect-fourth country"></div>
+                <h4>предпочитаемые языки</h4>
+                <div class="ct-chart ct-perfect-fourth lang-pref"></div>
             </div>
             <div class="item">
-                <p>языки</p>
+                <h4>языки</h4>
                 <div class="ct-chart ct-perfect-fourth lang"></div>
             </div>
         </div>
         <div class="row">
             <div class="item">
-                <p>пользователей/новых пользователей</p>
-                <div class="ct-chart ct-perfect-fourth chart"></div>
+                <h4>страны</h4>
+                <div class="ct-chart ct-perfect-fourth country"></div>
             </div>
             <div class="item">
-                <p>количество просмотренных страниц</p>
-                <div class="ct-chart ct-perfect-fourth page-by-day"></div>
+                <h4>пользователей/новых пользователей</h4>
+                <div class="ct-chart ct-perfect-fourth chart"></div>
             </div>
         </div>
         <div class="row">
-            <p>количество просмотренных страниц за последние 2 дня</p>
-            <div class="ct-chart ct-perfect-fourth page"></div>
+            <div class="item">
+                <h4>количество просмотренных страниц</h4>
+                <div class="ct-chart ct-perfect-fourth page-by-day"></div>
+            </div>
+            <div class="item">
+                <h4>количество просмотренных страниц за последние 2 дня</h4>
+                <div class="ct-chart ct-perfect-fourth page"></div>
+            </div>
         </div>
     </div>
 </div>

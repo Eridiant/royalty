@@ -247,6 +247,14 @@ class SiteController extends Controller
             ->asArray()
             ->all();
 
+        $languagesPref = UserIp::find()
+            ->select(['preferred_lang', 'COUNT(*) AS cnt'])
+            ->where(['not', ['preferred_lang' => null]])
+            ->groupBy(['preferred_lang'])
+            ->orderBy(['cnt' => SORT_DESC])
+            ->limit(5)
+            ->asArray()
+            ->all();
 
         $country = [];
         $countryLabels = [];
@@ -259,6 +267,12 @@ class SiteController extends Controller
         foreach ($languages as $langu) {
             $lang[] = $langu["cnt"];
             $langLabels[] = $langu["lang"];
+        }
+        $langPref = [];
+        $langPrefLabels = [];
+        foreach ($languagesPref as $langp) {
+            $langPref[] = $langp["cnt"];
+            $langPrefLabels[] = $langp["preferred_lang"];
         }
 
         $intr = intval(date('U')) - 3600 * 24 * 30;
@@ -294,7 +308,7 @@ class SiteController extends Controller
             $pages[] = $data->pageChart->page;
             $pagesLabels[] = $data->hour;
         }
-        return $this->render('statistics', compact('dayStats', 'dataStats', 'users', 'newUsers', 'pageByDay', 'usersLabels', 'pages', 'pagesLabels', 'country', 'lang', 'countryLabels', 'langLabels'));
+        return $this->render('statistics', compact('dayStats', 'dataStats', 'users', 'newUsers', 'pageByDay', 'usersLabels', 'pages', 'pagesLabels', 'country', 'lang', 'countryLabels', 'langLabels', 'langPrefLabels', 'langPref'));
     }
 
     private function geoCity($ip)
