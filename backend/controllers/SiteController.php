@@ -210,17 +210,21 @@ class SiteController extends Controller
 
         // IP
         $UserIps = UserIp::find()->where(['checked'=> null])->all();
-        foreach ($UserIps as $UserIp) {
-            $country = $this->geoCity(long2ip($UserIp->ip));
+        foreach ($UserIps as $UsIp) {
+            $country = $this->geoCity(long2ip($UsIp->ip));
             // $country = $this->geoCity('185.28.110.65');
-
+            // var_dump('<pre>');
+            // var_dump($country["country"]["iso"],$UsIp);
+            // var_dump('</pre>');
+            // die;
+            
             if ($country) {
-                $userIp->code = $country["country"]["iso"];
-                $UserIp->country = $country["country"]["name_ru"];
-                $UserIp->region = $country["region"]["name_ru"];
-                $UserIp->city = $country["city"]["name_ru"];
-                $UserIp->checked = 1;
-                $UserIp->save();
+                $UsIp->country = $country["country"]["name_ru"];
+                $UsIp->region = $country["region"]["name_ru"];
+                $UsIp->city = $country["city"]["name_ru"];
+                $UsIp->code = $country["country"]["iso"];
+                $UsIp->checked = 1;
+                $UsIp->save();
             }
         }
 
