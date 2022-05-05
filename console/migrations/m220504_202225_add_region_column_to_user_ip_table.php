@@ -24,6 +24,7 @@ class m220504_202225_add_region_column_to_user_ip_table extends Migration
     public function safeDown()
     {
         $this->dropColumn('{{%user_ip}}', 'preferred_lang');
+        $this->dropColumn('{{%user_ip}}', 'preferred_lang_all');
         $this->dropColumn('{{%user_ip}}', 'region');
         $this->dropColumn('{{%user_ip}}', 'checked');
     }

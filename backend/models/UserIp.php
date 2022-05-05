@@ -10,6 +10,8 @@ use Yii;
  * @property int $id
  * @property int $ip
  * @property string|null $code
+ * @property string|null $preferred_lang_all
+ * @property string|null $preferred_lang
  * @property string|null $country
  * @property string|null $region
  * @property string|null $city
@@ -20,8 +22,6 @@ use Yii;
  */
 class UserIp extends \yii\db\ActiveRecord
 {
-    public $cnt;
-
     /**
      * {@inheritdoc}
      */
@@ -39,8 +39,9 @@ class UserIp extends \yii\db\ActiveRecord
             [['ip', 'created_at'], 'required'],
             [['ip', 'checked', 'created_at'], 'integer'],
             [['code'], 'string', 'max' => 10],
+            [['preferred_lang_all'], 'string', 'max' => 255],
+            [['preferred_lang', 'region'], 'string', 'max' => 128],
             [['country', 'city'], 'string', 'max' => 64],
-            [['region'], 'string', 'max' => 128],
         ];
     }
 
@@ -53,6 +54,8 @@ class UserIp extends \yii\db\ActiveRecord
             'id' => 'ID',
             'ip' => 'Ip',
             'code' => 'Code',
+            'preferred_lang_all' => 'Preferred Lang All',
+            'preferred_lang' => 'Preferred Lang',
             'country' => 'Country',
             'region' => 'Region',
             'city' => 'City',
@@ -68,6 +71,6 @@ class UserIp extends \yii\db\ActiveRecord
      */
     public function getUserActivities()
     {
-        return $this->hasMany(UserActivity::className(), ['user_id' => 'id']);
+        return $this->hasMany(UserActivity::class, ['user_id' => 'id']);
     }
 }
