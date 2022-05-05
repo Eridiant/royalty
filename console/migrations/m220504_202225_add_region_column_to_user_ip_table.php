@@ -12,7 +12,8 @@ class m220504_202225_add_region_column_to_user_ip_table extends Migration
      */
     public function safeUp()
     {
-        $this->addColumn('{{%user_ip}}', 'preferred_lang', $this->tinyInteger()->after('code'));
+        $this->addColumn('{{%user_ip}}', 'preferred_lang', $this->string(128)->after('code'));
+        $this->addColumn('{{%user_ip}}', 'preferred_lang_all', $this->string(255)->after('code'));
         $this->addColumn('{{%user_ip}}', 'region', $this->string(128)->after('country'));
         $this->addColumn('{{%user_ip}}', 'checked', $this->tinyInteger()->after('city'));
     }
