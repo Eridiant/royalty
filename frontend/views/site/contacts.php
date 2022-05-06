@@ -1,3 +1,18 @@
+<?php
+
+// use yii\helpers\Html;
+// use yii\helpers\Url;
+/* @var $this yii\web\View */
+
+$this->title = Yii::t('frontend', 'Контакты');
+
+$this->registerJsFile(
+    '//maps.googleapis.com/maps/api/js?key=AIzaSyAij3ofbFzI6vQYhL_IBZHvawFtHZ9_gCY&region=EN&language=en',
+    ['position' => $this::POS_END, 'async'=>true]
+);
+
+?>
+
 <div id="google-maps" class="map">
     <div class="container-lg" style="max-width: 1920px; margin-left: auto; margin-right: auto">
         <div id="maps" class="maps"></div>
@@ -52,9 +67,5 @@
         </div>
     </div>
 </div>
-<?php
-    $this->registerJsFile(
-        '//maps.googleapis.com/maps/api/js?key=AIzaSyAij3ofbFzI6vQYhL_IBZHvawFtHZ9_gCY&region=EN&language=en',
-        ['position' => $this::POS_END, 'async'=>true]
-    );
+
 

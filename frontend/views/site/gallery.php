@@ -34,7 +34,7 @@ $this->title = 'Галерея';
                         <a class="construction" href="<?= Url::toRoute('/site/construction') ?>"><?=Yii::t('frontend', 'Ход строительства')?></a>
                         <a class="batumy" href="<?= Url::toRoute('/site/batumy') ?>"><?=Yii::t('frontend', 'Батуми')?></a>
                     </div>
-                    <a href="#" class="btn">
+                    <a href="/presentation/Royal_Residence_<?= Yii::$app->language; ?>.pdf" class="btn">
                         <svg width="14" height="16"><use xlink:href="/images/icons.svg#pdf"></use></svg>
                         <span><?=Yii::t('frontend', 'Скачать презентацию')?></span>
                     </a>

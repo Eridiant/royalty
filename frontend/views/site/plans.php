@@ -1,3 +1,13 @@
+<?php
+
+use yii\helpers\Url;
+
+/** @var yii\web\View $this */
+
+$this->title = 'Планировка';
+
+?>
+
 <div class="plans">
     <div class="container-lg" style="max-width: 1920px; margin-left: auto; margin-right: auto">
         <div class="plans-bg">
@@ -13,16 +23,17 @@
                         <object type="image/svg+xml" data="/images/svg/royal-build-bl.svg">
                             <img src="/images/svg/royal-build-bl.svg" alt="" />
                         </object>
-                        <p class="cap">Выберите этаж</p>
+                        <p class="cap">
+                            <?=Yii::$app->translate->getT("Выберите этаж")?>
+                        </p>
                         <p>
-                            Жилые квартиры начинаются с 1 по 18 этаж.
-                            Если у вас возникнут вопросы, оставьте номер телефона или напишите нам сообщение и мы ответим в ближайшее время.
+                            <?=Yii::$app->translate->getT("Жилые квартиры начинаются с 1 по 18 этаж. Если у вас возникнут вопросы, оставьте номер телефона или напишите нам сообщение и мы ответим в ближайшее время.")?>
                         </p>
                     </div>
                     <div class="building-choice">
                     <div class="building-change lgm" id="building-change" data-min="1" data-max="18">
                         <svg class="prev" width="161" height="25"><use xlink:href="images/icons.svg#rect"></use></svg>
-                        <p class="btn"><span class="floor-changes">1</span> этаж</p>
+                        <p class="btn"><span class="floor-changes">1</span> <?=Yii::$app->translate->getT("этаж")?>этаж</p>
                         <svg class="next" width="161" height="25"><use xlink:href="images/icons.svg#rect"></use></svg>
                     </div>
                     <div class="building-img">
@@ -38,7 +49,7 @@
                     </div>
                     <div class="building-floor lg">
                         <p class="fl num floor-changes">2</p>
-                        <p>этаж</p>
+                        <p><?=Yii::$app->translate->getT("этаж")?></p>
                     </div>
                 </div>
             </div>
@@ -52,9 +63,11 @@
             <object type="image/svg+xml" data="/images/svg/royal-build-bl.svg">
                 <img src="/images/svg/royal-build-bl.svg" alt="" />
             </object>
-            <p class="cap">выберите этаж</p>
+            <p class="cap">
+                <?=Yii::$app->translate->getT("Выберите этаж")?>
+            </p>
             <p>
-                Жилые квартиры начинаются с 2 по 18 этаж. Если у вас возникнут вопросы, оставьте номер телефона или напишите нам сообщение и мы ответим в ближайшее время.
+                <?=Yii::$app->translate->getT("Жилые квартиры начинаются с 2 по 18 этаж. Если у вас возникнут вопросы, оставьте номер телефона или напишите нам сообщение и мы ответим в ближайшее время.")?>
             </p>
         </div>
     </div>
@@ -64,10 +77,10 @@
     <div class="popup">
         <div class="popup-inner sending">
             <div class="subtitle">
-                Узнать цену
+                <?=Yii::$app->translate->getT("Узнать цену")?>
             </div>
             <p>
-                Заполнте поля и мы Вам перезвоним в течение 15 минут
+                <?=Yii::$app->translate->getT("Заполнте поля и мы Вам перезвоним в течение 15 минут")?>
             </p>
             <div class="">
                 <form name="callBack" class="form" action="#" method="post">
@@ -76,7 +89,7 @@
                     <label for="call-phone"></label>
                     <input name="phone" id="call-phone" pattern="(\+?\d[- .]*){7,15}" type="tel" class=""
                         placeholder="Телефон" required>
-                    <button type="submit" href="#" class="btn" data-btn="popup-success"><span>Оставить заявку</span></button>
+                    <button type="submit" href="#" class="btn" data-btn="popup-success"><span><?=Yii::$app->translate->getT("Оставить заявку")?></span></button>
                 </form>
             </div>
         </div>

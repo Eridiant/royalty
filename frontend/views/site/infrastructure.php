@@ -1,3 +1,13 @@
+<?php
+
+use yii\helpers\Url;
+
+/** @var yii\web\View $this */
+
+$this->title = 'Инфраструктура';
+
+?>
+
 <div class="infrastructure">
     <div class="container" style="max-width: 1600px; margin-left: auto; margin-right: auto">
         <h2 class="title"><?=Yii::$app->translate->getT("Инфраструктура")?></h2>

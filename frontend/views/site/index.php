@@ -393,18 +393,18 @@ $this->title = 'Royal';
                     <ul class="apartments-tabs">
                         <li class="active" data-num="0">
                             <svg width="25" height="36"><use xlink:href="/images/icons.svg#people"></use></svg>
-                            <p>36 m<sup>2</sup></p>
+                            <p>30 m<sup>2</sup></p>
                         </li>
                         <li data-num="1">
                             <svg width="25" height="36"><use xlink:href="/images/icons.svg#people"></use></svg>
                             <svg width="25" height="36"><use xlink:href="/images/icons.svg#people"></use></svg>
-                            <p>46 m<sup>2</sup></p>
+                            <p>38 m<sup>2</sup></p>
                         </li>
                         <li data-num="2">
                             <svg width="25" height="36"><use xlink:href="/images/icons.svg#people"></use></svg>
                             <svg width="25" height="36"><use xlink:href="/images/icons.svg#people"></use></svg>
                             <svg width="14" height="21"><use xlink:href="/images/icons.svg#people"></use></svg>
-                            <p>56 m<sup>2</sup></p>
+                            <p>52 m<sup>2</sup></p>
                         </li>
                     </ul>
                     <div class="cap"><?=Yii::$app->translate->getT("квартиры")?></div>
