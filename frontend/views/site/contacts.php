@@ -1,6 +1,7 @@
-<div class="map">
+<div id="google-maps" class="map">
     <div class="container-lg" style="max-width: 1920px; margin-left: auto; margin-right: auto">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1990.6169153523354!2d41.59324362088274!3d41.62212559382382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s41.62230491491541%2C%2041.59460414225088!5e0!3m2!1sru!2s!4v1650356254295!5m2!1sru!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div id="maps" class="maps"></div>
+        <!-- <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d1990.6169153523354!2d41.59324362088274!3d41.62212559382382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1s41.62230491491541%2C%2041.59460414225088!5e0!3m2!1sru!2s!4v1650356254295!5m2!1sru!2s" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe> -->
     </div>
 </div>
 <div class="contacts">
@@ -51,5 +52,9 @@
         </div>
     </div>
 </div>
-
+<?php
+    $this->registerJsFile(
+        '//maps.googleapis.com/maps/api/js?key=AIzaSyAij3ofbFzI6vQYhL_IBZHvawFtHZ9_gCY&region=EN&language=en',
+        ['position' => $this::POS_END, 'async'=>true]
+    );
 
