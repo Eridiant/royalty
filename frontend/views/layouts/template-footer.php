@@ -8,10 +8,11 @@ use yii\helpers\Url;
     <div class="container-lg" style="max-width: 1920px; margin-left: auto; margin-right: auto">
         <div class="container" style="max-width: 1600px; margin-left: auto; margin-right: auto">
             <div class="footer-wrapper">
-                <div class="footer-logo">
+                <div class="footer-logo nav-logo">
                     <object type="image/svg+xml" data="/images/svg/logo.svg">
                         <img src="/images/svg/logo.svg" alt="" />
                     </object>
+                    <a href="/"></a>
                 </div>
                 <div class="footer-social">
                     <p><?=Yii::$app->translate->getT("Соцсети")?>:</p>
@@ -34,14 +35,14 @@ use yii\helpers\Url;
                     <a class="radius" href="tel:+995558499966">
                         <svg width="19" height="19"><use xlink:href="/images/icons.svg#phone"></use></svg>
                     </a>
-                    <a href="tel:+995558499966"></a>
+                    <a href="tel:+995558499966">
                         +995 (558) 49-99-66
                     </a>
                     <p>
                         <a class="radius" href="tel:+995558499922">
                             <svg width="19" height="19"><use xlink:href="/images/icons.svg#phone"></use></svg>
                         </a>
-                        <a href="tel:+995558499922"></a>
+                        <a href="tel:+995558499922">
                             +995 (558) 49-99-22
                         </a>
                     </p>

@@ -439,7 +439,7 @@ $this->title = 'Royal';
                 <p class="title"><?=Yii::$app->translate->getT("Напишите нам")?></p>
                 <div class="contacts-content">
                     <p>
-                        <?=Yii::$app->translate->getT("Наш менеджер перезвонит Вам в течении")?> <b><?=Yii::$app->translate->getT("15 минут")?></b> <?=Yii::$app->translate->getT("и подберет для Вас наилучший вариант")?>
+                        <?=Yii::$app->translate->getT("Наш менеджер перезвонит Вам в течении <b>15 минут</b> и подберет для Вас наилучший вариант")?>
                     </p>
                 </div>
                 <form name="callBack" class="form" action="#" method="post">
