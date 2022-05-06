@@ -84,12 +84,11 @@ class SiteController extends Controller
 
         $dayStat = DayStat::find()->orderBy(['id'=> SORT_DESC])->one();
         if (is_null($dayStat)) {
-            $dayStat = new DayStat();
             $startInterval = intval(floor($userIp[0]["created_at"] / (3600 * 24)) * 3600 * 24);
         } else {
-            // $startInterval = $dayStat["date"] + 3600 * 24;
-            $startInterval = $dayStat["date"];
+            $startInterval = $dayStat["date"] + 3600 * 24;
         }
+        $dayStat = new DayStat();
 
         $endInterval = $startInterval + (3600 * 24) - 1;
         $countModel = UserActivity::find();
@@ -147,13 +146,12 @@ class SiteController extends Controller
         // page stat
         $dataStat = DataStat::find()->orderBy(['id'=> SORT_DESC])->one();
         if (is_null($dataStat)) {
-            $dataStat = new DataStat();
             $startInterval = intval(floor($userIp[0]["created_at"] / 3600) * 3600);
         } else {
             // $startInterval = intval(floor($dataStat["date"] / (3600 * 24)) * 3600 * 24);
-            // $startInterval = $dataStat["date"] + 3600;
-            $startInterval = $dataStat["date"];
+            $startInterval = $dataStat["date"] + 3600;
         }
+        $dataStat = new DataStat();
 
         $endInterval = $startInterval + 3600 - 1;
         $countModel = UserActivity::find();
