@@ -87,7 +87,8 @@ class SiteController extends Controller
             $dayStat = new DayStat();
             $startInterval = intval(floor($userIp[0]["created_at"] / (3600 * 24)) * 3600 * 24);
         } else {
-            $startInterval = $dayStat["date"] + 3600 * 24;
+            // $startInterval = $dayStat["date"] + 3600 * 24;
+            $startInterval = $dayStat["date"];
         }
 
         $endInterval = $startInterval + (3600 * 24) - 1;
@@ -150,7 +151,8 @@ class SiteController extends Controller
             $startInterval = intval(floor($userIp[0]["created_at"] / 3600) * 3600);
         } else {
             // $startInterval = intval(floor($dataStat["date"] / (3600 * 24)) * 3600 * 24);
-            $startInterval = $dataStat["date"] + 3600;
+            // $startInterval = $dataStat["date"] + 3600;
+            $startInterval = $dataStat["date"];
         }
 
         $endInterval = $startInterval + 3600 - 1;
