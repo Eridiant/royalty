@@ -11,7 +11,11 @@ $this->title = 'Royal';
     <div class="container-lg" style="max-width: 1920px; margin-left: auto; margin-right: auto">
         <div class="header-bg">
             <picture>
-				<img src="/images/del/header.jpg" alt="">
+                <source type="image/jpeg" srcset="/images/index/header/header-mb-1x.jpg, /images/index/header/header-mb-2x.jpg 2x, /images/index/header/header-mb-4x.jpg 4x" media="(max-width: 360px)">
+                <source type="image/jpeg" srcset="/images/index/header/header-xs-1x.jpg, /images/index/header/header-xs-2x.jpg 2x, /images/index/header/header-xs-4x.jpg 4x" media="(max-width: 480px)">
+                <source type="image/jpeg" srcset="/images/index/header/header-lg-1x.jpg, /images/index/header/header-lg-2x.jpg 2x, /images/index/header/header-lg-4x.jpg 4x" media="(max-width: 1350px)">
+				<source type="image/jpeg" type="image/jpeg" srcset="/images/index/header/header-1x.jpg, /images/index/header/header-2x.jpg 2x, /images/index/header/header-3x.jpg 3x">
+				<img src="/images/index/header/header-1x.jpg" alt="">
             </picture>
         </div>
         <div class="container" style="max-width: 1600px; margin-left: auto; margin-right: auto">
@@ -113,13 +117,13 @@ $this->title = 'Royal';
         <div class="pattern"></div>
         <div class="development-bg md">
             <picture>
-                <img src="/images/index/development/dev-bg.jpg" alt="">
+                <img src="/images/index/development/dev-bg.jpg" loading="lazy" alt="">
             </picture>
         </div>
         <div class="container" style="max-width: 1600px; margin-left: auto; margin-right: auto">
             <div class="development-img mdm">
                 <picture>
-                    <img src="/images/index/development/dev.jpg" alt="">
+                    <img src="/images/index/development/dev.jpg" loading="lazy" alt="">
                 </picture>
             </div>
             <div class="development-wrapper">
@@ -192,12 +196,12 @@ $this->title = 'Royal';
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <picture>
-                        <img src="/images/index/panorama/panorama-1.jpg" alt="">
+                        <img src="/images/index/panorama/panorama-1.jpg" loading="lazy" alt="">
                     </picture>
                 </div>
                 <div class="swiper-slide">
                     <picture>
-                        <img src="/images/index/panorama/panorama-2.jpg" alt="">
+                        <img src="/images/index/panorama/panorama-2.jpg" loading="lazy" alt="">
                     </picture>
                 </div>
             </div>
@@ -211,7 +215,7 @@ $this->title = 'Royal';
     <div class="container-lg" style="max-width: 1920px; margin-left: auto; margin-right: auto">
         <div class="location-map">
             <picture>
-                <img src="/images/index/location/map-2x.jpg" alt="" />
+                <img src="/images/index/location/map-2x.jpg" loading="lazy" alt="" />
             </picture>
         </div>
         <div class="container" style="max-width: 1600px; margin-left: auto; margin-right: auto">
@@ -221,7 +225,7 @@ $this->title = 'Royal';
                     <p class="title"><?=Yii::$app->translate->getT("Расположение")?></p>
                     <div class="location-map-mb">
                         <picture>
-                            <img src="/images/index/location/map-mb-2x.jpg" alt="" />
+                            <img src="/images/index/location/map-mb-2x.jpg" loading="lazy" alt=""/>
                         </picture>
                     </div>
                     <p class="cap"><?=Yii::$app->translate->getT("рядом с комплексом")?></p>
@@ -231,7 +235,7 @@ $this->title = 'Royal';
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
                                         <picture>
-                                            <img src="/images/index/location/loc-1.jpg">
+                                            <img src="/images/index/location/loc-1.jpg"  loading="lazy" alt="">
                                         </picture>
                                     </div>
                                     <p><?=Yii::$app->translate->getT("Первая линия от моря в 70 метрах")?></p>
@@ -239,7 +243,7 @@ $this->title = 'Royal';
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
                                         <picture>
-                                            <img src="/images/index/location/loc-2.jpg">
+                                            <img src="/images/index/location/loc-2.jpg"  loading="lazy" alt="">
                                         </picture>
                                     </div>
                                     <p><?=Yii::$app->translate->getT("Парк отдых 6000 кв.м")?></p>
@@ -247,7 +251,7 @@ $this->title = 'Royal';
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
                                         <picture>
-                                            <img src="/images/index/location/loc-3.jpg">
+                                            <img src="/images/index/location/loc-3.jpg"  loading="lazy" alt="">
                                         </picture>
                                     </div>
                                     <p><?=Yii::$app->translate->getT("Набережная 10 км")?></p>
@@ -255,7 +259,7 @@ $this->title = 'Royal';
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
                                         <picture>
-                                            <img src="/images/index/location/loc-4.jpg">
+                                            <img src="/images/index/location/loc-4.jpg"  loading="lazy" alt="">
                                         </picture>
                                     </div>
                                     <p><?=Yii::$app->translate->getT("Торговый центр 3000 кв.м")?></p>
@@ -263,7 +267,7 @@ $this->title = 'Royal';
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
                                         <picture>
-                                            <img src="/images/index/location/loc-5.jpg">
+                                            <img src="/images/index/location/loc-5.jpg"  loading="lazy" alt="">
                                         </picture>
                                     </div>
                                     <p><?=Yii::$app->translate->getT("Детская площадка 200 кв.метров")?></p>
@@ -271,7 +275,7 @@ $this->title = 'Royal';
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
                                         <picture>
-                                            <img src="/images/index/location/loc-6.jpg">
+                                            <img src="/images/index/location/loc-6.jpg"  loading="lazy" alt="">
                                         </picture>
                                     </div>
                                     <p><?=Yii::$app->translate->getT("Автобусная остановка")?></p>
@@ -279,7 +283,7 @@ $this->title = 'Royal';
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
                                         <picture>
-                                            <img src="/images/index/location/loc-7.jpg">
+                                            <img src="/images/index/location/loc-7.jpg"  loading="lazy" alt="">
                                         </picture>
                                     </div>
                                     <p><?=Yii::$app->translate->getT("Супермаркет")?></p>
@@ -287,7 +291,7 @@ $this->title = 'Royal';
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
                                         <picture>
-                                            <img src="/images/index/location/loc-8.jpg">
+                                            <img src="/images/index/location/loc-8.jpg"  loading="lazy" alt="">
                                         </picture>
                                     </div>
                                     <p><?=Yii::$app->translate->getT("Аэропорт в 5 минутах")?></p>
@@ -321,32 +325,32 @@ $this->title = 'Royal';
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <picture>
-                                <img src="/images/index/apartments/apart-1.jpg">
+                                <img src="/images/index/apartments/apart-1.jpg"  loading="lazy" alt="">
                             </picture>
                         </div>
                         <div class="swiper-slide">
                             <picture>
-                                <img src="/images/index/apartments/apart-2.jpg">
+                                <img src="/images/index/apartments/apart-2.jpg"  loading="lazy" alt="">
                             </picture>
                         </div>
                         <div class="swiper-slide">
                             <picture>
-                                <img src="/images/index/apartments/apart-3.jpg">
+                                <img src="/images/index/apartments/apart-3.jpg"  loading="lazy" alt="">
                             </picture>
                         </div>
                         <div class="swiper-slide">
                             <picture>
-                                <img src="/images/index/apartments/apart-4.jpg">
+                                <img src="/images/index/apartments/apart-4.jpg"  loading="lazy" alt="">
                             </picture>
                         </div>
                         <div class="swiper-slide">
                             <picture>
-                                <img src="/images/index/apartments/apart-5.jpg">
+                                <img src="/images/index/apartments/apart-5.jpg"  loading="lazy" alt="">
                             </picture>
                         </div>
                         <div class="swiper-slide">
                             <picture>
-                                <img src="/images/index/apartments/apart-6.jpg">
+                                <img src="/images/index/apartments/apart-6.jpg"  loading="lazy" alt="">
                             </picture>
                         </div>
                     </div>
@@ -355,32 +359,32 @@ $this->title = 'Royal';
                     <div class="swiper-wrapper">
                         <div class="swiper-slide">
                             <picture>
-                                <img src="/images/index/apartments/apart-1.jpg">
+                                <img src="/images/index/apartments/apart-1.jpg"  loading="lazy" alt="">
                             </picture>
                         </div>
                         <div class="swiper-slide">
                             <picture>
-                                <img src="/images/index/apartments/apart-2.jpg">
+                                <img src="/images/index/apartments/apart-2.jpg"  loading="lazy" alt="">
                             </picture>
                         </div>
                         <div class="swiper-slide">
                             <picture>
-                                <img src="/images/index/apartments/apart-3.jpg">
+                                <img src="/images/index/apartments/apart-3.jpg"  loading="lazy" alt="">
                             </picture>
                         </div>
                         <div class="swiper-slide">
                             <picture>
-                                <img src="/images/index/apartments/apart-4.jpg">
+                                <img src="/images/index/apartments/apart-4.jpg"  loading="lazy" alt="">
                             </picture>
                         </div>
                         <div class="swiper-slide">
                             <picture>
-                                <img src="/images/index/apartments/apart-5.jpg">
+                                <img src="/images/index/apartments/apart-5.jpg"  loading="lazy" alt="">
                             </picture>
                         </div>
                         <div class="swiper-slide">
                             <picture>
-                                <img src="/images/index/apartments/apart-6.jpg">
+                                <img src="/images/index/apartments/apart-6.jpg"  loading="lazy" alt="">
                             </picture>
                         </div>
                     </div>
