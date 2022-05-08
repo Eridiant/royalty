@@ -235,7 +235,8 @@ $this->title = 'Royal';
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
                                         <picture>
-                                            <img src="/images/index/location/loc-1.jpg"  loading="lazy" alt="">
+                                            <source type="image/jpeg" type="image/jpeg" srcset="/images/index/location/loc-1-1x.jpg, /images/index/location/loc-1-2x.jpg 2x">
+                                            <img src="/images/index/location/loc-1-1x.jpg" width="364" height="243" loading="lazy" alt="">
                                         </picture>
                                     </div>
                                     <p><?=Yii::$app->translate->getT("Первая линия от моря в 70 метрах")?></p>
@@ -243,7 +244,8 @@ $this->title = 'Royal';
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
                                         <picture>
-                                            <img src="/images/index/location/loc-2.jpg"  loading="lazy" alt="">
+                                            <source type="image/jpeg" type="image/jpeg" srcset="/images/index/location/loc-2-1x.jpg, /images/index/location/loc-2-2x.jpg 2x">
+                                            <img src="/images/index/location/loc-2-1x.jpg" width="364" height="243" loading="lazy" alt="">
                                         </picture>
                                     </div>
                                     <p><?=Yii::$app->translate->getT("Парк отдых 6000 кв.м")?></p>
@@ -251,7 +253,8 @@ $this->title = 'Royal';
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
                                         <picture>
-                                            <img src="/images/index/location/loc-3.jpg"  loading="lazy" alt="">
+                                            <source type="image/jpeg" type="image/jpeg" srcset="/images/index/location/loc-3-1x.jpg, /images/index/location/loc-3-2x.jpg 2x">
+                                            <img src="/images/index/location/loc-3-1x.jpg" width="364" height="243" loading="lazy" alt="">
                                         </picture>
                                     </div>
                                     <p><?=Yii::$app->translate->getT("Набережная 10 км")?></p>
@@ -259,7 +262,8 @@ $this->title = 'Royal';
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
                                         <picture>
-                                            <img src="/images/index/location/loc-4.jpg"  loading="lazy" alt="">
+                                            <source type="image/jpeg" type="image/jpeg" srcset="/images/index/location/loc-4-1x.jpg, /images/index/location/loc-4-2x.jpg 2x">
+                                            <img src="/images/index/location/loc-4-1x.jpg" width="364" height="243" loading="lazy" alt="">
                                         </picture>
                                     </div>
                                     <p><?=Yii::$app->translate->getT("Торговый центр 3000 кв.м")?></p>
@@ -267,7 +271,8 @@ $this->title = 'Royal';
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
                                         <picture>
-                                            <img src="/images/index/location/loc-5.jpg"  loading="lazy" alt="">
+                                            <source type="image/jpeg" type="image/jpeg" srcset="/images/index/location/loc-5-1x.jpg, /images/index/location/loc-5-2x.jpg 2x">
+                                            <img src="/images/index/location/loc-5-1x.jpg" width="364" height="243" loading="lazy" alt="">
                                         </picture>
                                     </div>
                                     <p><?=Yii::$app->translate->getT("Детская площадка 200 кв.метров")?></p>
@@ -275,7 +280,8 @@ $this->title = 'Royal';
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
                                         <picture>
-                                            <img src="/images/index/location/loc-6.jpg"  loading="lazy" alt="">
+                                            <source type="image/jpeg" type="image/jpeg" srcset="/images/index/location/loc-6-1x.jpg, /images/index/location/loc-6-2x.jpg 2x">
+                                            <img src="/images/index/location/loc-6-1x.jpg" width="364" height="243" loading="lazy" alt="">
                                         </picture>
                                     </div>
                                     <p><?=Yii::$app->translate->getT("Автобусная остановка")?></p>
@@ -283,7 +289,8 @@ $this->title = 'Royal';
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
                                         <picture>
-                                            <img src="/images/index/location/loc-7.jpg"  loading="lazy" alt="">
+                                            <source type="image/jpeg" type="image/jpeg" srcset="/images/index/location/loc-7-1x.jpg, /images/index/location/loc-7-2x.jpg 2x">
+                                            <img src="/images/index/location/loc-7-1x.jpg" width="364" height="243" loading="lazy" alt="">
                                         </picture>
                                     </div>
                                     <p><?=Yii::$app->translate->getT("Супермаркет")?></p>
@@ -291,7 +298,8 @@ $this->title = 'Royal';
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
                                         <picture>
-                                            <img src="/images/index/location/loc-8.jpg"  loading="lazy" alt="">
+                                            <source type="image/jpeg" type="image/jpeg" srcset="/images/index/location/loc-8-1x.jpg, /images/index/location/loc-8-2x.jpg 2x">
+                                            <img src="/images/index/location/loc-8-1x.jpg" width="364" height="243" loading="lazy" alt="">
                                         </picture>
                                     </div>
                                     <p><?=Yii::$app->translate->getT("Аэропорт в 5 минутах")?></p>
