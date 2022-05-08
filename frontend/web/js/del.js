@@ -11,39 +11,6 @@ window.addEventListener('load', () => {
         init();
     }
 
-    if (document.querySelector('.apartments-thumbs')) {
-        var thumbs = new Swiper(".apartments-thumbs", {
-            loop: true,
-            spaceBetween: 10,
-            slidesPerView: 4,
-        });
-        var apartments = new Swiper(".apartments-slider", {
-            loop: true,
-            spaceBetween: 20,
-            thumbs: {
-                swiper: thumbs,
-            },
-            navigation: {
-                nextEl: ".apartments-slider-next",
-                prevEl: ".apartments-slider-prev",
-            },
-        });
-
-        let tabs = document.querySelector('.apartments-tabs');
-        tabs.addEventListener('click', (e) => {
-            let target = e.target.closest('li');
-            // console.log(target.classList.contains('active'));
-            if (!target.classList.contains('active')) {
-                document.querySelector('.apartments-tabs .active').classList.remove('active');
-                document.querySelector('.apartments-desc .current').classList.remove('current');
-                let i = target.dataset.num;
-                document.querySelector(`.apartments-tabs [data-num="${i}"]`).classList.add('active');
-                document.querySelector(`.apartments-desc [data-num="${i}"]`).classList.add('current');
-                apartments.slideTo(`${i * 2 + 1}`);
-            }
-        })
-    }
-
     if (document.querySelector('#building-change')) {
 
         let change = document.querySelector('#building-change');
@@ -307,6 +274,7 @@ function flr(model) {
                 loop: true,
                 spaceBetween: 10,
                 slidesPerView: 4,
+                threshold: 5,
             });
             var apartments = new Swiper(".apartments-slider", {
                 loop: true,
