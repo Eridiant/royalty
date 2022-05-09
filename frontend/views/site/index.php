@@ -14,7 +14,7 @@ $this->title = 'Royal';
                 <source type="image/jpeg" srcset="/images/index/header/header-mb-1x.jpg, /images/index/header/header-mb-2x.jpg 2x, /images/index/header/header-mb-4x.jpg 4x" media="(max-width: 360px)">
                 <source type="image/jpeg" srcset="/images/index/header/header-xs-1x.jpg, /images/index/header/header-xs-2x.jpg 2x, /images/index/header/header-xs-4x.jpg 4x" media="(max-width: 480px)">
                 <source type="image/jpeg" srcset="/images/index/header/header-lg-1x.jpg, /images/index/header/header-lg-2x.jpg 2x, /images/index/header/header-lg-4x.jpg 4x" media="(max-width: 1350px)">
-				<source type="image/jpeg" type="image/jpeg" srcset="/images/index/header/header-1x.jpg, /images/index/header/header-2x.jpg 2x, /images/index/header/header-3x.jpg 3x">
+				<source type="image/jpeg" srcset="/images/index/header/header-1x.jpg, /images/index/header/header-2x.jpg 2x, /images/index/header/header-3x.jpg 3x">
 				<img src="/images/index/header/header-1x.jpg" alt="">
             </picture>
         </div>
@@ -22,14 +22,14 @@ $this->title = 'Royal';
             <div class="header-title mb">
                 <svg width="115" height="115"><use xlink:href="/images/icons.svg#video"></use></svg>
                 <object type="image/svg+xml" data="/images/svg/royal-mb.svg">
-                    <img src="/images/svg/royal-mb.svg" alt="" />
+                    <img src="/images/svg/royal-mb.svg" alt="">
                 </object>
             </div>
             <div class="header-bg-logo dt">
                 <div class="header-inner">
                     <div class="header-title">
                         <object type="image/svg+xml" data="/images/svg/royal-bg.svg">
-                            <img src="/images/svg/royal-bg.svg" alt="" />
+                            <img src="/images/svg/royal-bg.svg" alt="">
                         </object>
                         <!-- <p>Выберите квартиру своей мечты на берегу моря</p> -->
                         <p><?=Yii::$app->translate->getT("Выберите квартиру своей мечты на берегу моря")?></p>
@@ -40,7 +40,7 @@ $this->title = 'Royal';
                 <!-- <div class="nav">
                     <div class="nav-logo">
                         <object type="image/svg+xml" data="/images/svg/logo.svg">
-                            <img src="/images/svg/logo.svg" alt="" />
+                            <img src="/images/svg/logo.svg" alt="">
                         </object>
                     </div>
                     <div class="nav-wrap">
@@ -55,7 +55,7 @@ $this->title = 'Royal';
                 <div class="header-inner dt">
                     <div class="header-title">
                         <object type="image/svg+xml" data="/images/svg/royal.svg">
-                            <img src="/images/svg/royal.svg" alt="" />
+                            <img src="/images/svg/royal.svg" alt="">
                         </object>
                         <p><?=Yii::$app->translate->getT("Выберите квартиру своей мечты на берегу моря")?></p>
                     </div>
@@ -117,13 +117,16 @@ $this->title = 'Royal';
         <div class="pattern"></div>
         <div class="development-bg md">
             <picture>
-                <img src="/images/index/development/dev-bg.jpg" loading="lazy" alt="">
+                <source type="image/jpeg" srcset="/images/index/development/dev-bg-1x.jpg, /images/index/development/dev-bg-2x.jpg 2x">
+                <img src="/images/index/development/dev-bg-1x.jpg" loading="lazy" width="1920" alt="">
             </picture>
         </div>
         <div class="container" style="max-width: 1600px; margin-left: auto; margin-right: auto">
             <div class="development-img mdm">
                 <picture>
-                    <img src="/images/index/development/dev.jpg" loading="lazy" alt="">
+                    <source type="image/jpeg" srcset="/images/index/development/dev-gl-1x.jpg, /images/index/development/dev-gl-2x.jpg 2x" media="(max-width: 360px)">
+                    <source type="image/jpeg" srcset="/images/index/development/dev-1x.jpg, /images/index/development/dev-2x.jpg 1.5x">
+                    <img src="/images/index/development/dev-1x.jpg" loading="lazy" width="893" height="1205" alt="">
                 </picture>
             </div>
             <div class="development-wrapper">
@@ -196,12 +199,16 @@ $this->title = 'Royal';
             <div class="swiper-wrapper">
                 <div class="swiper-slide">
                     <picture>
-                        <img src="/images/index/panorama/panorama-1.jpg" loading="lazy" alt="">
+                        <source type="image/jpeg" srcset="/images/index/panorama/panorama-gl-1-1x.jpg, /images/index/panorama/panorama-gl-1-2x.jpg 2x" media="(max-width: 360px)">
+                        <source type="image/jpeg" srcset="/images/index/panorama/panorama-1-1x.jpg, /images/index/panorama/panorama-1-2x.jpg 2x">
+                        <img src="/images/index/panorama/panorama-1-1x.jpg" loading="lazy" width="1920" height="1011" alt="">
                     </picture>
                 </div>
                 <div class="swiper-slide">
                     <picture>
-                        <img src="/images/index/panorama/panorama-2.jpg" loading="lazy" alt="">
+                        <source type="image/jpeg" srcset="/images/index/panorama/panorama-gl-2-1x.jpg, /images/index/panorama/panorama-gl-2-2x.jpg 2x" media="(max-width: 360px)">
+                        <source type="image/jpeg" srcset="/images/index/panorama/panorama-2-1x.jpg, /images/index/panorama/panorama-2-2x.jpg 2x">
+                        <img src="/images/index/panorama/panorama-2-1x.jpg" loading="lazy" width="1920" height="1011" alt="">
                     </picture>
                 </div>
             </div>
@@ -215,7 +222,8 @@ $this->title = 'Royal';
     <div class="container-lg" style="max-width: 1920px; margin-left: auto; margin-right: auto">
         <div class="location-map">
             <picture>
-                <img src="/images/index/location/map-2x.jpg" loading="lazy" alt="" />
+				<source type="image/jpeg" srcset="/images/index/location/map-1x.jpg, /images/index/location/map-2x.jpg 2x">
+                <img src="/images/index/location/map-1x.jpg" loading="lazy" width="895" height="917" alt="">
             </picture>
         </div>
         <div class="container" style="max-width: 1600px; margin-left: auto; margin-right: auto">
@@ -225,7 +233,9 @@ $this->title = 'Royal';
                     <p class="title"><?=Yii::$app->translate->getT("Расположение")?></p>
                     <div class="location-map-mb">
                         <picture>
-                            <img src="/images/index/location/map-mb-2x.jpg" loading="lazy" alt=""/>
+                            <source type="image/jpeg" srcset="/images/index/location/map-gl-1x.jpg, /images/index/location/map-gl-2x.jpg 2x" media="(max-width: 360px)">
+                            <source type="image/jpeg" srcset="/images/index/location/map-mb-1x.jpg, /images/index/location/map-mb-2x.jpg 2x">
+                            <img src="/images/index/location/map-mb-1x.jpg" loading="lazy" width="548" height="770" alt="">
                         </picture>
                     </div>
                     <p class="cap"><?=Yii::$app->translate->getT("рядом с комплексом")?></p>
@@ -235,7 +245,7 @@ $this->title = 'Royal';
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
                                         <picture>
-                                            <source type="image/jpeg" type="image/jpeg" srcset="/images/index/location/loc-1-1x.jpg, /images/index/location/loc-1-2x.jpg 2x">
+                                            <source type="image/jpeg" srcset="/images/index/location/loc-1-1x.jpg, /images/index/location/loc-1-2x.jpg 2x">
                                             <img src="/images/index/location/loc-1-1x.jpg" width="364" height="243" loading="lazy" alt="">
                                         </picture>
                                     </div>
@@ -244,7 +254,7 @@ $this->title = 'Royal';
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
                                         <picture>
-                                            <source type="image/jpeg" type="image/jpeg" srcset="/images/index/location/loc-2-1x.jpg, /images/index/location/loc-2-2x.jpg 2x">
+                                            <source type="image/jpeg" srcset="/images/index/location/loc-2-1x.jpg, /images/index/location/loc-2-2x.jpg 2x">
                                             <img src="/images/index/location/loc-2-1x.jpg" width="364" height="243" loading="lazy" alt="">
                                         </picture>
                                     </div>
@@ -253,7 +263,7 @@ $this->title = 'Royal';
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
                                         <picture>
-                                            <source type="image/jpeg" type="image/jpeg" srcset="/images/index/location/loc-3-1x.jpg, /images/index/location/loc-3-2x.jpg 2x">
+                                            <source type="image/jpeg" srcset="/images/index/location/loc-3-1x.jpg, /images/index/location/loc-3-2x.jpg 2x">
                                             <img src="/images/index/location/loc-3-1x.jpg" width="364" height="243" loading="lazy" alt="">
                                         </picture>
                                     </div>
@@ -262,7 +272,7 @@ $this->title = 'Royal';
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
                                         <picture>
-                                            <source type="image/jpeg" type="image/jpeg" srcset="/images/index/location/loc-4-1x.jpg, /images/index/location/loc-4-2x.jpg 2x">
+                                            <source type="image/jpeg" srcset="/images/index/location/loc-4-1x.jpg, /images/index/location/loc-4-2x.jpg 2x">
                                             <img src="/images/index/location/loc-4-1x.jpg" width="364" height="243" loading="lazy" alt="">
                                         </picture>
                                     </div>
@@ -271,7 +281,7 @@ $this->title = 'Royal';
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
                                         <picture>
-                                            <source type="image/jpeg" type="image/jpeg" srcset="/images/index/location/loc-5-1x.jpg, /images/index/location/loc-5-2x.jpg 2x">
+                                            <source type="image/jpeg" srcset="/images/index/location/loc-5-1x.jpg, /images/index/location/loc-5-2x.jpg 2x">
                                             <img src="/images/index/location/loc-5-1x.jpg" width="364" height="243" loading="lazy" alt="">
                                         </picture>
                                     </div>
@@ -280,7 +290,7 @@ $this->title = 'Royal';
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
                                         <picture>
-                                            <source type="image/jpeg" type="image/jpeg" srcset="/images/index/location/loc-6-1x.jpg, /images/index/location/loc-6-2x.jpg 2x">
+                                            <source type="image/jpeg" srcset="/images/index/location/loc-6-1x.jpg, /images/index/location/loc-6-2x.jpg 2x">
                                             <img src="/images/index/location/loc-6-1x.jpg" width="364" height="243" loading="lazy" alt="">
                                         </picture>
                                     </div>
@@ -289,7 +299,7 @@ $this->title = 'Royal';
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
                                         <picture>
-                                            <source type="image/jpeg" type="image/jpeg" srcset="/images/index/location/loc-7-1x.jpg, /images/index/location/loc-7-2x.jpg 2x">
+                                            <source type="image/jpeg" srcset="/images/index/location/loc-7-1x.jpg, /images/index/location/loc-7-2x.jpg 2x">
                                             <img src="/images/index/location/loc-7-1x.jpg" width="364" height="243" loading="lazy" alt="">
                                         </picture>
                                     </div>
@@ -298,7 +308,7 @@ $this->title = 'Royal';
                                 <div class="swiper-slide">
                                     <div class="location-slider-img">
                                         <picture>
-                                            <source type="image/jpeg" type="image/jpeg" srcset="/images/index/location/loc-8-1x.jpg, /images/index/location/loc-8-2x.jpg 2x">
+                                            <source type="image/jpeg" srcset="/images/index/location/loc-8-1x.jpg, /images/index/location/loc-8-2x.jpg 2x">
                                             <img src="/images/index/location/loc-8-1x.jpg" width="364" height="243" loading="lazy" alt="">
                                         </picture>
                                     </div>
