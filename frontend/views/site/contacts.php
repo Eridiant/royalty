@@ -1,5 +1,10 @@
 <?php
 
+
+use yii\helpers\Html;
+
+Html::csrfMetaTags();
+
 // use yii\helpers\Html;
 // use yii\helpers\Url;
 /* @var $this yii\web\View */

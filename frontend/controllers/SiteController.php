@@ -298,6 +298,7 @@ class SiteController extends Controller
      */
     public function actionPlans()
     {
+        $this->bodyClass = 'plans-page';
         return $this->render('plans');
     }
 

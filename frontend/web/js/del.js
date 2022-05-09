@@ -73,7 +73,7 @@ window.addEventListener('load', () => {
             })
         }
     })
-    if (document.querySelector('.contacts')) {
+    if (document.querySelector('.contacts') || document.querySelector('.plans-page')) {
         document.forms.callBack.onsubmit = function(e) {
             e.preventDefault();
             callBackAjax(this.name.value, this.phone.value)
@@ -144,7 +144,7 @@ function floorAjax(data) {
         quizRequest.open("POST", '/site/floor', true);
         quizRequest.setRequestHeader('Content-Type', 'application/json');
         // quizRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-        quizRequest.setRequestHeader('X-CSRF-Token', yii.getCsrfToken());
+        quizRequest.setRequestHeader('X-CSRF-Token', document.querySelector('meta[name="csrf-token"]').content);
         quizRequest.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
         quizRequest.onload = function() {
             if(quizRequest.readyState == XMLHttpRequest.DONE && quizRequest.status == 200) {
@@ -297,7 +297,7 @@ function flr(model) {
             quizRequest.open("POST", '/site/flat', true);
             quizRequest.setRequestHeader('Content-Type', 'application/json');
             // quizRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-            quizRequest.setRequestHeader('X-CSRF-Token', yii.getCsrfToken());
+            quizRequest.setRequestHeader('X-CSRF-Token', document.querySelector('meta[name="csrf-token"]').content);
             quizRequest.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
             quizRequest.onload = function() {
                 if(quizRequest.readyState == XMLHttpRequest.DONE && quizRequest.status == 200) {
@@ -351,7 +351,7 @@ function callBackAjax(name, phone) {
         quizRequest.open("POST", '/site/callback', true);
         quizRequest.setRequestHeader('Content-Type', 'application/json');
         // quizRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-        quizRequest.setRequestHeader('X-CSRF-Token', yii.getCsrfToken());
+        quizRequest.setRequestHeader('X-CSRF-Token', document.querySelector('meta[name="csrf-token"]').content);
         quizRequest.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
         quizRequest.onload = function() {
             if(quizRequest.readyState == XMLHttpRequest.DONE && quizRequest.status == 200) {
