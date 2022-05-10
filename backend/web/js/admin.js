@@ -151,6 +151,15 @@ window.addEventListener('load', () => {
                 onlyInteger: true
             }
         };
+        let dataPage = {
+            low: 0,
+            showArea: true,
+            showPoint: false,
+            lineSmooth: Chartist.Interpolation.step(),
+            axisY: {
+                onlyInteger: true
+            }
+        };
 
         let pageBy = {
             // A labels array that can contain any sort of values
@@ -175,7 +184,7 @@ window.addEventListener('load', () => {
         // is the actual data object.
         let grf = new Chartist.Line('.chart', data, data2);
         let pgBD = new Chartist.Line('.page-by-day', pageBy, data2);
-        let pg = new Chartist.Line('.page', page, data2);
+        let pg = new Chartist.Line('.page', page, dataPage);
     }
     
 })
