@@ -15,6 +15,7 @@ $this->title = Yii::t('frontend', 'Планировка');
     <div class="container-lg" style="max-width: 1920px; margin-left: auto; margin-right: auto">
         <div class="plans-bg">
             <picture>
+                <source type="image/jpeg" srcset="/images/plans/building/building-mb-1x.jpg, /images/plans/building/building-mb-2x.jpg 2x" media="(max-width: 480px)">
                 <source type="image/jpeg" srcset="/images/plans/building/building-1x.jpg, /images/plans/building/building-2x.jpg 2x">
                 <img src="/images/plans/building/building-1x.jpg" alt="">
             </picture>
