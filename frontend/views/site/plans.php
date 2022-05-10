@@ -36,7 +36,7 @@ $this->title = Yii::t('frontend', 'Планировка');
                     <div class="building-choice">
                     <div class="building-change lgm" id="building-change" data-min="1" data-max="18">
                         <svg class="prev" width="161" height="25"><use xlink:href="images/icons.svg#rect"></use></svg>
-                        <p class="btn"><span class="floor-changes">1</span> <?=Yii::$app->translate->getT("этаж")?>этаж</p>
+                        <p class="btn no"><span class="floor-changes">1</span> <?=Yii::$app->translate->getT("этаж")?>этаж</p>
                         <svg class="next" width="161" height="25"><use xlink:href="images/icons.svg#rect"></use></svg>
                     </div>
                     <div class="building-img">

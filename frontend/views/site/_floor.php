@@ -114,11 +114,11 @@ use yii\helpers\Url;
                         </div>
                         <div class="flat-buttons">
                             <!-- <div class="btn">Узнать цену</div> -->
-                            <div class="btn act-btn" data-btn="popup-call-back">
+                            <div class="btn act-btn no" data-btn="popup-call-back">
                                 <span><?=Yii::t('frontend', 'Узнать цену')?></span>
                                 <svg width="20" height="20"><use xlink:href="images/icons.svg#phone"></use></svg>
                             </div>
-                            <div class="btn btn-brd xsm act-btn" data-btn="popup-call-back"><?=Yii::t('frontend', 'Забронировать квартиру')?></div>
+                            <div class="btn btn-brd xsm act-btn no" data-btn="popup-call-back"><?=Yii::t('frontend', 'Забронировать квартиру')?></div>
                             <div class="">
                                 <svg width="14" height="16"><use xlink:href="/images/icons.svg#pdf"></use></svg>
                                 <a id="pdf" href="<?=Url::toRoute(['site/pdf', 'floor' => 1, 'flat' => 1, 'img' => 20]) ?>" target="_blank">
