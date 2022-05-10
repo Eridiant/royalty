@@ -15,7 +15,8 @@ $this->title = Yii::t('frontend', 'Планировка');
     <div class="container-lg" style="max-width: 1920px; margin-left: auto; margin-right: auto">
         <div class="plans-bg">
             <picture>
-                <img src="/images/plans/building/building.jpg" alt="">
+                <source type="image/jpeg" srcset="/images/plans/building/building-1x.jpg, /images/plans/building/building-2x.jpg 2x">
+                <img src="/images/plans/building/building-1x.jpg" alt="">
             </picture>
         </div>
         <div class="container" style="max-width: 1600px; margin-left: auto; margin-right: auto">
@@ -41,7 +42,9 @@ $this->title = Yii::t('frontend', 'Планировка');
                     </div>
                     <div class="building-img">
                             <picture>
-                                <img src="/images/plans/building/build.png" alt="">
+                                <source type="image/webp" srcset="/images/plans/building/build-1x.webp, /images/plans/building/build-2x.webp 2x">
+                                <source type="image/jpeg" srcset="/images/plans/building/build-1x.jpg, /images/plans/building/build-2x.jpg 2x">
+                                <img src="/images/plans/building/build-1x.png" alt="">
                             </picture>
                         </div>
                         <div class="building-svg">
