@@ -18,7 +18,8 @@ $this->title = 'Инфраструктура';
         <div class="container" style="max-width: 1600px; margin-left: auto; margin-right: auto">
             <div class="infrastructure-item">
                 <picture>
-                    <img src="/images/infrastructure/infrastructure/infr-1.jpg">
+                    <source type="image/jpeg" srcset="/images/infrastructure/infrastructure/infr-mb-1x-1.jpg, /images/infrastructure/infrastructure/infr-mb-2x-1.jpg 2x" media="(max-width: 480px)">
+                    <img src="/images/infrastructure/infrastructure/infr-1.jpg" loading="lazy" alt="">
                 </picture>
                 <p class="title small"><?=Yii::$app->translate->getT("Эксплуатируемая крыша")?></p>
                 <p class="infrastructure-text">
@@ -27,7 +28,8 @@ $this->title = 'Инфраструктура';
             </div>
             <div class="infrastructure-item">
                 <picture>
-                    <img src="/images/infrastructure/infrastructure/infr-2.jpg">
+                    <source type="image/jpeg" srcset="/images/infrastructure/infrastructure/infr-mb-1x-2.jpg, /images/infrastructure/infrastructure/infr-mb-2x-2.jpg 2x" media="(max-width: 480px)">
+                    <img src="/images/infrastructure/infrastructure/infr-2.jpg" loading="lazy" alt="">
                 </picture>
                 <p class="title small"><?=Yii::$app->translate->getT("Паркинг")?></p>
                 <p class="infrastructure-text">
@@ -41,7 +43,8 @@ $this->title = 'Инфраструктура';
         <div class="container" style="max-width: 1600px; margin-left: auto; margin-right: auto">
             <div class="infrastructure-large">
                 <picture>
-                    <img src="/images/infrastructure/infrastructure/infr-3.jpg">
+                    <source type="image/jpeg" srcset="/images/infrastructure/infrastructure/infr-mb-1x-3.jpg, /images/infrastructure/infrastructure/infr-mb-2x-3.jpg 2x" media="(max-width: 480px)">
+                    <img src="/images/infrastructure/infrastructure/infr-3.jpg" loading="lazy" alt="">
                 </picture>
                 <p class="title small"><?=Yii::$app->translate->getT("Детская игровая площадка")?></p>
                 <p class="infrastructure-text">
@@ -55,7 +58,8 @@ $this->title = 'Инфраструктура';
         <div class="container" style="max-width: 1600px; margin-left: auto; margin-right: auto">
             <div class="infrastructure-item">
                 <picture>
-                    <img src="/images/infrastructure/infrastructure/infr-4.jpg">
+                    <source type="image/jpeg" srcset="/images/infrastructure/infrastructure/infr-mb-1x-4.jpg, /images/infrastructure/infrastructure/infr-mb-2x-4.jpg 2x" media="(max-width: 480px)">
+                    <img src="/images/infrastructure/infrastructure/infr-4.jpg" loading="lazy" alt="">
                 </picture>
                 <p class="title small"><?=Yii::$app->translate->getT("Сквер")?></p>
                 <p class="infrastructure-text">
@@ -64,7 +68,8 @@ $this->title = 'Инфраструктура';
             </div>
             <div class="infrastructure-item">
                 <picture>
-                    <img src="/images/infrastructure/infrastructure/infr-5.jpg">
+                    <source type="image/jpeg" srcset="/images/infrastructure/infrastructure/infr-mb-1x-5.jpg, /images/infrastructure/infrastructure/infr-mb-2x-5.jpg 2x" media="(max-width: 480px)">
+                    <img src="/images/infrastructure/infrastructure/infr-5.jpg" loading="lazy" alt="">
                 </picture>
                 <p class="title small"><?=Yii::$app->translate->getT("Открытая спортивная площадка")?></p>
                 <p class="infrastructure-text">
@@ -79,7 +84,8 @@ $this->title = 'Инфраструктура';
         <div class="container" style="max-width: 1600px; margin-left: auto; margin-right: auto">
             <div class="infrastructure-large">
                 <picture>
-                    <img src="/images/infrastructure/infrastructure/infr-6.jpg">
+                    <source type="image/jpeg" srcset="/images/infrastructure/infrastructure/infr-mb-1x-6.jpg, /images/infrastructure/infrastructure/infr-mb-2x-6.jpg 2x" media="(max-width: 480px)">
+                    <img src="/images/infrastructure/infrastructure/infr-6.jpg" loading="lazy" alt="">
                 </picture>
                 <p class="title small"><?=Yii::$app->translate->getT("Фитнес центр")?></p>
                 <p class="infrastructure-text">
@@ -93,7 +99,8 @@ $this->title = 'Инфраструктура';
         <div class="container" style="max-width: 1600px; margin-left: auto; margin-right: auto">
             <div class="infrastructure-item">
                 <picture>
-                    <img src="/images/infrastructure/infrastructure/infr-7.jpg">
+                    <source type="image/jpeg" srcset="/images/infrastructure/infrastructure/infr-mb-1x-7.jpg, /images/infrastructure/infrastructure/infr-mb-2x-7.jpg 2x" media="(max-width: 480px)">
+                    <img src="/images/infrastructure/infrastructure/infr-7.jpg" loading="lazy" alt="">
                 </picture>
                 <p class="title small"><?=Yii::$app->translate->getT("Открытый Бассейн")?></p>
                 <p class="infrastructure-text">
@@ -102,7 +109,8 @@ $this->title = 'Инфраструктура';
             </div>
             <div class="infrastructure-item">
                 <picture>
-                    <img src="/images/infrastructure/infrastructure/infr-8.jpg">
+                    <source type="image/jpeg" srcset="/images/infrastructure/infrastructure/infr-mb-1x-8.jpg, /images/infrastructure/infrastructure/infr-mb-2x-8.jpg 2x" media="(max-width: 480px)">
+                    <img src="/images/infrastructure/infrastructure/infr-8.jpg" loading="lazy" alt="">
                 </picture>
                 <p class="title small"><?=Yii::$app->translate->getT("Отель")?></p>
                 <p class="infrastructure-text">
@@ -119,7 +127,7 @@ $this->title = 'Инфраструктура';
         <div class="container" style="max-width: 1600px; margin-left: auto; margin-right: auto">
             <div class="infrastructure-item">
                 <picture>
-                    <img src="/images/infrastructure/location/location-1.jpg">
+                    <img src="/images/infrastructure/location/location-1.jpg" loading="lazy" alt="">
                 </picture>
                 <p class="title small"><?=Yii::$app->translate->getT("Ресепшн 24\7")?></p>
                 <p class="infrastructure-text">
@@ -128,7 +136,7 @@ $this->title = 'Инфраструктура';
             </div>
             <div class="infrastructure-item">
                 <picture>
-                    <img src="/images/infrastructure/location/location-2.jpg">
+                    <img src="/images/infrastructure/location/location-2.jpg" loading="lazy" alt="">
                 </picture>
                 <p class="title small"><?=Yii::$app->translate->getT("Охрана и видеонаблюдение 24\7")?></p>
                 <p class="infrastructure-text">
@@ -142,7 +150,7 @@ $this->title = 'Инфраструктура';
         <div class="container" style="max-width: 1600px; margin-left: auto; margin-right: auto">
             <div class="infrastructure-large">
                 <picture>
-                    <img src="/images/infrastructure/location/location-3.jpg">
+                    <img src="/images/infrastructure/location/location-3.jpg" loading="lazy" alt="">
                 </picture>
                 <p class="title small"><?=Yii::$app->translate->getT("Клининг")?></p>
                 <p class="infrastructure-text">
