@@ -90,7 +90,7 @@ $this->title = Yii::t('frontend', 'Планировка');
                     <label for="call-name"></label>
                     <input name="name" id="call-name" type="text" placeholder="Имя" required>
                     <label for="call-phone"></label>
-                    <input name="phone" id="call-phone" pattern="(\+?\d[- .]*){7,15}" type="tel" class=""
+                    <input name="phone" id="call-phone" pattern="(\+?\d[- .]*){7,19}" type="tel" class=""
                         placeholder="Телефон" required>
                     <button type="submit" href="#" class="btn" data-btn="popup-success"><span><?=Yii::$app->translate->getT("Оставить заявку")?></span></button>
                 </form>
