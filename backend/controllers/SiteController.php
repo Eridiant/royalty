@@ -103,7 +103,7 @@ class SiteController extends Controller
         while ($endInterval < intval(date('U')) && !$interrupt) {
 
             $users = $this->countUsers($startInterval, $endInterval, $countModel);
-            $pages = $this->countUsers($startInterval, $endInterval, $countModel);
+            $pages = $this->countPages($startInterval, $endInterval, $countModel);
             $newUsers = $this->countNewUsers($startInterval, $endInterval);
 
             $transaction = Yii::$app->db->beginTransaction();
@@ -133,11 +133,6 @@ class SiteController extends Controller
                 throw $e;
             }
 
-            // var_dump('<pre>');
-            // var_dump($dayStat);
-            // var_dump('</pre>');
-            // die;
-            
             $startInterval += 3600 * 24;
             $endInterval = $startInterval + (3600 * 24) - 1;
             $dayStat = new DayStat();
@@ -300,7 +295,17 @@ class SiteController extends Controller
         $country = new SxGeo(Yii::getAlias('@webroot') . '/dat/SxGeoCity.dat', SXGEO_BATCH | SXGEO_MEMORY);
 
         return $country->getCityFull($ip);
-    } 
+    }
+
+    private function countPages($startInterval, $endInterval, $countModel)
+    {
+        $query = $countModel
+                // ->select(['user_id'])
+                ->where(['between', 'created_at', $startInterval, $endInterval])
+                ->select(['id'])
+                ->count();
+        return $query;
+    }
 
     private function countUsers($startInterval, $endInterval, $countModel)
     {
