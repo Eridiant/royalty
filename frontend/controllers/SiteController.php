@@ -113,7 +113,9 @@ class SiteController extends Controller
             // var_dump($userIp->getErrors());
             $userAct = new UserActivity();
             $userAct->url = $request->pathInfo;
-            if (isset($_SERVER['HTTP_REFERER']) && (strpos($_SERVER['HTTP_REFERER'], $request->serverName) === false)) {
+            
+            // if (isset($_SERVER['HTTP_REFERER']) && (strpos($_SERVER['HTTP_REFERER'], $request->serverName) === false)) {
+            if (isset($_SERVER['HTTP_REFERER'])) {
                 $userAct->ref = $_SERVER['HTTP_REFERER'];
             }
             $userAct->device = trim($_SERVER['HTTP_USER_AGENT']);
