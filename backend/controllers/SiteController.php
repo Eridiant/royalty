@@ -310,6 +310,17 @@ class SiteController extends Controller
         return $country->getCityFull($ip);
     }
 
+    private function countUniqPages($startInterval, $endInterval, $countModel)
+    {
+        $query = $countModel
+                // ->select(['user_id'])
+                ->where(['between', 'created_at', $startInterval, $endInterval])
+                ->select(['user_id', 'url'])
+                ->distinct()
+                ->count();
+        return $query;
+    }
+
     private function countPages($startInterval, $endInterval, $countModel)
     {
         $query = $countModel
