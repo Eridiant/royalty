@@ -167,7 +167,8 @@ class SiteController extends Controller
         while ($endInterval < intval(date('U')) && !$interrupt) {
             // var_dump(\Yii::$app->formatter->asDate($startInterval, "php:Y-m-d H:i:s"));
             
-            $pages = $this->countUsers($startInterval, $endInterval, $countModel);
+            // $pages = $this->countUsers($startInterval, $endInterval, $countModel);
+            $pages = $this->countPages($startInterval, $endInterval, $countModel);
 
             $transaction = Yii::$app->db->beginTransaction();
             try {
