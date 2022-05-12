@@ -37,7 +37,7 @@ class SiteController extends Controller
                         'allow' => true,
                     ],
                     [
-                        'actions' => ['logout', 'index', 'statistics'],
+                        'actions' => ['logout', 'index', 'statistics', 'stasis'],
                         'allow' => true,
                         'roles' => ['@'],
                     ],
@@ -74,6 +74,18 @@ class SiteController extends Controller
         return $this->render('index');
     }
 
+    public function actionStasis()
+    {
+        $userIp = UserIp::find()->all();
+        foreach ($userIp as $value) {
+            if ($value->preferred_lang_all !== null) {
+                echo '<pre>' . substr($value->preferred_lang_all, 0, 2) . '</pre>';
+                $value->preferred_lang = substr($value->preferred_lang_all, 0, 2);
+                $value->save();
+            }
+        }
+    }
+
     public function actionStatistics()
     {
         $userIp = UserIp::find()->all();
@@ -99,7 +111,7 @@ class SiteController extends Controller
         //     var_dump('</pre>');
         // }
         // die;
-        
+
         while ($endInterval < intval(date('U')) && !$interrupt) {
 
             $users = $this->countUsers($startInterval, $endInterval, $countModel);
