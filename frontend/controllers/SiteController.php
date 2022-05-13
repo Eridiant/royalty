@@ -60,15 +60,15 @@ class SiteController extends Controller
             ],
             [
                 'class' => 'yii\filters\PageCache',
-                'only' => ['index'],
-                'duration' => 3600,
+                'only' => ['index', 'infrastructure', 'contacts', 'gallery', 'construction', 'batumy'],
+                'duration' => 3600 * 24 * 365,
                 'variations' => [
                     Yii::$app->language,
                 ],
-                // 'dependency' => [
-                //     'class' => 'yii\caching\DbDependency',
-                //     'sql' => 'SELECT MAX(update_at) FROM ' . Page::tableName(),
-                // ]
+                'dependency' => [
+                    'class' => 'yii\caching\TagDependency',
+                    'tags' => 'translate',
+                ]
             ]
         ];
     }

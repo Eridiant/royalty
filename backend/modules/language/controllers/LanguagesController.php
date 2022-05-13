@@ -117,9 +117,9 @@ class LanguagesController extends Controller
             return $this->redirect(['active']);
         }
         $language->deleted_at = time();
-        $language->deleted_at = time();
         if($language->save())
         {
+            Yii::$app->cache->flush();
             Yii::$app->session->setFlash('success', 'Language successfully deleted.');
             return $this->redirect(['active']);
         }
@@ -166,6 +166,7 @@ class LanguagesController extends Controller
         $language->deleted_at = null;
         if($language->save())
         {
+            Yii::$app->cache->flush();
             Yii::$app->session->setFlash('success', 'Language successfully restored.');
             return $this->redirect(['languages/active']);
         }
@@ -175,6 +176,7 @@ class LanguagesController extends Controller
     {
         $translation = Trasnlations::findOne($id);
         $translation->delete();
+        Yii::$app->cache->flush();
         Yii::$app->session->setFlash('success', 'Translation successfully deleted.');
         return $this->redirect(['active']);
     }
@@ -192,6 +194,7 @@ class LanguagesController extends Controller
         {
             if($model->save())
             {
+                Yii::$app->cache->flush();
                 Yii::$app->session->setFlash('success', 'Translation successfully updated.');
                 return $this->redirect(['active']);
             }
@@ -210,6 +213,7 @@ class LanguagesController extends Controller
         {
             if($translation->save())
             {
+                Yii::$app->cache->flush();
                 Yii::$app->session->setFlash('success', 'Translation successfully created.');
                 return $this->redirect(['active']);
             }

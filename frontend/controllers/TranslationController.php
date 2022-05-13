@@ -14,6 +14,7 @@ use frontend\models\Language;
 use frontend\models\Trasnlations;
 use frontend\models\TrasnlationsMessage;
 use frontend\models\TrasnlationsSearch;
+use yii\caching\TagDependency;
 
 /**
  * TranslationController
@@ -98,8 +99,9 @@ class TranslationController extends Controller
 
         $model->translation = Yii::$app->request->post('translation');
 
-        if($model->save())
-        {
+        if($model->save()) {
+            Yii::$app->cache->flush();
+            // TagDependency::invalidate(Yii::$app->cache, 'translation');
             return ['data' => ['success' => true]];
         }
         return ['data' => ['success' => false]];
@@ -112,10 +114,9 @@ class TranslationController extends Controller
             $model->id = $translation->id;
             $model->language = \Yii::$app->language;
         }
-        if($model->load(Yii::$app->request->post()))
-        {
-            if($model->save())
-            {
+        if($model->load(Yii::$app->request->post())) {
+            if($model->save()) {
+                TagDependency::invalidate(Yii::$app->cache, 'translation');
                 Yii::$app->session->setFlash('success', 'Translation successfully updated.');
                 return $this->redirect(['active']);
             }
@@ -127,10 +128,8 @@ class TranslationController extends Controller
         ]);
         ///// create
         $translation = new Trasnlations();
-        if($translation->load(Yii::$app->request->post()))
-        {
-            if($translation->save())
-            {
+        if($translation->load(Yii::$app->request->post())) {
+            if($translation->save()) {
                 Yii::$app->session->setFlash('success', 'Translation successfully created.');
                 return $this->redirect(['active']);
             }

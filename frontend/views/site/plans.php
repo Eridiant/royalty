@@ -3,8 +3,6 @@
 use yii\helpers\Url;
 use yii\helpers\Html;
 
-Html::csrfMetaTags();
-
 /** @var yii\web\View $this */
 
 $this->title = Yii::t('frontend', 'Планировка');
