@@ -93,12 +93,12 @@ class SiteController extends Controller
         ];
     }
 
-    public function afterAction($action, $result)
+    public function beforeAction($action)
     {
         $request = Yii::$app->request;
         $ip = ip2long($request->userIP);
         if ($ip === 3105648193 || $request->pathInfo === 'site/set-locale' || !Yii::$app->user->isGuest ) {
-            return parent::afterAction($action, $result);
+            return parent::beforeAction($action);
         }
         
 
@@ -138,6 +138,12 @@ class SiteController extends Controller
         catch (\yii\db\Exception $exception) {
             echo 'еггог';
         }
+        return parent::beforeAction($action);
+    }
+
+    public function afterAction($action, $result)
+    {
+        
 
         // if ($userIp->getErrors()) {
         //     var_dump($userIp->getErrors());die;
