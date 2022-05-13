@@ -60,7 +60,7 @@ class SiteController extends Controller
             ],
             [
                 'class' => 'yii\filters\PageCache',
-                'only' => ['indexx'],
+                'only' => ['index'],
                 'duration' => 3600,
                 'variations' => [
                     Yii::$app->language,
