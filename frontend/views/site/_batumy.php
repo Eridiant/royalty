@@ -6,27 +6,32 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <picture>
-                            <img src="/images/gallery/batumy/batumy-1.jpg" alt="">
+                            <source type="image/jpeg" srcset="/images/gallery/batumy/batumy-mb-1-1x.jpg, /images/gallery/batumy/batumy-mb-1-2x.jpg 2x">
+                            <img src="/images/gallery/batumy/batumy-mb-1-1x.jpg" width="377" height="377" alt="">
                         </picture>
                     </div>
                     <div class="swiper-slide">
                         <picture>
-                            <img src="/images/gallery/batumy/batumy-2.jpg" alt="">
+                            <source type="image/jpeg" srcset="/images/gallery/batumy/batumy-mb-2-1x.jpg, /images/gallery/batumy/batumy-mb-2-2x.jpg 2x">
+                            <img src="/images/gallery/batumy/batumy-mb-2-1x.jpg" width="377" height="377" alt="">
                         </picture>
                     </div>
                     <div class="swiper-slide">
                         <picture>
-                            <img src="/images/gallery/batumy/batumy-3.jpg" alt="">
+                            <source type="image/jpeg" srcset="/images/gallery/batumy/batumy-mb-3-1x.jpg, /images/gallery/batumy/batumy-mb-3-2x.jpg 2x">
+                            <img src="/images/gallery/batumy/batumy-mb-3-1x.jpg" width="377" height="377" alt="">
                         </picture>
                     </div>
                     <div class="swiper-slide">
                         <picture>
-                            <img src="/images/gallery/batumy/batumy-5.jpg" alt="">
+                            <source type="image/jpeg" srcset="/images/gallery/batumy/batumy-mb-5-1x.jpg, /images/gallery/batumy/batumy-mb-5-2x.jpg 2x">
+                            <img src="/images/gallery/batumy/batumy-mb-5-1x.jpg" width="377" height="377" alt="">
                         </picture>
                     </div>
                     <div class="swiper-slide">
                         <picture>
-                            <img src="/images/gallery/batumy/batumy-6.jpg" alt="">
+                            <source type="image/jpeg" srcset="/images/gallery/batumy/batumy-mb-6-1x.jpg, /images/gallery/batumy/batumy-mb-6-2x.jpg 2x">
+                            <img src="/images/gallery/batumy/batumy-mb-6-1x.jpg" width="377" height="377" alt="">
                         </picture>
                     </div>
                 </div>

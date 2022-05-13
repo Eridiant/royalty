@@ -6,22 +6,26 @@
                 <div class="swiper-wrapper">
                     <div class="swiper-slide">
                         <picture>
-                            <img src="/images/gallery/construction/construction-1.jpg" alt="">
+                            <source type="image/jpeg" srcset="/images/gallery/construction/construction-mb-1-1x.jpg, /images/gallery/construction/construction-mb-1-2x.jpg 2x">
+                            <img src="/images/gallery/construction/construction-mb-1-1x.jpg" width="377" height="377" alt="">
                         </picture>
                     </div>
                     <div class="swiper-slide">
                         <picture>
-                            <img src="/images/gallery/construction/construction-2.jpg" alt="">
+                            <source type="image/jpeg" srcset="/images/gallery/construction/construction-mb-2-1x.jpg, /images/gallery/construction/construction-mb-2-2x.jpg 2x">
+                            <img src="/images/gallery/construction/construction-mb-2-1x.jpg" width="377" height="377" alt="">
                         </picture>
                     </div>
                     <div class="swiper-slide">
                         <picture>
-                            <img src="/images/gallery/construction/construction-3.jpg" alt="">
+                            <source type="image/jpeg" srcset="/images/gallery/construction/construction-mb-3-1x.jpg, /images/gallery/construction/construction-mb-3-2x.jpg 2x">
+                            <img src="/images/gallery/construction/construction-mb-3-1x.jpg" width="377" height="377" alt="">
                         </picture>
                     </div>
                     <div class="swiper-slide">
                         <picture>
-                            <img src="/images/gallery/construction/construction-4.jpg" alt="">
+                            <source type="image/jpeg" srcset="/images/gallery/construction/construction-mb-4-1x.jpg, /images/gallery/construction/construction-mb-4-2x.jpg 2x">
+                            <img src="/images/gallery/construction/construction-mb-4-1x.jpg" width="377" height="377" alt="">
                         </picture>
                     </div>
                 </div>
