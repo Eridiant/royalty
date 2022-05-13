@@ -58,6 +58,18 @@ class SiteController extends Controller
                     'logout' => ['get', 'post'],
                 ],
             ],
+            [
+                'class' => 'yii\filters\PageCache',
+                'only' => ['indexx'],
+                'duration' => 3600,
+                'variations' => [
+                    Yii::$app->language,
+                ],
+                // 'dependency' => [
+                //     'class' => 'yii\caching\DbDependency',
+                //     'sql' => 'SELECT MAX(update_at) FROM ' . Page::tableName(),
+                // ]
+            ]
         ];
     }
 

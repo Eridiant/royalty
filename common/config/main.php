@@ -9,8 +9,8 @@ return [
     'components' => [
         'cache' => [
             'class' => 'yii\caching\FileCache',
-            'keyPrefix' => 'rylr_',
             // 'class' => 'yii\caching\ApcCache',
+            'keyPrefix' => 'rylr_',
             // 'useApcu' => true,
         ],
         'translate' => [

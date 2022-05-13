@@ -41,7 +41,7 @@ function trsltAjax(key, translation) {
         quizRequest.open("POST", '/translation/translation-ajax', true);
         quizRequest.setRequestHeader('Content-Type', 'application/json');
         // quizRequest.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded; charset=UTF-8');
-        quizRequest.setRequestHeader('X-CSRF-Token', yii.getCsrfToken());
+        quizRequest.setRequestHeader('X-CSRF-Token', document.querySelector('meta[name="csrf-token"]').content);
         quizRequest.setRequestHeader('X-Requested-With', 'XMLHttpRequest');
         quizRequest.onload = function() {
             if(quizRequest.readyState == XMLHttpRequest.DONE && quizRequest.status == 200) {
