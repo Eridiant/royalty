@@ -62,12 +62,13 @@ class SiteController extends Controller
                 'class' => 'yii\filters\PageCache',
                 'only' => ['index', 'infrastructure', 'contacts', 'gallery', 'construction', 'batumy'],
                 'duration' => 3600 * 24 * 365,
-                'variations' => [
-                    Yii::$app->language,
-                ],
+                'enabled' => Yii::$app->user->isGuest,
                 'dependency' => [
                     'class' => 'yii\caching\TagDependency',
                     'tags' => 'translate',
+                ],
+                'variations' => [
+                    Yii::$app->language,
                 ]
             ]
         ];

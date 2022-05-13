@@ -469,7 +469,7 @@ $this->title = 'Royal';
                     <input name="name" id="call-name" type="text" placeholder="<?=Yii::t('frontend', 'Имя')?>" required>
                     <label for="call-phone"></label>
                     <input name="phone" id="call-phone" pattern="(\+?\d[- .]*){7,19}" type="tel" class="" placeholder="<?=Yii::t('frontend', 'Телефон')?>" required>
-                    <button type="submit" href="#" class="btn callback"><span><?=Yii::t('frontend', 'Оставить заявку')?></span></button>
+                    <button type="submit" class="btn callback"><span><?=Yii::t('frontend', 'Оставить заявку')?></span></button>
                 </form>
             </div>
         </div>
