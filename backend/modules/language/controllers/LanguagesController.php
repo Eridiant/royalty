@@ -117,6 +117,7 @@ class LanguagesController extends Controller
             return $this->redirect(['active']);
         }
         $language->deleted_at = time();
+        $language->date_update = time();
         if($language->save())
         {
             Yii::$app->cache->flush();

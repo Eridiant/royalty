@@ -4,7 +4,7 @@ use yii\helpers\Url;
 use yii\helpers\Html;
 
 /** @var yii\web\View $this */
-$this->title = 'Royal';
+$this->title = 'Royal development';
 // $this->registerMetaTag(['name' => 'title', 'content' => Yii::t('frontend', 'Главная страница - Апартаменты в Батуми')]);
 // $this->registerMetaTag(['name' => 'description', 'content' => Yii::t('frontend', 'Калиграфи Тауерс. Апартаменты в Батуми у моря')]);
 
