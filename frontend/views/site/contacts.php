@@ -64,7 +64,7 @@ $this->registerJsFile(
                     <label for="call-phone"></label>
                     <input name="phone" id="call-phone" pattern="(\+?\d[- .]*){7,19}" type="tel" class=""
                         placeholder="<?=Yii::t('frontend', 'Телефон')?>" required>
-                    <button type="submit" href="#" class="btn" data-btn="popup-success"><span><?=Yii::t('frontend', 'Оставить заявку')?></span></button>
+                    <button type="submit" class="btn" data-btn="popup-success"><span><?=Yii::t('frontend', 'Оставить заявку')?></span></button>
                 </form>
             </div>
         </div>

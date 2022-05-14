@@ -132,17 +132,3 @@ use yii\helpers\Url;
         </div>
     </div>
 </div>
-<!-- <?//=Yii::t('frontend', '')?>
-<?//=Yii::$app->translate->getT("")?> -->
-
-
-<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" /> -->
-<!-- <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script> -->
-
-<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-<!-- <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script> -->
-<!-- <script src="js/jquery.fancybox.min.js"></script> -->
-<!-- <script src="js/app.min.js"></script> -->
-
-</body>
-</html>
