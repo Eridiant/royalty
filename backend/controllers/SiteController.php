@@ -76,10 +76,13 @@ class SiteController extends Controller
 
     public function actionStasis()
     {
-        $userIp = UserIp::find()->all();
-        foreach ($userIp as $value) {
+        $prefLang = UserIp::find()
+        ->where(['not', ['preferred_lang_all' => null]])
+        ->andWhere(['preferred_lang'=> null])
+        ->all();
+
+        foreach ($prefLang as $value) {
             if ($value->preferred_lang_all !== null) {
-                echo '<pre>' . substr($value->preferred_lang_all, 0, 2) . '</pre>';
                 $value->preferred_lang = substr($value->preferred_lang_all, 0, 2);
                 $value->save();
             }
@@ -92,6 +95,18 @@ class SiteController extends Controller
 
         if (is_null($userIp[0])) {
             return $this->render('statistics');
+        }
+
+        $prefLang = UserIp::find()
+            ->where(['not', ['preferred_lang_all' => null]])
+            ->andWhere(['preferred_lang'=> null])
+            ->all();
+
+        foreach ($prefLang as $value) {
+            if ($value->preferred_lang_all !== null) {
+                $value->preferred_lang = substr($value->preferred_lang_all, 0, 2);
+                $value->save();
+            }
         }
 
         $dayStat = DayStat::find()->orderBy(['id'=> SORT_DESC])->one();

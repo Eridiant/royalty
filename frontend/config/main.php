@@ -65,7 +65,6 @@ return [
                 'plans' => 'site/plans',
                 'pdf' => 'site/pdf',
                 'contacts' => 'site/contacts',
-                'about' => 'site/about',
                 'privacy-policy' => 'site/privacy-policy',
                 'infrastructure' => 'site/infrastructure',
                 'gallery' => 'site/gallery',

@@ -12,13 +12,13 @@
                     <svg width="19" height="19"><use xlink:href="/images/icons.svg#phone"></use></svg>
                 </div>
                 <div class="nav-lang">
-                    <a class="radius nav-lang-current" href="/site/set-locale?locale=<?=$cLang->key?>">
+                    <a class="radius nav-lang-current" href="/site/set-locale?locale=<?=$cLang->key?>" rel="nofollow">
                         <?= $cLang->code; ?>
                     </a>
                     <div class="nav-lang-choose">
                         <?php foreach ($model as $lang): ?>
                             <?php if ($lang->key != $currentLang): ?>
-                                <a class="radius" href="/site/set-locale?locale=<?=$lang->key?>">
+                                <a class="radius" href="/site/set-locale?locale=<?=$lang->key?>" rel="nofollow">
                                     <?= $lang->code; ?>
                                 </a>
                             <?php endif; ?>

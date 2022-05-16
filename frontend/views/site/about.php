@@ -23,33 +23,33 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
                 <div class="development-items">
                     <div class="development-item">
-                        <a href="#" class="radius">
+                        <span class="radius">
                             <svg width="18" height="18"><use xlink:href="/images/icons.svg#anchor"></use></svg>
-                        </a>
+                        </span>
                         <p>Близко к морю 150 метров</p>
                     </div>
                     <div class="development-item">
-                        <a href="#" class="radius">
+                        <span class="radius">
                             <svg width="18" height="18"><use xlink:href="/images/icons.svg#key"></use></svg>
-                        </a>
+                        </span>
                         <p>Планировочные решения от 28 кв.</p>
                     </div>
                     <div class="development-item">
-                        <a href="#" class="radius">
+                        <span class="radius">
                             <svg width="18" height="18"><use xlink:href="/images/icons.svg#hotel"></use></svg>
-                        </a>
+                        </span>
                         <p>Архитектура и концепция ЖК</p>
                     </div>
                     <div class="development-item">
-                        <a href="#" class="radius">
+                        <span class="radius">
                             <svg width="18" height="18"><use xlink:href="/images/icons.svg#secure"></use></svg>
-                        </a>
+                        </span>
                         <p>Надежный застройщик и аккредитация банка</p>
                     </div>
                     <div class="development-item">
-                        <a href="#" class="radius">
+                        <span class="radius">
                             <svg width="19" height="18"><use xlink:href="/images/icons.svg#money"></use></svg>
-                        </a>
+                        </span>
                         <p>Условия приобретения и ценовая политика</p>
                     </div>
                 </div>

@@ -121,7 +121,7 @@ use yii\helpers\Url;
                             <div class="btn btn-brd xsm act-btn no" data-btn="popup-call-back"><?=Yii::t('frontend', 'Забронировать квартиру')?></div>
                             <div class="">
                                 <svg width="14" height="16"><use xlink:href="/images/icons.svg#pdf"></use></svg>
-                                <a id="pdf" href="<?=Url::toRoute(['site/pdf', 'floor' => 1, 'flat' => 1, 'img' => 20]) ?>" target="_blank">
+                                <a id="pdf" href="<?=Url::toRoute(['site/pdf', 'floor' => 1, 'flat' => 1, 'img' => 20]) ?>" target="_blank" rel="nofollow">
                                     <?=Yii::t('frontend', 'Скачать планировку')?>
                                 </a>
                             </div>

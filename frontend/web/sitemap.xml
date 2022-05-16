@@ -23,7 +23,7 @@
   <priority>0.80</priority>
 </url>
 <url>
-  <loc>https://royalresidence.ge/contacts</loc>
+  <loc>https://royalresidence.ge/gallery</loc>
   <lastmod>2022-04-27T18:51:12+00:00</lastmod>
   <priority>0.80</priority>
 </url>
@@ -33,17 +33,12 @@
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://royalresidence.ge/gallery</loc>
-  <lastmod>2022-04-27T18:51:12+00:00</lastmod>
-  <priority>0.64</priority>
-</url>
-<url>
   <loc>https://royalresidence.ge/batumy</loc>
   <lastmod>2022-04-27T18:51:12+00:00</lastmod>
   <priority>0.64</priority>
 </url>
 <url>
-  <loc>https://royalresidence.ge/privacy-policy</loc>
+  <loc>https://royalresidence.ge/contacts</loc>
   <lastmod>2022-04-27T18:51:12+00:00</lastmod>
   <priority>0.64</priority>
 </url>

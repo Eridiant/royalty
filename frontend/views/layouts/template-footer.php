@@ -50,7 +50,7 @@ use yii\helpers\Url;
                 </div>
             </div>
         </div>
-        <a href="<?= Url::toRoute('/site/privacy-policy') ?>" class="footer-polit mb"><?=Yii::t('frontend', 'Политика конфиденциальности')?></a>
+        <a href="<?= Url::toRoute('/site/privacy-policy') ?>" class="footer-polit mb" rel="nofollow"><?=Yii::t('frontend', 'Политика конфиденциальности')?></a>
     </div>
 </footer>
 
@@ -86,13 +86,13 @@ use yii\helpers\Url;
             <!-- <div class="content-empty"></div> -->
         </div>
         <div class="lang lang-menu nav-lang">
-            <a class="radius nav-lang-current" href="/site/set-locale?locale=<?=$cLang->key?>">
+            <a class="radius nav-lang-current" href="/site/set-locale?locale=<?=$cLang->key?>" rel="nofollow">
                 <?= $cLang->code; ?>
             </a>
             <div class="nav-lang-choose">
                 <?php foreach ($model as $lang): ?>
                     <?php if ($lang->key != $currentLang): ?>
-                        <a class="radius" href="/site/set-locale?locale=<?=$lang->key?>">
+                        <a class="radius" href="/site/set-locale?locale=<?=$lang->key?>" rel="nofollow">
                             <?= $lang->code; ?>
                         </a>
                     <?php endif; ?>
@@ -110,7 +110,7 @@ use yii\helpers\Url;
                     <li><a href="<?= Url::toRoute('/site/contacts') ?>"><?=Yii::t('frontend', 'Контакты')?></a></li>
                 </ul>
             </div>
-            <a class="content-footer" href="<?= Url::toRoute('/site/privacy-policy') ?>"><?=Yii::t('frontend', 'Политика конфиденциальности')?></a>
+            <a class="content-footer" href="<?= Url::toRoute('/site/privacy-policy') ?>" rel="nofollow"><?=Yii::t('frontend', 'Политика конфиденциальности')?></a>
         </div>
     </div>
 </div>
