@@ -97,17 +97,17 @@ class SiteController extends Controller
             return $this->render('statistics');
         }
 
-        $prefLang = UserIp::find()
-            ->where(['not', ['preferred_lang_all' => null]])
-            ->andWhere(['preferred_lang'=> null])
-            ->all();
+        // $prefLang = UserIp::find()
+        //     ->where(['not', ['preferred_lang_all' => null]])
+        //     ->andWhere(['preferred_lang'=> null])
+        //     ->all();
 
-        foreach ($prefLang as $value) {
-            if ($value->preferred_lang_all !== null) {
-                $value->preferred_lang = substr($value->preferred_lang_all, 0, 2);
-                $value->save();
-            }
-        }
+        // foreach ($prefLang as $value) {
+        //     if ($value->preferred_lang_all !== null) {
+        //         $value->preferred_lang = substr($value->preferred_lang_all, 0, 2);
+        //         $value->save();
+        //     }
+        // }
 
         $dayStat = DayStat::find()->orderBy(['id'=> SORT_DESC])->one();
         if (is_null($dayStat)) {
@@ -221,17 +221,23 @@ class SiteController extends Controller
             $country = $this->geoCity(long2ip($UsIp->ip));
             // $country = $this->geoCity('185.28.110.65');
             // var_dump('<pre>');
-            // var_dump($country["country"]["iso"],$UsIp);
+            // var_dump($country,$UsIp);
             // var_dump('</pre>');
             // die;
             
-            if ($country) {
-                $UsIp->country = $country["country"]["name_ru"];
-                $UsIp->region = $country["region"]["name_ru"];
-                $UsIp->city = $country["city"]["name_ru"];
-                $UsIp->code = $country["country"]["iso"];
+            if (isset($UsIp)) {
+                if ($country) {
+                    $UsIp->country = $country["country"]["name_ru"];
+                    $UsIp->region = $country["region"]["name_ru"];
+                    $UsIp->city = $country["city"]["name_ru"];
+                    $UsIp->code = $country["country"]["iso"];
+                }
+                $UsIp->preferred_lang = substr($UsIp->preferred_lang_all, 0, 2);
                 $UsIp->checked = 1;
-                $UsIp->save();
+                // $UsIp->save();
+                if (!$UsIp->save()) {
+                    var_dump($UsIp->getErrors());
+                }
             }
         }
 
