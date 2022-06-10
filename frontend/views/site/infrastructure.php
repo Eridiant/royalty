@@ -19,7 +19,7 @@ $this->title = 'Инфраструктура';
             <div class="infrastructure-item">
                 <picture>
                     <source type="image/jpeg" srcset="/images/infrastructure/infrastructure/infr-mb-1x-1.jpg, /images/infrastructure/infrastructure/infr-mb-2x-1.jpg 2x" media="(max-width: 480px)">
-                    <img src="/images/infrastructure/infrastructure/infr-1.jpg" loading="lazy" alt="">
+                    <img src="/images/infrastructure/infrastructure/infr-1.jpg" alt="">
                 </picture>
                 <p class="title small"><?=Yii::$app->translate->getT("Эксплуатируемая крыша")?></p>
                 <p class="infrastructure-text">
@@ -29,7 +29,7 @@ $this->title = 'Инфраструктура';
             <div class="infrastructure-item">
                 <picture>
                     <source type="image/jpeg" srcset="/images/infrastructure/infrastructure/infr-mb-1x-2.jpg, /images/infrastructure/infrastructure/infr-mb-2x-2.jpg 2x" media="(max-width: 480px)">
-                    <img src="/images/infrastructure/infrastructure/infr-2.jpg" loading="lazy" alt="">
+                    <img src="/images/infrastructure/infrastructure/infr-2.jpg" alt="">
                 </picture>
                 <p class="title small"><?=Yii::$app->translate->getT("Паркинг")?></p>
                 <p class="infrastructure-text">

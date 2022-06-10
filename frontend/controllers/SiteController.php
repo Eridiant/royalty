@@ -113,8 +113,8 @@ class SiteController extends Controller
                 $userIp->ip = $ip;
                 // $userIp->ip = $ip;
                 // $userIp->ip = $ip;
-                if (($list = strtolower($_SERVER['HTTP_ACCEPT_LANGUAGE']))) {
-
+                if (isset($_SERVER['HTTP_ACCEPT_LANGUAGE'])) {
+                    $list = strtolower($_SERVER['HTTP_ACCEPT_LANGUAGE']);
                     $userIp->preferred_lang_all = $list;
                     if ($list = substr($value->preferred_lang_all, 0, 2)) {
                         $userIp->preferred_lang = $list;
