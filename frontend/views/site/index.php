@@ -214,6 +214,27 @@ $this->title = 'Royal development';
                         <img src="/images/index/panorama/panorama-2-1x.jpg" loading="lazy" width="1920" height="1011" alt="">
                     </picture>
                 </div>
+                <div class="swiper-slide">
+                    <picture>
+                        <source type="image/jpeg" srcset="/images/index/panorama/panorama-gl-3-1x.jpg, /images/index/panorama/panorama-gl-3-2x.jpg 2x" media="(max-width: 360px)">
+                        <source type="image/jpeg" srcset="/images/index/panorama/panorama-3-1x.jpg, /images/index/panorama/panorama-3-2x.jpg 2x">
+                        <img src="/images/index/panorama/panorama-3-1x.jpg" loading="lazy" width="1920" height="1011" alt="">
+                    </picture>
+                </div>
+                <div class="swiper-slide">
+                    <picture>
+                        <source type="image/jpeg" srcset="/images/index/panorama/panorama-gl-4-1x.jpg, /images/index/panorama/panorama-gl-4-2x.jpg 2x" media="(max-width: 360px)">
+                        <source type="image/jpeg" srcset="/images/index/panorama/panorama-4-1x.jpg, /images/index/panorama/panorama-4-2x.jpg 2x">
+                        <img src="/images/index/panorama/panorama-4-1x.jpg" loading="lazy" width="1920" height="1011" alt="">
+                    </picture>
+                </div>
+                <div class="swiper-slide">
+                    <picture>
+                        <source type="image/jpeg" srcset="/images/index/panorama/panorama-gl-5-1x.jpg, /images/index/panorama/panorama-gl-5-2x.jpg 2x" media="(max-width: 360px)">
+                        <source type="image/jpeg" srcset="/images/index/panorama/panorama-5-1x.jpg, /images/index/panorama/panorama-5-2x.jpg 2x">
+                        <img src="/images/index/panorama/panorama-5-1x.jpg" loading="lazy" width="1920" height="1011" alt="">
+                    </picture>
+                </div>
             </div>
             <div class="swiper-button-next panorama-button-next"></div>
             <div class="swiper-button-prev panorama-button-prev"></div>
